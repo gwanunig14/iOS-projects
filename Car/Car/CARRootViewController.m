@@ -66,19 +66,19 @@
     
 
     CARGasPedal *gas =[[CARGasPedal alloc] init];
-    gas.frame = CGRectMake(140, 175, 20, 30);
+    gas.frame = CGRectMake(150, 170, 20, 30);
     [self.view addSubview:gas];
     [gas setTitle:@"GO" forState:UIControlStateNormal];
     [gas addTarget:self action:@selector(pressGasPedal) forControlEvents:UIControlEventTouchUpInside];
     
     CARBrake *brake = [[CARBrake alloc] init];
-    brake.frame = CGRectMake(90, 175, 20, 30);
+    brake.frame = CGRectMake(125, 170, 20, 30);
     [self.view addSubview:brake];
     [brake setTitle:@"STOP" forState:UIControlStateNormal];
     [brake addTarget:self action:@selector(pressBrake) forControlEvents:UIControlEventTouchUpInside];
     
     CARIgnition *start = [[CARIgnition alloc] init];
-    start.frame = CGRectMake(104, 125, 40, 40);
+    start.frame = CGRectMake(110, 120, 40, 40);
     [self.view addSubview:start];
     [start setTitle:@"START" forState:UIControlStateNormal];
     [start addTarget:self action:@selector(pressIgnition) forControlEvents:UIControlEventTouchUpInside];
