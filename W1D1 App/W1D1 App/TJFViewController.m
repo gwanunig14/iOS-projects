@@ -1,6 +1,6 @@
 //
 //  TJFViewController.m
-//  funapp
+//  W1D1 App
 //
 //  Created by T.J. Mercer on 3/31/14.
 //  Copyright (c) 2014 T.J. All rights reserved.
@@ -18,19 +18,35 @@
 
 {
     [super viewDidLoad];
-	
+
 }
 
 - (void)didReceiveMemoryWarning
-
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)ButtonPressed:(id)sender {
+- (IBAction)Yes:(id)sender {
     
-    self.mylabel.text = @"T.J.";
+    self.first.text = @"POW";
+    
+}
+
+- (IBAction)No:(id)sender {
+
+    self.second.text = self.textfield.text;
+    
+}
+
+- (IBAction)Maybe:(id)sender {
+    
+    self.third.backgroundColor = [UIColor whiteColor];
+    
+    self.third.textColor = [UIColor blackColor];
+    
+    self.third.text = @"SMACK";
 
 }
+
+
 @end

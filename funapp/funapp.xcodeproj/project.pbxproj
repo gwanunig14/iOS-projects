@@ -380,6 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "funapp/funapp-Prefix.pch";
 				INFOPLIST_FILE = "funapp/funapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "funapp/funapp-Prefix.pch";
 				INFOPLIST_FILE = "funapp/funapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +459,7 @@
 				9C396C7818E9BF790086DE3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C396C7918E9BF790086DE3D /* Build configuration list for PBXNativeTarget "funappTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +468,7 @@
 				9C396C7B18E9BF790086DE3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

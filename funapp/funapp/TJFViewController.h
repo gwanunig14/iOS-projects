@@ -10,4 +10,8 @@
 
 @interface TJFViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *mylabel;
+
+- (IBAction)ButtonPressed:(id)sender;
+
 @end
