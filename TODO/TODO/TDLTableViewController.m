@@ -8,6 +8,8 @@
 
 #import "TDLTableViewController.h"
 
+#import "TDLTableViewCell.h"
+
 @implementation TDLTableViewController
 
 {
@@ -22,41 +24,106 @@
     
     {
         
-        listItems = @[@"Jo Albright",
-                      @"Teddy Conyers",
-                      @"Jon Fox",
-                      @"Ali Houshmand",
-                      @"Austen Johnson",
-                      @"Jeff King",
-                      @"T.J. Mercer",
-                      @"Jeffery Moulds",
-                      @"Austin Nolan",
-                      @"Jisha Obukwelu",
-                      @"Heidi Proske",
-                      @"Savitha Reddy",
-                      @"Ed Salter",
-                      @"Ashby Thornwell",
-                      @"Derek Weber",
-                      @"John Yam"];
-        
-        listImages = @[[UIImage imageNamed:@"jo"],
-                       [UIImage imageNamed:@"teddy"],
-                       [UIImage imageNamed:@"jon"],
-                       [UIImage imageNamed:@"ali"],
-                       [UIImage imageNamed:@"austen"],
-                       [UIImage imageNamed:@"jeff"],
-                       [UIImage imageNamed:@"me"],
-                       [UIImage imageNamed:@"jeffery"],
-                       [UIImage imageNamed:@"austin"],
-                       [UIImage imageNamed:@"jisha"],
-                       [UIImage imageNamed:@"heidi"],
-                       [UIImage imageNamed:@"savitha"],
-                       [UIImage imageNamed:@"ed"],
-                       [UIImage imageNamed:@"ashby"],
-                       [UIImage imageNamed:@"derek"],
-                       [UIImage imageNamed:@"john"]];
-        
+       listItems = @[@{
+                          @"name": @"Jo Albright",
+                          @"image" : [UIImage imageNamed:@"jo"],
+                          @"github" : @"https://github.com/joalbright"
+                          },
+                      @{
+                          @"name": @"Teddy Conyers",
+                          @"image" : [UIImage imageNamed:@"Teddy"],
+                          @"github" : @"https://github.com/talented76"
+                          },
+                      @{
+                          @"name": @"Jon Fox",
+                          @"image" : [UIImage imageNamed:@"jon"],
+                          @"github" : @"https://github.com/FoxJon"
+                          },
+                      @{
+                          @"name": @"Ali Houshmand",
+                          @"image" : [UIImage imageNamed:@"ali"],
+                          @"github" : @"https://github.com/HoushmandA06"
+                          },
+                      @{
+                          @"name": @"Austen Johnson",
+                          @"image" : [UIImage imageNamed:@"austen"],
+                          @"github" : @"https://github.com/ajohnson21"
+                          },
+                      @{
+                          @"name": @"Jeff King",
+                          @"image" : [UIImage imageNamed:@"jeff"],
+                          @"github" : @"https://github.com/rampis"
+                          },
+                      @{
+                          @"name": @"T.J. Mercer",
+                          @"image" : [UIImage imageNamed:@"me"],
+                          @"github" : @"https://github.com/gwanunig14"
+                          },
+                      @{
+                          @"name": @"Jeffery Moulds",
+                          @"image" : [UIImage imageNamed:@"jeffery"],
+                          @"github" : @"https://github.com/jdmgithub"
+                          },
+                      @{
+                          @"name": @"Austin Nolan",
+                          @"image" : [UIImage imageNamed:@"austin"],
+                          @"github" : @"https://github.com/adnolan99"
+                          },
+                      @{
+                          @"name": @"Jisha Obukwelu",
+                          @"image" : [UIImage imageNamed:@"jisha"],
+                          @"github" : @"https://github.com/Jiobu"
+                          },
+                      @{
+                          @"name": @"Heidi Proske",
+                          @"image" : [UIImage imageNamed:@"heidi"],
+                          @"github" : @"https://github.com/justagirlcoding"
+                          },
+                      @{
+                          @"name": @"Savitha Reddy",
+                          @"image" : [UIImage imageNamed:@"savitha"],
+                          @"github" : @"https://github.com/savithareddy"
+                          },
+                      @{
+                          @"name": @"Ed Salter",
+                          @"image" : [UIImage imageNamed:@"Ed"],
+                          @"github" : @"https://github.com/MadArkitekt"
+                          },
+                      @{
+                          @"name": @"Ashby Thornwell",
+                          @"image" : [UIImage imageNamed:@"ashby"],
+                          @"github" : @"https://github.com/athornwell"
+                          },
+                      @{
+                          @"name": @"Derek Weber",
+                          @"image" : [UIImage imageNamed:@"derek"],
+                          @"github" : @"https://github.com/dweber03"
+                          },
+                      @{
+                          @"name": @"John Yam",
+                          @"image" : [UIImage imageNamed:@"john"],
+                          @"github" : @"https://github.com/yamski"
+                          }];
+//        
+//        listImages = @[[UIImage imageNamed:@"jo"],
+//                       [UIImage imageNamed:@"teddy"],
+//                       [UIImage imageNamed:@"jon"],
+//                       [UIImage imageNamed:@"ali"],
+//                       [UIImage imageNamed:@"austen"],
+//                       [UIImage imageNamed:@"jeff"],
+//                       [UIImage imageNamed:@"me"],
+//                       [UIImage imageNamed:@"jeffery"],
+//                       [UIImage imageNamed:@"austin"],
+//                       [UIImage imageNamed:@"jisha"],
+//                       [UIImage imageNamed:@"heidi"],
+//                       [UIImage imageNamed:@"savitha"],
+//                       [UIImage imageNamed:@"ed"],
+//                       [UIImage imageNamed:@"ashby"],
+//                       [UIImage imageNamed:@"derek"],
+//                       [UIImage imageNamed:@"john"]];
+ 
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        self.tableView.rowHeight = 100;
         
     }
     
@@ -94,18 +161,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier : @"cell"];
+    TDLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier : @"cell"];
     
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc]init];
-    }
+    if (cell == nil) cell = [[TDLTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
-    int index = [indexPath row];
+    int index = indexPath.row;
     
-    cell.textLabel.text = listItems[index];
+    NSDictionary * listItem = listItems[index];
     
-    cell.imageView.image = listImages[index];
+    cell.profileInfo = listItem;
+    
+//    cell.textLabel.text = listItem[@"name"];
+    
+//    cell.imageView.image = listItem[@"image"];
+    
     
     UIView * header = [[UIView alloc] initWithFrame:CGRectMake(15, 0, 300, 48)];
     
@@ -132,53 +201,5 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
