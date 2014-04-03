@@ -10,12 +10,6 @@
 
 @interface TDLTableViewCell : UITableViewCell
 
-@property (nonatomic) UIImageView * imageView;
-
-@property (nonatomic) UILabel * nameList;
-
-@property (nonatomic) UILabel * gitList;
-
 @property (nonatomic) NSDictionary * profileInfo;
 
 @end

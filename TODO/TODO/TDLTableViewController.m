@@ -14,7 +14,6 @@
 
 {
     NSArray *listItems;
-    NSArray *listImages;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -104,26 +103,27 @@
                           @"image" : [UIImage imageNamed:@"john"],
                           @"github" : @"https://github.com/yamski"
                           }];
-//        
-//        listImages = @[[UIImage imageNamed:@"jo"],
-//                       [UIImage imageNamed:@"teddy"],
-//                       [UIImage imageNamed:@"jon"],
-//                       [UIImage imageNamed:@"ali"],
-//                       [UIImage imageNamed:@"austen"],
-//                       [UIImage imageNamed:@"jeff"],
-//                       [UIImage imageNamed:@"me"],
-//                       [UIImage imageNamed:@"jeffery"],
-//                       [UIImage imageNamed:@"austin"],
-//                       [UIImage imageNamed:@"jisha"],
-//                       [UIImage imageNamed:@"heidi"],
-//                       [UIImage imageNamed:@"savitha"],
-//                       [UIImage imageNamed:@"ed"],
-//                       [UIImage imageNamed:@"ashby"],
-//                       [UIImage imageNamed:@"derek"],
-//                       [UIImage imageNamed:@"john"]];
  
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         self.tableView.rowHeight = 100;
+        
+        UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+        header.backgroundColor = [UIColor blackColor];
+        
+        self.tableView.tableHeaderView = header;
+        
+        UITextField * nameField = [[UITextField alloc]initWithFrame:CGRectMake(20, 20, 280, 30)];
+        nameField.backgroundColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
+        nameField.layer.cornerRadius = 5;
+        nameField.textColor = [UIColor blackColor];
+        
+        [header addSubview:nameField];
+        
+        UIButton * submitButton = [[UIButton alloc] initWithFrame:CGRectMake(115, 70, 100, 30)];
+        submitButton.layer.cornerRadius = 10;
+        [submitButton setTitle:@"New User" forState:UIControlStateNormal];
+        submitButton.backgroundColor = [UIColor darkGrayColor];
+        [header addSubview:submitButton];
         
     }
     
@@ -176,25 +176,22 @@
 //    cell.imageView.image = listItem[@"image"];
     
     
-    UIView * header = [[UIView alloc] initWithFrame:CGRectMake(15, 0, 300, 48)];
+    UIView * footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 48)];
     
-    UIView * footer = [[UIView alloc] initWithFrame:CGRectMake(15, 0, 300, 48)];
     
-    header.backgroundColor = [UIColor grayColor];
+//    header.backgroundColor = [UIColor grayColor];
     footer.backgroundColor = [UIColor blackColor];
     
-    self.tableView.tableHeaderView = header;
     self.tableView.tableFooterView = footer;
     
-    UILabel * titleHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 300, 30)];
     UILabel * titleFooter = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 300, 30)];
     
-    titleHeader.text = @"Class";
-    titleHeader.textColor = [UIColor whiteColor];
+//    titleHeader.text = @"Class";
+//    titleHeader.textColor = [UIColor whiteColor];
     titleFooter.text = @"End";
-    titleFooter.textColor = [UIColor whiteColor];
+    titleFooter.textColor = [UIColor cyanColor];
     
-    [header addSubview:titleHeader];
+//    [header addSubview:titleHeader];
     [footer addSubview:titleFooter];
     
     return cell;
