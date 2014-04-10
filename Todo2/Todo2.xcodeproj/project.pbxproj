@@ -19,8 +19,8 @@
 		9C095B2B18F4496F0067E1D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C095B1318F4496F0067E1D0 /* UIKit.framework */; };
 		9C095B3318F4496F0067E1D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C095B3118F4496F0067E1D0 /* InfoPlist.strings */; };
 		9C095B3518F4496F0067E1D0 /* Todo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C095B3418F4496F0067E1D0 /* Todo2Tests.m */; };
-		9C095B4018F449E20067E1D0 /* TDLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C095B3F18F449E20067E1D0 /* TDLTableViewController.m */; };
 		9C095B4318F451810067E1D0 /* TDLTableViewCellLow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C095B4218F451810067E1D0 /* TDLTableViewCellLow.m */; };
+		9CE0771818F5CC1000D35D32 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0771718F5CC1000D35D32 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		9C095B3018F4496F0067E1D0 /* Todo2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Todo2Tests-Info.plist"; sourceTree = "<group>"; };
 		9C095B3218F4496F0067E1D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C095B3418F4496F0067E1D0 /* Todo2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo2Tests.m; sourceTree = "<group>"; };
-		9C095B3E18F449E20067E1D0 /* TDLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLTableViewController.h; sourceTree = "<group>"; };
-		9C095B3F18F449E20067E1D0 /* TDLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLTableViewController.m; sourceTree = "<group>"; };
 		9C095B4118F451810067E1D0 /* TDLTableViewCellLow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLTableViewCellLow.h; sourceTree = "<group>"; };
 		9C095B4218F451810067E1D0 /* TDLTableViewCellLow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLTableViewCellLow.m; sourceTree = "<group>"; };
+		9CE0771618F5CC1000D35D32 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		9CE0771718F5CC1000D35D32 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +83,8 @@
 		9C095B0318F4496F0067E1D0 = {
 			isa = PBXGroup;
 			children = (
+				9CE0771618F5CC1000D35D32 /* TableViewController.h */,
+				9CE0771718F5CC1000D35D32 /* TableViewController.m */,
 				9C095B1518F4496F0067E1D0 /* Todo2 */,
 				9C095B2E18F4496F0067E1D0 /* Todo2Tests */,
 				9C095B0E18F4496F0067E1D0 /* Frameworks */,
@@ -115,8 +117,6 @@
 			children = (
 				9C095B1E18F4496F0067E1D0 /* TDLAppDelegate.h */,
 				9C095B1F18F4496F0067E1D0 /* TDLAppDelegate.m */,
-				9C095B3E18F449E20067E1D0 /* TDLTableViewController.h */,
-				9C095B3F18F449E20067E1D0 /* TDLTableViewController.m */,
 				9C095B4118F451810067E1D0 /* TDLTableViewCellLow.h */,
 				9C095B4218F451810067E1D0 /* TDLTableViewCellLow.m */,
 				9C095B2118F4496F0067E1D0 /* Images.xcassets */,
@@ -250,10 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C095B4018F449E20067E1D0 /* TDLTableViewController.m in Sources */,
 				9C095B4318F451810067E1D0 /* TDLTableViewCellLow.m in Sources */,
 				9C095B1C18F4496F0067E1D0 /* main.m in Sources */,
 				9C095B2018F4496F0067E1D0 /* TDLAppDelegate.m in Sources */,
+				9CE0771818F5CC1000D35D32 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +450,7 @@
 				9C095B3A18F4496F0067E1D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C095B3B18F4496F0067E1D0 /* Build configuration list for PBXNativeTarget "Todo2Tests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +459,7 @@
 				9C095B3D18F4496F0067E1D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

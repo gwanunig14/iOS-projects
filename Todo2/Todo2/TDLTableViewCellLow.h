@@ -10,8 +10,10 @@
 
 @interface TDLTableViewCellLow : UITableViewCell
 
-@property (nonatomic) NSDictionary * setTodoInfoLow;
+@property (nonatomic) UILabel * nameLabel;
+@property (nonatomic) UIView * bgView;
+@property (nonatomic) UIButton * circleButton;
 
-//+ (NSDictionary *)addNewTodo;
+
 
 @end

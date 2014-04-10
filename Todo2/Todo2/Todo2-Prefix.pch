@@ -14,3 +14,11 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define RED_COLOR [UIColor colorWithRed: 0.906f green: 0.051f blue:0.094f alpha: 1.0f]
+#define YELLOW_COLOR [UIColor colorWithRed: 0.875 green: 0.506f blue: 0.220f alpha: 1.0f]
+#define ORANGE_COLOR [UIColor colorWithRed: 0.804f green: 0.808f blue: 0.580f alpha: 1.0f]
+#define TAN_COLOR [UIColor colorWithRed: 0.918f green: 0.922f blue: 0.867f alpha: 1.0f]
+
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
