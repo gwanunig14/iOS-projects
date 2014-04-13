@@ -7,144 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9CDC87B118FAC55C00179220 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87B018FAC55C00179220 /* Foundation.framework */; };
-		9CDC87B318FAC55C00179220 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87B218FAC55C00179220 /* CoreGraphics.framework */; };
-		9CDC87B518FAC55D00179220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87B418FAC55D00179220 /* UIKit.framework */; };
-		9CDC87BB18FAC55D00179220 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC87B918FAC55D00179220 /* InfoPlist.strings */; };
-		9CDC87BD18FAC55D00179220 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC87BC18FAC55D00179220 /* main.m */; };
-		9CDC87C118FAC55D00179220 /* TLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC87C018FAC55D00179220 /* TLAAppDelegate.m */; };
-		9CDC87C318FAC55D00179220 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC87C218FAC55D00179220 /* Images.xcassets */; };
-		9CDC87CA18FAC55D00179220 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87C918FAC55D00179220 /* XCTest.framework */; };
-		9CDC87CB18FAC55D00179220 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87B018FAC55C00179220 /* Foundation.framework */; };
-		9CDC87CC18FAC55D00179220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87B418FAC55D00179220 /* UIKit.framework */; };
-		9CDC87D418FAC55D00179220 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC87D218FAC55D00179220 /* InfoPlist.strings */; };
-		9CDC87D618FAC55D00179220 /* TweetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC87D518FAC55D00179220 /* TweetTests.m */; };
-		9CDC87E118FAC57000179220 /* TLATVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC87E018FAC57000179220 /* TLATVC.m */; };
+		9C26603418FB0128003917ED /* TLATVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26603318FB0128003917ED /* TLATVC.m */; };
+		9CDC87EF18FB001F00179220 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87EE18FB001F00179220 /* Foundation.framework */; };
+		9CDC87F118FB001F00179220 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87F018FB001F00179220 /* CoreGraphics.framework */; };
+		9CDC87F318FB001F00179220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87F218FB001F00179220 /* UIKit.framework */; };
+		9CDC87F918FB001F00179220 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC87F718FB001F00179220 /* InfoPlist.strings */; };
+		9CDC87FB18FB001F00179220 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC87FA18FB001F00179220 /* main.m */; };
+		9CDC87FF18FB001F00179220 /* TLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC87FE18FB001F00179220 /* TLAAppDelegate.m */; };
+		9CDC880118FB001F00179220 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC880018FB001F00179220 /* Images.xcassets */; };
+		9CDC880818FB001F00179220 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC880718FB001F00179220 /* XCTest.framework */; };
+		9CDC880918FB001F00179220 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87EE18FB001F00179220 /* Foundation.framework */; };
+		9CDC880A18FB001F00179220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC87F218FB001F00179220 /* UIKit.framework */; };
+		9CDC881218FB001F00179220 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CDC881018FB001F00179220 /* InfoPlist.strings */; };
+		9CDC881418FB001F00179220 /* TweetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC881318FB001F00179220 /* TweetTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9CDC87CD18FAC55D00179220 /* PBXContainerItemProxy */ = {
+		9CDC880B18FB001F00179220 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9CDC87A518FAC55C00179220 /* Project object */;
+			containerPortal = 9CDC87E318FB001F00179220 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9CDC87AC18FAC55C00179220;
+			remoteGlobalIDString = 9CDC87EA18FB001F00179220;
 			remoteInfo = Tweet;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9CDC87AD18FAC55C00179220 /* Tweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CDC87B018FAC55C00179220 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9CDC87B218FAC55C00179220 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9CDC87B418FAC55D00179220 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		9CDC87B818FAC55D00179220 /* Tweet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tweet-Info.plist"; sourceTree = "<group>"; };
-		9CDC87BA18FAC55D00179220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9CDC87BC18FAC55D00179220 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9CDC87BE18FAC55D00179220 /* Tweet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet-Prefix.pch"; sourceTree = "<group>"; };
-		9CDC87BF18FAC55D00179220 /* TLAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAAppDelegate.h; sourceTree = "<group>"; };
-		9CDC87C018FAC55D00179220 /* TLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLAAppDelegate.m; sourceTree = "<group>"; };
-		9CDC87C218FAC55D00179220 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9CDC87C818FAC55D00179220 /* TweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CDC87C918FAC55D00179220 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9CDC87D118FAC55D00179220 /* TweetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweetTests-Info.plist"; sourceTree = "<group>"; };
-		9CDC87D318FAC55D00179220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9CDC87D518FAC55D00179220 /* TweetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetTests.m; sourceTree = "<group>"; };
-		9CDC87DF18FAC57000179220 /* TLATVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLATVC.h; sourceTree = "<group>"; };
-		9CDC87E018FAC57000179220 /* TLATVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLATVC.m; sourceTree = "<group>"; };
+		9C26603218FB0128003917ED /* TLATVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLATVC.h; sourceTree = "<group>"; };
+		9C26603318FB0128003917ED /* TLATVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLATVC.m; sourceTree = "<group>"; };
+		9CDC87EB18FB001F00179220 /* Tweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CDC87EE18FB001F00179220 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9CDC87F018FB001F00179220 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9CDC87F218FB001F00179220 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9CDC87F618FB001F00179220 /* Tweet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tweet-Info.plist"; sourceTree = "<group>"; };
+		9CDC87F818FB001F00179220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9CDC87FA18FB001F00179220 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CDC87FC18FB001F00179220 /* Tweet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet-Prefix.pch"; sourceTree = "<group>"; };
+		9CDC87FD18FB001F00179220 /* TLAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAAppDelegate.h; sourceTree = "<group>"; };
+		9CDC87FE18FB001F00179220 /* TLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLAAppDelegate.m; sourceTree = "<group>"; };
+		9CDC880018FB001F00179220 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9CDC880618FB001F00179220 /* TweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CDC880718FB001F00179220 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9CDC880F18FB001F00179220 /* TweetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweetTests-Info.plist"; sourceTree = "<group>"; };
+		9CDC881118FB001F00179220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9CDC881318FB001F00179220 /* TweetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9CDC87AA18FAC55C00179220 /* Frameworks */ = {
+		9CDC87E818FB001F00179220 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDC87B318FAC55C00179220 /* CoreGraphics.framework in Frameworks */,
-				9CDC87B518FAC55D00179220 /* UIKit.framework in Frameworks */,
-				9CDC87B118FAC55C00179220 /* Foundation.framework in Frameworks */,
+				9CDC87F118FB001F00179220 /* CoreGraphics.framework in Frameworks */,
+				9CDC87F318FB001F00179220 /* UIKit.framework in Frameworks */,
+				9CDC87EF18FB001F00179220 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CDC87C518FAC55D00179220 /* Frameworks */ = {
+		9CDC880318FB001F00179220 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDC87CA18FAC55D00179220 /* XCTest.framework in Frameworks */,
-				9CDC87CC18FAC55D00179220 /* UIKit.framework in Frameworks */,
-				9CDC87CB18FAC55D00179220 /* Foundation.framework in Frameworks */,
+				9CDC880818FB001F00179220 /* XCTest.framework in Frameworks */,
+				9CDC880A18FB001F00179220 /* UIKit.framework in Frameworks */,
+				9CDC880918FB001F00179220 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9CDC87A418FAC55C00179220 = {
+		9CDC87E218FB001F00179220 = {
 			isa = PBXGroup;
 			children = (
-				9CDC87DF18FAC57000179220 /* TLATVC.h */,
-				9CDC87E018FAC57000179220 /* TLATVC.m */,
-				9CDC87B618FAC55D00179220 /* Tweet */,
-				9CDC87CF18FAC55D00179220 /* TweetTests */,
-				9CDC87AF18FAC55C00179220 /* Frameworks */,
-				9CDC87AE18FAC55C00179220 /* Products */,
+				9CDC87F418FB001F00179220 /* Tweet */,
+				9CDC880D18FB001F00179220 /* TweetTests */,
+				9CDC87ED18FB001F00179220 /* Frameworks */,
+				9CDC87EC18FB001F00179220 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9CDC87AE18FAC55C00179220 /* Products */ = {
+		9CDC87EC18FB001F00179220 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC87AD18FAC55C00179220 /* Tweet.app */,
-				9CDC87C818FAC55D00179220 /* TweetTests.xctest */,
+				9CDC87EB18FB001F00179220 /* Tweet.app */,
+				9CDC880618FB001F00179220 /* TweetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9CDC87AF18FAC55C00179220 /* Frameworks */ = {
+		9CDC87ED18FB001F00179220 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC87B018FAC55C00179220 /* Foundation.framework */,
-				9CDC87B218FAC55C00179220 /* CoreGraphics.framework */,
-				9CDC87B418FAC55D00179220 /* UIKit.framework */,
-				9CDC87C918FAC55D00179220 /* XCTest.framework */,
+				9CDC87EE18FB001F00179220 /* Foundation.framework */,
+				9CDC87F018FB001F00179220 /* CoreGraphics.framework */,
+				9CDC87F218FB001F00179220 /* UIKit.framework */,
+				9CDC880718FB001F00179220 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9CDC87B618FAC55D00179220 /* Tweet */ = {
+		9CDC87F418FB001F00179220 /* Tweet */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC87BF18FAC55D00179220 /* TLAAppDelegate.h */,
-				9CDC87C018FAC55D00179220 /* TLAAppDelegate.m */,
-				9CDC87C218FAC55D00179220 /* Images.xcassets */,
-				9CDC87B718FAC55D00179220 /* Supporting Files */,
+				9CDC87FD18FB001F00179220 /* TLAAppDelegate.h */,
+				9CDC87FE18FB001F00179220 /* TLAAppDelegate.m */,
+				9C26603218FB0128003917ED /* TLATVC.h */,
+				9C26603318FB0128003917ED /* TLATVC.m */,
+				9CDC880018FB001F00179220 /* Images.xcassets */,
+				9CDC87F518FB001F00179220 /* Supporting Files */,
 			);
 			path = Tweet;
 			sourceTree = "<group>";
 		};
-		9CDC87B718FAC55D00179220 /* Supporting Files */ = {
+		9CDC87F518FB001F00179220 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC87B818FAC55D00179220 /* Tweet-Info.plist */,
-				9CDC87B918FAC55D00179220 /* InfoPlist.strings */,
-				9CDC87BC18FAC55D00179220 /* main.m */,
-				9CDC87BE18FAC55D00179220 /* Tweet-Prefix.pch */,
+				9CDC87F618FB001F00179220 /* Tweet-Info.plist */,
+				9CDC87F718FB001F00179220 /* InfoPlist.strings */,
+				9CDC87FA18FB001F00179220 /* main.m */,
+				9CDC87FC18FB001F00179220 /* Tweet-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9CDC87CF18FAC55D00179220 /* TweetTests */ = {
+		9CDC880D18FB001F00179220 /* TweetTests */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC87D518FAC55D00179220 /* TweetTests.m */,
-				9CDC87D018FAC55D00179220 /* Supporting Files */,
+				9CDC881318FB001F00179220 /* TweetTests.m */,
+				9CDC880E18FB001F00179220 /* Supporting Files */,
 			);
 			path = TweetTests;
 			sourceTree = "<group>";
 		};
-		9CDC87D018FAC55D00179220 /* Supporting Files */ = {
+		9CDC880E18FB001F00179220 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9CDC87D118FAC55D00179220 /* TweetTests-Info.plist */,
-				9CDC87D218FAC55D00179220 /* InfoPlist.strings */,
+				9CDC880F18FB001F00179220 /* TweetTests-Info.plist */,
+				9CDC881018FB001F00179220 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,13 +152,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CDC87AC18FAC55C00179220 /* Tweet */ = {
+		9CDC87EA18FB001F00179220 /* Tweet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CDC87D918FAC55D00179220 /* Build configuration list for PBXNativeTarget "Tweet" */;
+			buildConfigurationList = 9CDC881718FB001F00179220 /* Build configuration list for PBXNativeTarget "Tweet" */;
 			buildPhases = (
-				9CDC87A918FAC55C00179220 /* Sources */,
-				9CDC87AA18FAC55C00179220 /* Frameworks */,
-				9CDC87AB18FAC55C00179220 /* Resources */,
+				9CDC87E718FB001F00179220 /* Sources */,
+				9CDC87E818FB001F00179220 /* Frameworks */,
+				9CDC87E918FB001F00179220 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -166,122 +166,122 @@
 			);
 			name = Tweet;
 			productName = Tweet;
-			productReference = 9CDC87AD18FAC55C00179220 /* Tweet.app */;
+			productReference = 9CDC87EB18FB001F00179220 /* Tweet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9CDC87C718FAC55D00179220 /* TweetTests */ = {
+		9CDC880518FB001F00179220 /* TweetTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CDC87DC18FAC55D00179220 /* Build configuration list for PBXNativeTarget "TweetTests" */;
+			buildConfigurationList = 9CDC881A18FB001F00179220 /* Build configuration list for PBXNativeTarget "TweetTests" */;
 			buildPhases = (
-				9CDC87C418FAC55D00179220 /* Sources */,
-				9CDC87C518FAC55D00179220 /* Frameworks */,
-				9CDC87C618FAC55D00179220 /* Resources */,
+				9CDC880218FB001F00179220 /* Sources */,
+				9CDC880318FB001F00179220 /* Frameworks */,
+				9CDC880418FB001F00179220 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9CDC87CE18FAC55D00179220 /* PBXTargetDependency */,
+				9CDC880C18FB001F00179220 /* PBXTargetDependency */,
 			);
 			name = TweetTests;
 			productName = TweetTests;
-			productReference = 9CDC87C818FAC55D00179220 /* TweetTests.xctest */;
+			productReference = 9CDC880618FB001F00179220 /* TweetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9CDC87A518FAC55C00179220 /* Project object */ = {
+		9CDC87E318FB001F00179220 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TLA;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = T.J.;
 				TargetAttributes = {
-					9CDC87C718FAC55D00179220 = {
-						TestTargetID = 9CDC87AC18FAC55C00179220;
+					9CDC880518FB001F00179220 = {
+						TestTargetID = 9CDC87EA18FB001F00179220;
 					};
 				};
 			};
-			buildConfigurationList = 9CDC87A818FAC55C00179220 /* Build configuration list for PBXProject "Tweet" */;
+			buildConfigurationList = 9CDC87E618FB001F00179220 /* Build configuration list for PBXProject "Tweet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9CDC87A418FAC55C00179220;
-			productRefGroup = 9CDC87AE18FAC55C00179220 /* Products */;
+			mainGroup = 9CDC87E218FB001F00179220;
+			productRefGroup = 9CDC87EC18FB001F00179220 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CDC87AC18FAC55C00179220 /* Tweet */,
-				9CDC87C718FAC55D00179220 /* TweetTests */,
+				9CDC87EA18FB001F00179220 /* Tweet */,
+				9CDC880518FB001F00179220 /* TweetTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9CDC87AB18FAC55C00179220 /* Resources */ = {
+		9CDC87E918FB001F00179220 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDC87BB18FAC55D00179220 /* InfoPlist.strings in Resources */,
-				9CDC87C318FAC55D00179220 /* Images.xcassets in Resources */,
+				9CDC87F918FB001F00179220 /* InfoPlist.strings in Resources */,
+				9CDC880118FB001F00179220 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CDC87C618FAC55D00179220 /* Resources */ = {
+		9CDC880418FB001F00179220 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDC87D418FAC55D00179220 /* InfoPlist.strings in Resources */,
+				9CDC881218FB001F00179220 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9CDC87A918FAC55C00179220 /* Sources */ = {
+		9CDC87E718FB001F00179220 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDC87E118FAC57000179220 /* TLATVC.m in Sources */,
-				9CDC87C118FAC55D00179220 /* TLAAppDelegate.m in Sources */,
-				9CDC87BD18FAC55D00179220 /* main.m in Sources */,
+				9C26603418FB0128003917ED /* TLATVC.m in Sources */,
+				9CDC87FF18FB001F00179220 /* TLAAppDelegate.m in Sources */,
+				9CDC87FB18FB001F00179220 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CDC87C418FAC55D00179220 /* Sources */ = {
+		9CDC880218FB001F00179220 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDC87D618FAC55D00179220 /* TweetTests.m in Sources */,
+				9CDC881418FB001F00179220 /* TweetTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9CDC87CE18FAC55D00179220 /* PBXTargetDependency */ = {
+		9CDC880C18FB001F00179220 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9CDC87AC18FAC55C00179220 /* Tweet */;
-			targetProxy = 9CDC87CD18FAC55D00179220 /* PBXContainerItemProxy */;
+			target = 9CDC87EA18FB001F00179220 /* Tweet */;
+			targetProxy = 9CDC880B18FB001F00179220 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9CDC87B918FAC55D00179220 /* InfoPlist.strings */ = {
+		9CDC87F718FB001F00179220 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9CDC87BA18FAC55D00179220 /* en */,
+				9CDC87F818FB001F00179220 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9CDC87D218FAC55D00179220 /* InfoPlist.strings */ = {
+		9CDC881018FB001F00179220 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9CDC87D318FAC55D00179220 /* en */,
+				9CDC881118FB001F00179220 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9CDC87D718FAC55D00179220 /* Debug */ = {
+		9CDC881518FB001F00179220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -327,7 +327,7 @@
 			};
 			name = Debug;
 		};
-		9CDC87D818FAC55D00179220 /* Release */ = {
+		9CDC881618FB001F00179220 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -359,7 +359,7 @@
 			};
 			name = Release;
 		};
-		9CDC87DA18FAC55D00179220 /* Debug */ = {
+		9CDC881818FB001F00179220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -372,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		9CDC87DB18FAC55D00179220 /* Release */ = {
+		9CDC881918FB001F00179220 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -385,7 +385,7 @@
 			};
 			name = Release;
 		};
-		9CDC87DD18FAC55D00179220 /* Debug */ = {
+		9CDC881B18FB001F00179220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tweet.app/Tweet";
@@ -407,7 +407,7 @@
 			};
 			name = Debug;
 		};
-		9CDC87DE18FAC55D00179220 /* Release */ = {
+		9CDC881C18FB001F00179220 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tweet.app/Tweet";
@@ -428,32 +428,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CDC87A818FAC55C00179220 /* Build configuration list for PBXProject "Tweet" */ = {
+		9CDC87E618FB001F00179220 /* Build configuration list for PBXProject "Tweet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CDC87D718FAC55D00179220 /* Debug */,
-				9CDC87D818FAC55D00179220 /* Release */,
+				9CDC881518FB001F00179220 /* Debug */,
+				9CDC881618FB001F00179220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CDC87D918FAC55D00179220 /* Build configuration list for PBXNativeTarget "Tweet" */ = {
+		9CDC881718FB001F00179220 /* Build configuration list for PBXNativeTarget "Tweet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CDC87DA18FAC55D00179220 /* Debug */,
-				9CDC87DB18FAC55D00179220 /* Release */,
+				9CDC881818FB001F00179220 /* Debug */,
+				9CDC881918FB001F00179220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9CDC87DC18FAC55D00179220 /* Build configuration list for PBXNativeTarget "TweetTests" */ = {
+		9CDC881A18FB001F00179220 /* Build configuration list for PBXNativeTarget "TweetTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CDC87DD18FAC55D00179220 /* Debug */,
-				9CDC87DE18FAC55D00179220 /* Release */,
+				9CDC881B18FB001F00179220 /* Debug */,
+				9CDC881C18FB001F00179220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9CDC87A518FAC55C00179220 /* Project object */;
+	rootObject = 9CDC87E318FB001F00179220 /* Project object */;
 }

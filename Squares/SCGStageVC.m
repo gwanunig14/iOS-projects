@@ -48,18 +48,18 @@
 {
     [super viewDidLoad];
     
-    gameSize = 10;
+    gameSize = 15;
     
     float circleWidth = SCREEN_WIDTH / gameSize;
-    float squareWidth = circleWidth / 2;
+    float squareWidth = circleWidth * .75;
     
     // create squares
     for (int sRow = 0; sRow < gameSize - 1; sRow++)
     {
         for (int sCol = 0; sCol < gameSize - 1; sCol++)
         {
-            float squareX = ((circleWidth - squareWidth) * 1.5) + (circleWidth * sCol);
-            float SquareY = ((circleWidth - squareWidth) * 1.5) + (circleWidth * sRow) +((SCREEN_HEIGHT - SCREEN_WIDTH) / 2);
+            float squareX = ((squareWidth) * 0.75) + (circleWidth * sCol);
+            float SquareY = ((squareWidth) * 0.75) + (circleWidth * sRow) +((SCREEN_HEIGHT - SCREEN_WIDTH) / 2);
 
 //            float squareX = ((circleWidth - squareWidth) * 1.5) + (circleWidth * sCol);
 //            float SquareY = ((circleWidth - squareWidth) * 1.5) + (circleWidth * sRow) +((SCREEN_HEIGHT - SCREEN_WIDTH) / 2);
@@ -67,7 +67,7 @@
             SCGSquare * square = [[SCGSquare alloc] initWithFrame:CGRectMake(squareX, SquareY, squareWidth, squareWidth)];
             
             square.backgroundColor = [UIColor lightGrayColor];
-            square.layer.cornerRadius = squareWidth/5;
+            square.layer.cornerRadius = squareWidth/4;
             NSString * key = [NSString stringWithFormat:@"c%dr%d", sCol,sRow];
             allSquares [key] = square;
             

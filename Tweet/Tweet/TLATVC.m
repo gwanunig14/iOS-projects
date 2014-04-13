@@ -21,6 +21,13 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        tweets = @[
+  @{
+                     @"name":@"John",
+                     @"user":@"@36",
+                     @"tweet":@"Hello World"
+                     }
+                 ];
         // Custom initialization
     }
     return self;
@@ -56,7 +63,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [tweets count];
 }
 
 /*

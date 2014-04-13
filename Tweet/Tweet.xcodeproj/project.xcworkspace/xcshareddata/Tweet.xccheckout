@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F6F38A58-561B-4E1F-BB5E-8FEBD1E094D9</string>
+	<string>53AADCE2-34B0-4BFF-9503-567F5C241180</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Tweet</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C2072BBD-B27A-4D47-A91E-3ACDF393E635</key>
+		<key>7F0CA0F1-C677-4351-8C13-648862607C86</key>
 		<string>https://github.com/gwanunig14/iOS-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Tweet/Tweet.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C2072BBD-B27A-4D47-A91E-3ACDF393E635</key>
+		<key>7F0CA0F1-C677-4351-8C13-648862607C86</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C2072BBD-B27A-4D47-A91E-3ACDF393E635</string>
+	<string>7F0CA0F1-C677-4351-8C13-648862607C86</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C2072BBD-B27A-4D47-A91E-3ACDF393E635</string>
+			<string>7F0CA0F1-C677-4351-8C13-648862607C86</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS-Projects</string>
 		</dict>

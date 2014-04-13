@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9CDC87AC18FAC55C00179220"
+               BlueprintIdentifier = "9CDC87EA18FB001F00179220"
                BuildableName = "Tweet.app"
                BlueprintName = "Tweet"
                ReferencedContainer = "container:Tweet.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9CDC87C718FAC55D00179220"
+               BlueprintIdentifier = "9CDC880518FB001F00179220"
                BuildableName = "TweetTests.xctest"
                BlueprintName = "TweetTests"
                ReferencedContainer = "container:Tweet.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9CDC87AC18FAC55C00179220"
+            BlueprintIdentifier = "9CDC87EA18FB001F00179220"
             BuildableName = "Tweet.app"
             BlueprintName = "Tweet"
             ReferencedContainer = "container:Tweet.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9CDC87AC18FAC55C00179220"
+            BlueprintIdentifier = "9CDC87EA18FB001F00179220"
             BuildableName = "Tweet.app"
             BlueprintName = "Tweet"
             ReferencedContainer = "container:Tweet.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9CDC87AC18FAC55C00179220"
+            BlueprintIdentifier = "9CDC87EA18FB001F00179220"
             BuildableName = "Tweet.app"
             BlueprintName = "Tweet"
             ReferencedContainer = "container:Tweet.xcodeproj">
