@@ -48,25 +48,26 @@
 {
     [super viewDidLoad];
     
-    gameSize = 15;
+    gameSize = 8;
     
     float circleWidth = SCREEN_WIDTH / gameSize;
-    float squareWidth = circleWidth * .75;
+    float squareWidth = circleWidth/2;
+    float squareOffset = circleWidth - (squareWidth / 2 );
     
     // create squares
     for (int sRow = 0; sRow < gameSize - 1; sRow++)
     {
         for (int sCol = 0; sCol < gameSize - 1; sCol++)
         {
-            float squareX = ((squareWidth) * 0.75) + (circleWidth * sCol);
-            float SquareY = ((squareWidth) * 0.75) + (circleWidth * sRow) +((SCREEN_HEIGHT - SCREEN_WIDTH) / 2);
+            float squareX = squareOffset + (circleWidth * sCol);
+            float squareY = squareOffset + (circleWidth * sRow) + ((SCREEN_HEIGHT - SCREEN_WIDTH) / 2);
 
 //            float squareX = ((circleWidth - squareWidth) * 1.5) + (circleWidth * sCol);
 //            float SquareY = ((circleWidth - squareWidth) * 1.5) + (circleWidth * sRow) +((SCREEN_HEIGHT - SCREEN_WIDTH) / 2);
             
-            SCGSquare * square = [[SCGSquare alloc] initWithFrame:CGRectMake(squareX, SquareY, squareWidth, squareWidth)];
+            SCGSquare * square = [[SCGSquare alloc] initWithFrame:CGRectMake(squareX, squareY, squareWidth, squareWidth)];
             
-            square.backgroundColor = [UIColor lightGrayColor];
+            square.backgroundColor = [UIColor clearColor];
             square.layer.cornerRadius = squareWidth/4;
             NSString * key = [NSString stringWithFormat:@"c%dr%d", sCol,sRow];
             allSquares [key] = square;
@@ -93,7 +94,6 @@
             
             [self.view addSubview:circle];
         }
-    
     }
 }
 
@@ -103,16 +103,26 @@
     NSString * key = [NSString stringWithFormat:@"c%dr%d", (int)position.x, (int)position.y];
     
     //set player num to value in tappedDots
-    tappedDots [key] = @(playerTurn);
     
-    NSLog(@"%@", tappedDots [key]);
     
-    //check for square
-    [self checkForSquareAroundPosition:position];
-    
-    UIColor * currentColor = playerColors[playerTurn];
-
-    playerTurn = (playerTurn) ? 0 : 1;
+    if ([tappedDots [key] isEqualToValue:@2]) {
+        tappedDots [key] = @(playerTurn);
+        
+        NSLog(@"%@", tappedDots [key]);
+        
+        //check for square
+        [self checkForSquareAroundPosition:position];
+        
+        UIColor * currentColor = playerColors[playerTurn];
+        
+        playerTurn = (playerTurn) ? 0 : 1;
+        
+        return currentColor;
+    }else{
+        tappedDots [key] = @2;
+        playerTurn = (playerTurn) ? 0 : 1;
+        return [UIColor colorWithWhite:0.5 alpha:1.0];
+    }
     
 //    if ([tappedDots [key] isEqualToValue:@2])
 //    {
@@ -122,7 +132,7 @@
 //        return [UIColor colorWithWhite:0.5 alpha:1.0];
 //    }
 
-    return currentColor;
+    
 }
 
 -(void)checkForSquareAroundPosition:(CGPoint)position
@@ -161,7 +171,7 @@
             BOOL leftDotsSame = ([tappedDots[topLeftDot] isEqualToValue:tappedDots[bottomLeftDot]]);
             SCGSquare * currentSquare = allSquares [topLeftDot];
             
-            if (currentSquare.backgroundColor != [UIColor lightGrayColor])
+            if (currentSquare.backgroundColor != [UIColor clearColor])
             {
                 return;
             } 
@@ -193,7 +203,7 @@
             BOOL leftDotsSame = ([tappedDots[topLeftDot] isEqualToValue:tappedDots[bottomLeftDot]]);
             SCGSquare * currentSquare = allSquares [topLeftDot];
             
-            if (currentSquare.backgroundColor != [UIColor lightGrayColor])
+            if (currentSquare.backgroundColor != [UIColor clearColor])
             {
                 return;
             }
@@ -226,7 +236,7 @@
             
             SCGSquare * currentSquare = allSquares [topLeftDot];
             
-            if (currentSquare.backgroundColor != [UIColor lightGrayColor])
+            if (currentSquare.backgroundColor != [UIColor clearColor])
             {
                 return;
             }
@@ -259,7 +269,7 @@
             
             SCGSquare * currentSquare = allSquares [topLeftDot];
             
-            if (currentSquare.backgroundColor != [UIColor lightGrayColor])
+            if (currentSquare.backgroundColor != [UIColor clearColor])
             {
                 return;
             }
