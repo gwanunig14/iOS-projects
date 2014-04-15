@@ -27,7 +27,7 @@
                        @"id_str": @"454825180305817600",
                        @"text": @"@foxjon123 What an awesome #FirstTweet ! So excited that you are doing things outside of what is being taught @TheIronYard #YouRock",
                        @"source": @"<a href=\"http://itunes.apple.com/us/app/twitter/id409789998?mt=12\" rel=\"nofollow\">Twitter for Mac</a>",
-                       @"truncated": @false,
+                       @"truncated": @NO,
                        @"in_reply_to_status_id": @454805152306696200,
                        @"in_reply_to_status_id_str": @"454805152306696193",
                        @"in_reply_to_user_id": @2435447227,
@@ -59,7 +59,7 @@
                                    @"urls":  @[]
                                }
                            },
-                           @"protected": @false,
+                           @"protected": @NO,
                            @"followers_count": @207,
                            @"friends_count": @313,
                            @"listed_count": @12,
@@ -67,17 +67,17 @@
                            @"favourites_count": @26,
                            @"utc_offset": @-14400,
                            @"time_zone": @"Eastern Time (US & Canada)",
-                           @"geo_enabled": @true,
-                           @"verified": @false,
+                           @"geo_enabled": @YES,
+                           @"verified": @NO,
                            @"statuses_count": @201,
                            @"lang": @"en",
-                           @"contributors_enabled": @false,
-                           @"is_translator": @false,
-                           @"is_translation_enabled": @false,
+                           @"contributors_enabled": @NO,
+                           @"is_translator": @NO,
+                           @"is_translation_enabled": @NO,
                            @"profile_background_color": @"FFFFFF",
                            @"profile_background_image_url": @"http://pbs.twimg.com/profile_background_images/267632372/logo.jpg",
                            @"profile_background_image_url_https": @"https://pbs.twimg.com/profile_background_images/267632372/logo.jpg",
-                           @"profile_background_tile": @false,
+                           @"profile_background_tile": @NO,
                            @"profile_image_url": @"http://pbs.twimg.com/profile_images/420687815211364352/wF9mtzLq_normal.jpeg",
                            @"profile_image_url_https": @"https://pbs.twimg.com/profile_images/420687815211364352/wF9mtzLq_normal.jpeg",
                            @"profile_banner_url": @"https://pbs.twimg.com/profile_banners/18487945/1391875911",
@@ -85,12 +85,12 @@
                            @"profile_sidebar_border_color": @"FFFFFF",
                            @"profile_sidebar_fill_color": @"F7F7F7",
                            @"profile_text_color": @"424242",
-                           @"profile_use_background_image": @true,
-                           @"default_profile": @false,
-                           @"default_profile_image": @false,
-                           @"following": @false,
-                           @"follow_request_sent": @false,
-                           @"notifications": @false
+                           @"profile_use_background_image": @YES,
+                           @"default_profile": @NO,
+                           @"default_profile_image": @NO,
+                           @"following": @NO,
+                           @"follow_request_sent": @NO,
+                           @"notifications": @NO
                        }
                   }];
     }
@@ -120,7 +120,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     NSLog(@"%d", [tweets count]);
     return [tweets count];

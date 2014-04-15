@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C27B53C18F8260F001F293B /* Squares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squares.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C27B53C18F8260F001F293B /* ▢s & ◯s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "▢s & ◯s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27B53F18F8260F001F293B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C27B54118F8260F001F293B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9C27B54318F8260F001F293B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -98,7 +98,7 @@
 		9C27B53D18F8260F001F293B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C27B53C18F8260F001F293B /* Squares.app */,
+				9C27B53C18F8260F001F293B /* ▢s & ◯s.app */,
 				9C27B55718F8260F001F293B /* SquaresTests.xctest */,
 			);
 			name = Products;
@@ -200,7 +200,7 @@
 			);
 			name = "▢s & ◯s";
 			productName = Squares;
-			productReference = 9C27B53C18F8260F001F293B /* Squares.app */;
+			productReference = 9C27B53C18F8260F001F293B /* ▢s & ◯s.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9C27B55618F8260F001F293B /* SquaresTests */ = {
@@ -484,6 +484,7 @@
 				9C27B56A18F8260F001F293B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C27B56B18F8260F001F293B /* Build configuration list for PBXNativeTarget "SquaresTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				9C27B56D18F8260F001F293B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

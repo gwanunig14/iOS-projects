@@ -11,6 +11,7 @@
 @implementation SCGCircle
 {
     UIColor * dotColor;
+    float dotWidth;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -20,7 +21,9 @@
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
         
-        dotColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+        dotColor = [UIColor blackColor];
+        
+        dotWidth = frame.size.width/2;
     }
     return self;
 }
@@ -32,9 +35,9 @@
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    float dotXY = (self.frame.size.width - 20) / 2;
+    float dotXY = (self.frame.size.width - dotWidth) / 2;
     
-    CGContextAddEllipseInRect(context, CGRectMake(dotXY, dotXY, (self.frame.size.width)/2, (self.frame.size.width)/2));
+    CGContextAddEllipseInRect(context, CGRectMake(dotXY, dotXY, dotWidth, dotWidth));
     
     [dotColor set];
     
