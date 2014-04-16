@@ -20,7 +20,8 @@
 		9C06AFF018FD67070030F874 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C06AFEE18FD67070030F874 /* InfoPlist.strings */; };
 		9C06AFF218FD67070030F874 /* DrawLinesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C06AFF118FD67070030F874 /* DrawLinesTests.m */; };
 		9C06AFFD18FD67600030F874 /* DLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C06AFFC18FD67600030F874 /* DLAViewController.m */; };
-		9C06B00018FD69920030F874 /* DLAStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C06AFFF18FD69920030F874 /* DLAStage.m */; };
+		9C06B00018FD69920030F874 /* DLAStageLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C06AFFF18FD69920030F874 /* DLAStageLines.m */; };
+		9CA88A5618FD7D9600984C16 /* DLAStageScribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA88A5518FD7D9600984C16 /* DLAStageScribble.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,10 @@
 		9C06AFF118FD67070030F874 /* DrawLinesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLinesTests.m; sourceTree = "<group>"; };
 		9C06AFFB18FD67600030F874 /* DLAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLAViewController.h; path = DrawLines/DLAViewController.h; sourceTree = "<group>"; };
 		9C06AFFC18FD67600030F874 /* DLAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLAViewController.m; path = DrawLines/DLAViewController.m; sourceTree = "<group>"; };
-		9C06AFFE18FD69920030F874 /* DLAStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAStage.h; sourceTree = "<group>"; };
-		9C06AFFF18FD69920030F874 /* DLAStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAStage.m; sourceTree = "<group>"; };
+		9C06AFFE18FD69920030F874 /* DLAStageLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAStageLines.h; sourceTree = "<group>"; };
+		9C06AFFF18FD69920030F874 /* DLAStageLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAStageLines.m; sourceTree = "<group>"; };
+		9CA88A5418FD7D9600984C16 /* DLAStageScribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAStageScribble.h; sourceTree = "<group>"; };
+		9CA88A5518FD7D9600984C16 /* DLAStageScribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAStageScribble.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +88,10 @@
 			children = (
 				9C06AFFB18FD67600030F874 /* DLAViewController.h */,
 				9C06AFFC18FD67600030F874 /* DLAViewController.m */,
-				9C06AFFE18FD69920030F874 /* DLAStage.h */,
-				9C06AFFF18FD69920030F874 /* DLAStage.m */,
+				9CA88A5418FD7D9600984C16 /* DLAStageScribble.h */,
+				9CA88A5518FD7D9600984C16 /* DLAStageScribble.m */,
+				9C06AFFE18FD69920030F874 /* DLAStageLines.h */,
+				9C06AFFF18FD69920030F874 /* DLAStageLines.m */,
 				9C06AFD218FD67070030F874 /* DrawLines */,
 				9C06AFEB18FD67070030F874 /* DrawLinesTests */,
 				9C06AFCB18FD67070030F874 /* Frameworks */,
@@ -251,8 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C06AFDD18FD67070030F874 /* DLAAppDelegate.m in Sources */,
+				9CA88A5618FD7D9600984C16 /* DLAStageScribble.m in Sources */,
 				9C06AFD918FD67070030F874 /* main.m in Sources */,
-				9C06B00018FD69920030F874 /* DLAStage.m in Sources */,
+				9C06B00018FD69920030F874 /* DLAStageLines.m in Sources */,
 				9C06AFFD18FD67600030F874 /* DLAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +456,7 @@
 				9C06AFF718FD67070030F874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C06AFF818FD67070030F874 /* Build configuration list for PBXNativeTarget "DrawLinesTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +465,7 @@
 				9C06AFFA18FD67070030F874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
