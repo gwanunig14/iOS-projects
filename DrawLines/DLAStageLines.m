@@ -41,8 +41,8 @@
     {
         
         //creates start and end as the two touched points.
-        CGPoint start = [line[0] CGPointValue];
-        CGPoint end = [line[1] CGPointValue];
+        CGPoint start = [line[@"points"][0] CGPointValue];
+        CGPoint end = [line[@"points"][1] CGPointValue];
     
         //adds the two points for the line to the dictionary.
         CGContextMoveToPoint(context, start.x, start.y);
