@@ -17,13 +17,10 @@
 @implementation DLAViewController
 {
     DLAStageScribble *scribbleBoard;
-//    DLAStageLines *lineBoard;
     UIView * colorsDrawer;
-
-//    UIButton * blue;
-//    UIButton * red;
-//    UIButton * yellow;
     UISlider * size;
+    float lineWidth;
+    UIColor * lineColor;
 }
 
 
@@ -33,7 +30,7 @@
     if (self)
     {
         self.view.backgroundColor = [UIColor blackColor];
-        
+
     }
     return self;
 }
@@ -42,8 +39,12 @@
 {
     [super viewDidLoad];
     
-    scribbleBoard = [[DLAStageLines alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:scribbleBoard];
+    lineColor = [UIColor purpleColor];
+    lineWidth = 5.0;
+    
+//    scribbleBoard = [[DLAStageLines alloc]initWithFrame:self.view.frame];
+    [self toggleStage];
+//    [self.view addSubview:scribbleBoard];
     
     colorsDrawer = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
     [self.view addSubview:colorsDrawer];
@@ -67,21 +68,72 @@
         [colorsDrawer addSubview:button];
     }
     
-    size = [[UISlider alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 60, 280, 40)];
+    size = [[UISlider alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 60, 280, 23)];
     size.minimumValue = 1.0;
     size.maximumValue = 20.0;
+    size.value = lineWidth;
     [size addTarget:self action:@selector(changeSize:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:size];
+    
+    UISwitch * toggleButton = [[UISwitch alloc]initWithFrame:CGRectMake(10, 60, 25, 25)];
+    toggleButton.layer.cornerRadius = 12.5;
+    toggleButton.backgroundColor = [UIColor clearColor];
+    [toggleButton addTarget:self action:@selector(toggleStage) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:toggleButton];
+    
+    UIButton * undoButton = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH * 0.8)-45, 60, 40, 40)];
+    undoButton.layer.cornerRadius = 20;
+    undoButton.backgroundColor = [UIColor yellowColor];
+    [undoButton addTarget:self action:@selector(undoStage) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:undoButton];
+    
+    UIButton * clearButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH -45, 60, 40, 40)];
+    clearButton.layer.cornerRadius = 20;
+    clearButton.backgroundColor = [UIColor redColor];
+    [clearButton addTarget:self action:@selector(clearStage) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:clearButton];
+    
+}
+
+-(void)undoStage
+{
+    [scribbleBoard undoStage];
+}
+
+-(void)clearStage
+{
+    [scribbleBoard clearStage];
+}
+
+-(void)toggleStage
+{
+    NSMutableArray * lines = scribbleBoard.lines;
+    
+    
+    [scribbleBoard removeFromSuperview];
+    if ([scribbleBoard isMemberOfClass:[DLAStageScribble class]])
+    {
+        scribbleBoard = [[DLAStageLines alloc] initWithFrame:self.view.frame];
+    } else {
+        scribbleBoard = [[DLAStageScribble alloc] initWithFrame:self.view.frame];
+    }
+    
+    scribbleBoard.scribbleSize = lineWidth;
+    scribbleBoard.scribbleColor = lineColor;
+    
+    if (lines != nil) scribbleBoard.lines = lines;
+    
+    [self.view insertSubview:scribbleBoard atIndex:0];
 }
 
 - (void)changeSize:(UISlider *)sender;
 {
-    [scribbleBoard setScribbleSize:sender.value];
+    scribbleBoard.scribbleSize = lineWidth = sender.value;
 }
 
 -(void)changeColor:(UIButton*)sender
 {
-    scribbleBoard.scribbleColor = sender.backgroundColor;
+    scribbleBoard.scribbleColor = lineColor = sender.backgroundColor;
 }
 
 - (void)didReceiveMemoryWarning

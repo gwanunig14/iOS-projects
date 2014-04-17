@@ -9,22 +9,31 @@
 #import "DLAStageScribble.h"
 
 @implementation DLAStageScribble
-{
-    NSMutableArray * scribbles;
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
     {
-        scribbles = [@[] mutableCopy];
+        self.lines = [@[] mutableCopy];
         self.scribbleSize = 2.0;
-        self.scribbleColor = [UIColor whiteColor];
-        self.backgroundColor = [UIColor blackColor];
+        self.scribbleColor = [UIColor purpleColor];
+        self.backgroundColor = [UIColor clearColor];
     }
 
     return self;
+}
+
+-(void)clearStage
+{
+    [self.lines removeAllObjects];
+    [self setNeedsDisplay];
+}
+
+-(void)undoStage
+{
+    [self.lines removeLastObject];
+    [self setNeedsDisplay];
 }
 
 //uislider that changes line width
@@ -38,16 +47,17 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetLineCap(context, kCGLineCapRound);
-    CGContextClearRect(context, rect);
+    CGContextSetLineJoin(context, kCGLineJoinRound);
+//    CGContextClearRect(context, rect);
     
     CGContextSetLineWidth(context, self.scribbleSize);
     [self.scribbleColor set];
     
-    for (NSDictionary * scribble in scribbles)
+    for (NSDictionary * line in self.lines)
     {
-        CGContextSetLineWidth(context, [scribble[@"width"] floatValue]);
-        [(UIColor *)scribble[@"color"] set];
-        NSArray * points = scribble[@"points"];
+        CGContextSetLineWidth(context, [line[@"width"] floatValue]);
+        [(UIColor *)line[@"color"] set];
+        NSArray * points = line[@"points"];
         
         CGPoint start = [points [0] CGPointValue];
         CGContextMoveToPoint(context, start.x, start.y);
@@ -84,7 +94,7 @@
     {
         CGPoint location =  [touch locationInView:self];
         
-        [scribbles addObject:[@{
+        [self.lines addObject:[@{
                                 @"color":self.scribbleColor,
                                 @"width":@(self.scribbleSize),
                                 //array within an array keeps up with the changes to the points.
@@ -97,23 +107,20 @@
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    for (UITouch * touch in touches)
-    {
-        CGPoint location =  [touch locationInView:self];
-//        add a new point for every logged point when you move your finger
-//        [[scribbles lastObject] addObject:[NSValue valueWithCGPoint:location]];
-        [[scribbles lastObject][@"points"] addObject:[NSValue valueWithCGPoint:location]];
-    }
-    [self setNeedsDisplay];
+    [self doTouch:touches];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    for (UITouch * touch in touches)
-    {
-        CGPoint location =  [touch locationInView:self];
-        [[scribbles lastObject][@"points"]addObject:[NSValue valueWithCGPoint:location]];
-    }
+    [self doTouch:touches];
+}
+
+-(void)doTouch:(NSSet *)touches
+{
+    UITouch * touch = [touches allObjects][0];
+    CGPoint location = [touch locationInView:self];
+    [[self.lines lastObject][@"points"] addObject:[NSValue valueWithCGPoint:location]];
+    NSLog(@"Touch X %f Y %f", location.x, location.y);
     [self setNeedsDisplay];
 }
 
