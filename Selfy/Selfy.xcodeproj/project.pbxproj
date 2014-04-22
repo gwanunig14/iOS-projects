@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CA709A8190588550024E474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA709A7190588550024E474 /* Foundation.framework */; };
+		9CA709AA190588550024E474 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA709A9190588550024E474 /* CoreGraphics.framework */; };
+		9CA709AC190588550024E474 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA709AB190588550024E474 /* UIKit.framework */; };
+		9CA709B2190588550024E474 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709B0190588550024E474 /* InfoPlist.strings */; };
+		9CA709B4190588550024E474 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA709B3190588550024E474 /* main.m */; };
+		9CA709B8190588550024E474 /* SLFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA709B7190588550024E474 /* SLFAppDelegate.m */; };
+		9CA709BA190588550024E474 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709B9190588550024E474 /* Images.xcassets */; };
+		9CA709C1190588550024E474 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA709C0190588550024E474 /* XCTest.framework */; };
+		9CA709C2190588550024E474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA709A7190588550024E474 /* Foundation.framework */; };
+		9CA709C3190588550024E474 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA709AB190588550024E474 /* UIKit.framework */; };
+		9CA709CB190588550024E474 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709C9190588550024E474 /* InfoPlist.strings */; };
+		9CA709CD190588550024E474 /* SelfyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA709CC190588550024E474 /* SelfyTests.m */; };
+		9CA709D8190588BC0024E474 /* SLFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA709D7190588BC0024E474 /* SLFTableViewController.m */; };
+		9CA709EA19058FA20024E474 /* Ashby.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709DA19058FA20024E474 /* Ashby.png */; };
+		9CA709EB19058FA20024E474 /* Austen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709DB19058FA20024E474 /* Austen.png */; };
+		9CA709EC19058FA20024E474 /* Austin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709DC19058FA20024E474 /* Austin.png */; };
+		9CA709ED19058FA20024E474 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709DD19058FA20024E474 /* default.png */; };
+		9CA709EE19058FA20024E474 /* Derek.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709DE19058FA20024E474 /* Derek.png */; };
+		9CA709EF19058FA20024E474 /* Ed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709DF19058FA20024E474 /* Ed.png */; };
+		9CA709F019058FA20024E474 /* Heidi.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E019058FA20024E474 /* Heidi.png */; };
+		9CA709F119058FA20024E474 /* Jeff.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E119058FA20024E474 /* Jeff.png */; };
+		9CA709F219058FA20024E474 /* Jeffery.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E219058FA20024E474 /* Jeffery.png */; };
+		9CA709F319058FA20024E474 /* Jisha.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E319058FA20024E474 /* Jisha.png */; };
+		9CA709F419058FA20024E474 /* Jo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E419058FA20024E474 /* Jo.png */; };
+		9CA709F519058FA20024E474 /* John.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E519058FA20024E474 /* John.png */; };
+		9CA709F619058FA20024E474 /* Jon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E619058FA20024E474 /* Jon.png */; };
+		9CA709F719058FA20024E474 /* Lucas Briggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E719058FA20024E474 /* Lucas Briggs.jpg */; };
+		9CA709F819058FA20024E474 /* Me.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E819058FA20024E474 /* Me.png */; };
+		9CA709F919058FA20024E474 /* Savitha.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709E919058FA20024E474 /* Savitha.png */; };
+		9CA709FB1905907D0024E474 /* sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA709FA1905907C0024E474 /* sunset.png */; };
+		9CA709FE19059DA20024E474 /* SLFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA709FD19059DA20024E474 /* SLFTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CA709C4190588550024E474 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CA7099C190588550024E474 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CA709A3190588550024E474;
+			remoteInfo = Selfy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9CA709A4190588550024E474 /* Selfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA709A7190588550024E474 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9CA709A9190588550024E474 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9CA709AB190588550024E474 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9CA709AF190588550024E474 /* Selfy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Selfy-Info.plist"; sourceTree = "<group>"; };
+		9CA709B1190588550024E474 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9CA709B3190588550024E474 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CA709B5190588550024E474 /* Selfy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Selfy-Prefix.pch"; sourceTree = "<group>"; };
+		9CA709B6190588550024E474 /* SLFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFAppDelegate.h; sourceTree = "<group>"; };
+		9CA709B7190588550024E474 /* SLFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLFAppDelegate.m; sourceTree = "<group>"; };
+		9CA709B9190588550024E474 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9CA709BF190588550024E474 /* SelfyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA709C0190588550024E474 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9CA709C8190588550024E474 /* SelfyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfyTests-Info.plist"; sourceTree = "<group>"; };
+		9CA709CA190588550024E474 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9CA709CC190588550024E474 /* SelfyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfyTests.m; sourceTree = "<group>"; };
+		9CA709D6190588BC0024E474 /* SLFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFTableViewController.h; path = Selfy/SLFTableViewController.h; sourceTree = "<group>"; };
+		9CA709D7190588BC0024E474 /* SLFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLFTableViewController.m; path = Selfy/SLFTableViewController.m; sourceTree = "<group>"; };
+		9CA709DA19058FA20024E474 /* Ashby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ashby.png; sourceTree = "<group>"; };
+		9CA709DB19058FA20024E474 /* Austen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Austen.png; sourceTree = "<group>"; };
+		9CA709DC19058FA20024E474 /* Austin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Austin.png; sourceTree = "<group>"; };
+		9CA709DD19058FA20024E474 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		9CA709DE19058FA20024E474 /* Derek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Derek.png; sourceTree = "<group>"; };
+		9CA709DF19058FA20024E474 /* Ed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ed.png; sourceTree = "<group>"; };
+		9CA709E019058FA20024E474 /* Heidi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Heidi.png; sourceTree = "<group>"; };
+		9CA709E119058FA20024E474 /* Jeff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jeff.png; sourceTree = "<group>"; };
+		9CA709E219058FA20024E474 /* Jeffery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jeffery.png; sourceTree = "<group>"; };
+		9CA709E319058FA20024E474 /* Jisha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jisha.png; sourceTree = "<group>"; };
+		9CA709E419058FA20024E474 /* Jo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jo.png; sourceTree = "<group>"; };
+		9CA709E519058FA20024E474 /* John.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = John.png; sourceTree = "<group>"; };
+		9CA709E619058FA20024E474 /* Jon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jon.png; sourceTree = "<group>"; };
+		9CA709E719058FA20024E474 /* Lucas Briggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lucas Briggs.jpg"; sourceTree = "<group>"; };
+		9CA709E819058FA20024E474 /* Me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Me.png; sourceTree = "<group>"; };
+		9CA709E919058FA20024E474 /* Savitha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Savitha.png; sourceTree = "<group>"; };
+		9CA709FA1905907C0024E474 /* sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunset.png; sourceTree = "<group>"; };
+		9CA709FC19059DA20024E474 /* SLFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFTableViewCell.h; sourceTree = "<group>"; };
+		9CA709FD19059DA20024E474 /* SLFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CA709A1190588550024E474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA709AA190588550024E474 /* CoreGraphics.framework in Frameworks */,
+				9CA709AC190588550024E474 /* UIKit.framework in Frameworks */,
+				9CA709A8190588550024E474 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA709BC190588550024E474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA709C1190588550024E474 /* XCTest.framework in Frameworks */,
+				9CA709C3190588550024E474 /* UIKit.framework in Frameworks */,
+				9CA709C2190588550024E474 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9CA7099B190588550024E474 = {
+			isa = PBXGroup;
+			children = (
+				9CA709FC19059DA20024E474 /* SLFTableViewCell.h */,
+				9CA709FD19059DA20024E474 /* SLFTableViewCell.m */,
+				9CA709D6190588BC0024E474 /* SLFTableViewController.h */,
+				9CA709D7190588BC0024E474 /* SLFTableViewController.m */,
+				9CA709AD190588550024E474 /* Selfy */,
+				9CA709C6190588550024E474 /* SelfyTests */,
+				9CA709A6190588550024E474 /* Frameworks */,
+				9CA709A5190588550024E474 /* Products */,
+				9CA709D919058F610024E474 /* Pictures */,
+			);
+			sourceTree = "<group>";
+		};
+		9CA709A5190588550024E474 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709A4190588550024E474 /* Selfy.app */,
+				9CA709BF190588550024E474 /* SelfyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CA709A6190588550024E474 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709A7190588550024E474 /* Foundation.framework */,
+				9CA709A9190588550024E474 /* CoreGraphics.framework */,
+				9CA709AB190588550024E474 /* UIKit.framework */,
+				9CA709C0190588550024E474 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CA709AD190588550024E474 /* Selfy */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709B6190588550024E474 /* SLFAppDelegate.h */,
+				9CA709B7190588550024E474 /* SLFAppDelegate.m */,
+				9CA709B9190588550024E474 /* Images.xcassets */,
+				9CA709AE190588550024E474 /* Supporting Files */,
+			);
+			path = Selfy;
+			sourceTree = "<group>";
+		};
+		9CA709AE190588550024E474 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709AF190588550024E474 /* Selfy-Info.plist */,
+				9CA709B0190588550024E474 /* InfoPlist.strings */,
+				9CA709B3190588550024E474 /* main.m */,
+				9CA709B5190588550024E474 /* Selfy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CA709C6190588550024E474 /* SelfyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709CC190588550024E474 /* SelfyTests.m */,
+				9CA709C7190588550024E474 /* Supporting Files */,
+			);
+			path = SelfyTests;
+			sourceTree = "<group>";
+		};
+		9CA709C7190588550024E474 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709C8190588550024E474 /* SelfyTests-Info.plist */,
+				9CA709C9190588550024E474 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CA709D919058F610024E474 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				9CA709DA19058FA20024E474 /* Ashby.png */,
+				9CA709DB19058FA20024E474 /* Austen.png */,
+				9CA709DC19058FA20024E474 /* Austin.png */,
+				9CA709DD19058FA20024E474 /* default.png */,
+				9CA709DE19058FA20024E474 /* Derek.png */,
+				9CA709DF19058FA20024E474 /* Ed.png */,
+				9CA709E019058FA20024E474 /* Heidi.png */,
+				9CA709E119058FA20024E474 /* Jeff.png */,
+				9CA709E219058FA20024E474 /* Jeffery.png */,
+				9CA709E319058FA20024E474 /* Jisha.png */,
+				9CA709E419058FA20024E474 /* Jo.png */,
+				9CA709E519058FA20024E474 /* John.png */,
+				9CA709E619058FA20024E474 /* Jon.png */,
+				9CA709E719058FA20024E474 /* Lucas Briggs.jpg */,
+				9CA709E819058FA20024E474 /* Me.png */,
+				9CA709E919058FA20024E474 /* Savitha.png */,
+				9CA709FA1905907C0024E474 /* sunset.png */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CA709A3190588550024E474 /* Selfy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CA709D0190588550024E474 /* Build configuration list for PBXNativeTarget "Selfy" */;
+			buildPhases = (
+				9CA709A0190588550024E474 /* Sources */,
+				9CA709A1190588550024E474 /* Frameworks */,
+				9CA709A2190588550024E474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Selfy;
+			productName = Selfy;
+			productReference = 9CA709A4190588550024E474 /* Selfy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CA709BE190588550024E474 /* SelfyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CA709D3190588550024E474 /* Build configuration list for PBXNativeTarget "SelfyTests" */;
+			buildPhases = (
+				9CA709BB190588550024E474 /* Sources */,
+				9CA709BC190588550024E474 /* Frameworks */,
+				9CA709BD190588550024E474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CA709C5190588550024E474 /* PBXTargetDependency */,
+			);
+			name = SelfyTests;
+			productName = SelfyTests;
+			productReference = 9CA709BF190588550024E474 /* SelfyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CA7099C190588550024E474 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SLF;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = T.J.;
+				TargetAttributes = {
+					9CA709BE190588550024E474 = {
+						TestTargetID = 9CA709A3190588550024E474;
+					};
+				};
+			};
+			buildConfigurationList = 9CA7099F190588550024E474 /* Build configuration list for PBXProject "Selfy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9CA7099B190588550024E474;
+			productRefGroup = 9CA709A5190588550024E474 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CA709A3190588550024E474 /* Selfy */,
+				9CA709BE190588550024E474 /* SelfyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CA709A2190588550024E474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA709F419058FA20024E474 /* Jo.png in Resources */,
+				9CA709FB1905907D0024E474 /* sunset.png in Resources */,
+				9CA709EC19058FA20024E474 /* Austin.png in Resources */,
+				9CA709EE19058FA20024E474 /* Derek.png in Resources */,
+				9CA709F619058FA20024E474 /* Jon.png in Resources */,
+				9CA709F219058FA20024E474 /* Jeffery.png in Resources */,
+				9CA709F719058FA20024E474 /* Lucas Briggs.jpg in Resources */,
+				9CA709F519058FA20024E474 /* John.png in Resources */,
+				9CA709F119058FA20024E474 /* Jeff.png in Resources */,
+				9CA709F919058FA20024E474 /* Savitha.png in Resources */,
+				9CA709F819058FA20024E474 /* Me.png in Resources */,
+				9CA709EF19058FA20024E474 /* Ed.png in Resources */,
+				9CA709B2190588550024E474 /* InfoPlist.strings in Resources */,
+				9CA709EB19058FA20024E474 /* Austen.png in Resources */,
+				9CA709F319058FA20024E474 /* Jisha.png in Resources */,
+				9CA709BA190588550024E474 /* Images.xcassets in Resources */,
+				9CA709F019058FA20024E474 /* Heidi.png in Resources */,
+				9CA709EA19058FA20024E474 /* Ashby.png in Resources */,
+				9CA709ED19058FA20024E474 /* default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA709BD190588550024E474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA709CB190588550024E474 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CA709A0190588550024E474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA709B8190588550024E474 /* SLFAppDelegate.m in Sources */,
+				9CA709FE19059DA20024E474 /* SLFTableViewCell.m in Sources */,
+				9CA709B4190588550024E474 /* main.m in Sources */,
+				9CA709D8190588BC0024E474 /* SLFTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA709BB190588550024E474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA709CD190588550024E474 /* SelfyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CA709C5190588550024E474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CA709A3190588550024E474 /* Selfy */;
+			targetProxy = 9CA709C4190588550024E474 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CA709B0190588550024E474 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CA709B1190588550024E474 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9CA709C9190588550024E474 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CA709CA190588550024E474 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CA709CE190588550024E474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9CA709CF190588550024E474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CA709D1190588550024E474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				INFOPLIST_FILE = "Selfy/Selfy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9CA709D2190588550024E474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				INFOPLIST_FILE = "Selfy/Selfy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9CA709D4190588550024E474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Selfy.app/Selfy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SelfyTests/SelfyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9CA709D5190588550024E474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Selfy.app/Selfy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				INFOPLIST_FILE = "SelfyTests/SelfyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CA7099F190588550024E474 /* Build configuration list for PBXProject "Selfy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CA709CE190588550024E474 /* Debug */,
+				9CA709CF190588550024E474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CA709D0190588550024E474 /* Build configuration list for PBXNativeTarget "Selfy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CA709D1190588550024E474 /* Debug */,
+				9CA709D2190588550024E474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9CA709D3190588550024E474 /* Build configuration list for PBXNativeTarget "SelfyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CA709D4190588550024E474 /* Debug */,
+				9CA709D5190588550024E474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CA7099C190588550024E474 /* Project object */;
+}

@@ -77,9 +77,38 @@
     
     [self createBricks];
     
-    [self createBall];
-    
     [self.delegate lifeCount:(int)lives];
+    
+    
+    
+    
+    self.ballsDynamicProperties = [self createPropertiesForItems:self.balls];
+    self.ballsDynamicProperties.elasticity = 1.01;
+    self.ballsDynamicProperties.resistance = 0.0;
+    
+    self.collider = [[UICollisionBehavior alloc] initWithItems:[self allItems]];
+    self.collider.collisionDelegate = self;
+    self.collider.collisionMode = UICollisionBehaviorModeEverything;
+    
+    self.bricksDynamicProperties = [self createPropertiesForItems:self.bricks];
+    self.paddleDynamicProperties = [self createPropertiesForItems:@[self.paddle]];
+    
+    //    self.ballsDynamicProperties.allowsRotation = YES;
+    self.ballsDynamicProperties = [self createPropertiesForItems:self.balls];
+    self.ballsDynamicProperties.elasticity = 1.01;
+    self.ballsDynamicProperties.resistance = 0.0;
+    
+    self.bricksDynamicProperties.allowsRotation = YES;
+    self.bricksDynamicProperties.density = 5;
+    self.bricksDynamicProperties.resistance = 0;
+    self.bricksDynamicProperties.elasticity = 1.1;
+    
+    self.paddleDynamicProperties.density = 500000;
+    self.paddleDynamicProperties.elasticity = 1.1;
+    
+    
+    
+    [self createBall];
     
 //    self.collider.translatesReferenceBoundsIntoBoundary = YES;
     
@@ -187,7 +216,7 @@
 {
     NSMutableArray * items = [@[self.paddle] mutableCopy];
     
-    for (UIView * item in self.balls) [items addObject:item];
+//    for (UIView * item in self.balls) [items addObject:item];
     for (UIView * item in self.bricks) [items addObject:item];
 //    NSLog(@"%@", items);
     
@@ -242,30 +271,9 @@
 
     //add balls to ball array
     [self.balls addObject:ball];
-
-    self.ballsDynamicProperties = [self createPropertiesForItems:self.balls];
-    self.ballsDynamicProperties.elasticity = 1.01;
-    self.ballsDynamicProperties.resistance = 0.0;
-    
-    self.collider = [[UICollisionBehavior alloc] initWithItems:[self allItems]];
-    self.collider.collisionDelegate = self;
-    self.collider.collisionMode = UICollisionBehaviorModeEverything;
-    
-    self.bricksDynamicProperties = [self createPropertiesForItems:self.bricks];
-    self.paddleDynamicProperties = [self createPropertiesForItems:@[self.paddle]];
-    
-    //    self.ballsDynamicProperties.allowsRotation = YES;
-    self.ballsDynamicProperties = [self createPropertiesForItems:self.balls];
-    self.ballsDynamicProperties.elasticity = 1.01;
-    self.ballsDynamicProperties.resistance = 0.0;
-    
-    self.bricksDynamicProperties.allowsRotation = YES;
-    self.bricksDynamicProperties.density = 5;
-    self.bricksDynamicProperties.resistance = 0;
-    self.bricksDynamicProperties.elasticity = 1.1;
-    
-    self.paddleDynamicProperties.density = 500000;
-    self.paddleDynamicProperties.elasticity = 1.1;
+        
+        [self.collider addItem:ball];
+        [self.ballsDynamicProperties addItem:ball];
     
     int w = self.view.frame.size.width;
     int h = self.view.frame.size.width;

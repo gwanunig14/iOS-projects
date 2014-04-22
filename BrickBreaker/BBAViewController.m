@@ -46,8 +46,8 @@
         [startButton addTarget:self action:@selector(startGame) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:startButton];
         
-        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-        topScore = [[userDefaults objectForKey:@"topScore"] intValue];
+//        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+//        topScore = [[userDefaults objectForKey:@"topScore"] intValue];
         
         header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
         header.backgroundColor = [UIColor blackColor];
@@ -90,9 +90,9 @@
 -(void)updatePoints:(int)points
 {
     
-    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@(topScore) forKey:@"topScore"];
-    [userDefaults synchronize];
+//    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+//    [userDefaults setObject:@(topScore) forKey:@"topScore"];
+//    [userDefaults synchronize];
 }
 
 -(void)gameDone
