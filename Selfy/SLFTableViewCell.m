@@ -20,14 +20,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        personalPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, SCREEN_WIDTH-10, 100)];
+        personalPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 280, 280)];
+        personalPhoto.backgroundColor = [UIColor lightGrayColor];
         [personalPhoto setContentMode:UIViewContentModeScaleAspectFit];
         
-        userPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(5, 110, 15, 15)];
-        userPhoto.layer.cornerRadius = 7.5;
+        userPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(20, 320, 40, 40)];
+        userPhoto.layer.cornerRadius = 20;
         userPhoto.layer.masksToBounds = YES;
         
-        photoCaption = [[UILabel alloc]initWithFrame:CGRectMake(22, 110, SCREEN_WIDTH-23, 15)];
+        photoCaption = [[UILabel alloc]initWithFrame:CGRectMake(80, 320, 220, 40)];
+        photoCaption.textColor = [UIColor darkGrayColor];
         
         [self addSubview:personalPhoto];
         [self addSubview:userPhoto];
@@ -36,14 +38,24 @@
     return self;
 }
 
-- (void)setProfileInfo:(NSDictionary *)profileInfo
+- (void)setPictureInfo:(NSDictionary *)pictureInfo
 {
-    personalPhoto.image = profileInfo [@"photo"];
-    photoCaption.text = profileInfo [@"caption"];
-    userPhoto.image = profileInfo [@"avatar"];
+    _pictureInfo = pictureInfo;
+
     
-    _profileInfo = profileInfo;
+    NSURL * imageURL = [NSURL URLWithString:pictureInfo[@"image"]];
+    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage * image = [UIImage imageWithData:imageData];
     
+    personalPhoto.image = image;
+    
+    photoCaption.text = pictureInfo [@"caption"];
+    
+    NSURL * avatarURL = [NSURL URLWithString:pictureInfo[@"avatar"]];
+    NSData * avatarData = [NSData dataWithContentsOfURL:avatarURL];
+    UIImage * avatar = [UIImage imageWithData:avatarData];
+    
+    userPhoto.image = avatar;
 }
 
 - (void)awakeFromNib

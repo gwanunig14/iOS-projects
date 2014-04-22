@@ -10,12 +10,29 @@
 
 #import "SLFTableViewController.h"
 
+#import "SLFStartUp.h"
+
+#import "SLFPhoto.h"
+
+#import <Parse/Parse.h>
+
 @implementation SLFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    [Parse setApplicationId:@"H1JHLiA7kFRmIWvtbkHDcnA1Caj4UofHxRx6UZAB"
+                  clientKey:@"dKLyXccYHUy1MXNgrdR2Sq5b1fNQoTr4clSXVd3p"];
+    
+    [PFUser enableAutomaticUser];
+    
+//    self.window.rootViewController = [[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+//    self.window.rootViewController = [[SLFStartUp alloc] initWithNibName:nil bundle:nil];
+    
+    self.window.rootViewController = [[SLFPhoto alloc] initWithNibName:nil bundle:nil];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -48,5 +65,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

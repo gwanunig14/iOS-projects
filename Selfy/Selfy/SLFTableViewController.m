@@ -10,6 +10,8 @@
 
 #import "SLFTableViewCell.h"
 
+#import <Parse/Parse.h>
+
 @interface SLFTableViewController ()
 
 @end
@@ -17,7 +19,7 @@
 @implementation SLFTableViewController
 {
     UIView * header;
-    NSMutableArray * pictureInfo;
+    NSMutableArray * allPictures;
     UIButton * settings;
     UIButton * newUser;
 }
@@ -27,9 +29,9 @@
     self = [super initWithStyle:style];
     if (self)
     {
-        self.tableView.rowHeight = 130;
+        self.tableView.rowHeight = self.tableView.frame.size.width + 100;
         header = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        self.tableView.tableHeaderView = header;
+//        self.tableView.tableHeaderView = header;
         [self.view addSubview:header];
         
         settings = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 30, 30)];
@@ -45,16 +47,24 @@
         newUser.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:8];
         [header addSubview:newUser];
         
-        pictureInfo = [@[
-                        @{  //the photo
-                            @"photo":[UIImage imageNamed:@"sunset"],
-                            //text about the photo
-                            @"caption":@"Woohoo!",
-                            //phototaker's name
-                            @"user": @"The Internet",
-                            @"avatar": [UIImage imageNamed:@"Austen"]
+        allPictures = [@[
+                         @{   @"image" : @"http://distilleryimage7.ak.instagram.com/6756ea06a44b11e2b62722000a1fbc10_7.jpg",
+                              @"caption" : @"This is a selfy!",
+                              @"user_id" : @"3n2mb23bnm",
+                              @"avatar" : @"https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/036/354/393842f.jpg",
+                              @"selfy_id" : @"hjk2l32bn1"
                             }
                         ] mutableCopy];
+       
+        PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+        testObject[@"name"] = @"T.J.";
+        [testObject saveInBackground];
+        
+        PFUser * user = [PFUser currentUser];
+        user.username = @"T.J.";
+        user.password = @"password";
+        
+        [user saveInBackground];
     }
     return self;
 }
@@ -62,6 +72,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -79,22 +93,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [pictureInfo count];
+    return [allPictures count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary * pictures = pictureInfo[indexPath.row];
+//    NSDictionary * pictures = pictureInfo[indexPath.row];
     
     SLFTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     if (cell == nil)
     {
-        cell = [[SLFTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        cell = [[SLFTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    cell.profileInfo = pictures;
+    cell.pictureInfo = allPictures[indexPath.row];
     
 //    cell.imageView.image = pictures[@"photo"];
 //    cell.detailTextLabel.text = pictures[@"caption"];
@@ -103,7 +117,7 @@
 
 -(void) createCell
 {
-    [pictureInfo insertObject:@{  //the photo
+    [allPictures insertObject:@{  //the photo
                                 @"photo":[UIImage imageNamed:@"sunset"],
                                 //text about the photo
                                 @"caption":@"Woohoo!",

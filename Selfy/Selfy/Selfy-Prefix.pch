@@ -15,5 +15,13 @@
     #import <Foundation/Foundation.h>
 #endif
 
+#define MAGENTA_COLOR [UIColor colorWithRed:245/255.0f green:3/255.0f blue:88/255.0f alpha:1.0f];
+#define CYAN_COLOR [UIColor colorWithRed:22/255.0f green:255/255.0f blue:221/255.0f alpha:1.0f];
+#define GREEN_COLOR [UIColor colorWithRed:16/255.0f green:237/255.0f blue:13/255.0f alpha:1.0f];
+#define PURPLE_COLOR [UIColor colorWithRed:127/255.0f green:1/255.0f blue:119/255.0f alpha:1.0f];
+
+
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define KB_HEIGHT 216
