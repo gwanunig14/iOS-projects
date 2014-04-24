@@ -30,9 +30,14 @@
     if (self)
     {
         self.tableView.rowHeight = self.tableView.frame.size.width + 100;
-        header = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+        header = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
 //        self.tableView.tableHeaderView = header;
         [self.view addSubview:header];
+        
+        UILabel * title = [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/3, 5, SCREEN_WIDTH/3, 20)];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.text = @"Selfy";
+        [header addSubview:title];
         
         settings = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 30, 30)];
         settings.layer.cornerRadius = 15;

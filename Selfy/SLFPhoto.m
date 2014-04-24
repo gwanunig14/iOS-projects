@@ -32,16 +32,16 @@
         [self.view addSubview:newForm];
         
         UILabel * title = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/3, 5, SCREEN_WIDTH/3,20)];
-        title.text = @"Selfies";
+        title.text = @"Selfy";
         title.textAlignment = NSTextAlignmentCenter;
-        title.textColor = PURPLE_COLOR;
+        title.textColor = CYAN_COLOR;
         
         UIView * header = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-        header.backgroundColor = CYAN_COLOR;
+        header.backgroundColor = MAGENTA_COLOR;
         [newForm addSubview:header];
         
         cancel = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-25, 5, 20, 20)];
-        cancel.backgroundColor = MAGENTA_COLOR;
+        cancel.backgroundColor = PURPLE_COLOR;
         cancel.layer.cornerRadius = 5;
         [header addSubview:cancel];
         [header addSubview:title];
@@ -51,7 +51,7 @@
         newPicture.image = [UIImage imageNamed:@"sunset"];
         newPicture.backgroundColor = [UIColor whiteColor];
         [[newPicture layer] setBorderWidth:2.0];
-        [[newPicture layer] setBorderColor:[UIColor colorWithRed:245/255.0f green:3/255.0f blue:88/255.0f alpha:1.0f].CGColor];
+        [[newPicture layer] setBorderColor:[UIColor colorWithRed:16/255.0f green:237/255.0f blue:13/255.0f alpha:1.0f].CGColor];
 //        newPicture = (@"sunset");
         [newForm addSubview:newPicture];
         
@@ -60,7 +60,7 @@
         newCaption.delegate = self;
         newCaption.layer.cornerRadius = 15;
         [[newCaption layer] setBorderWidth:2.0];
-        [[newCaption layer] setBorderColor:[UIColor colorWithRed:22/255.0f green:255/255.0f blue:221/255.0f alpha:1.0f].CGColor];
+        [[newCaption layer] setBorderColor:[UIColor colorWithRed:16/255.0f green:237/255.0f blue:13/255.0f alpha:1.0f].CGColor];
         newCaption.keyboardType = UIKeyboardTypeTwitter;
         [newForm addSubview:newCaption];
         
