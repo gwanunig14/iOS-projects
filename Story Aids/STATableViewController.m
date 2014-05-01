@@ -61,7 +61,7 @@
         cell = [[STAChapters alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    cell.
+//    cell.
     return cell;
 }
 
