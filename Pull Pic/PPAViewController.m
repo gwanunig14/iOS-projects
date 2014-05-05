@@ -10,19 +10,26 @@
 
 #import "PPAFilterController.h"
 
-@interface PPAViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+#import "BlurViewController.h"
 
-@property (nonatomic) UIImage * currentImage;
+#import "ControlsViewController.h"
+
+#import "HSBColorControlVC.h"
+
+@interface PPAViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate,PPAFilterControllerDelegate,BlurViewControllerDelegate,ControlsViewControllerDelegate,HSBColorControlVCDelegate>
+
+@property (nonatomic) UIImage * originalImage;
 
 @end
 
 @implementation PPAViewController
 {
+    ControlsViewController * conController;
+    BlurViewController * blurVC;
     PPAFilterController * filterVC;
+    HSBColorControlVC * colorVC;
     UIImageView * backgroundPicture;
-    UIScrollView * bunchaButtons;
-    NSArray * allButtons;
-    NSMutableArray * namesOfButtons;
+    UIView * edittingTable;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,59 +53,34 @@
     [self.view addSubview:header];
     header.backgroundColor = [UIColor blackColor];
     
-    filters = [@{} mutableCopy];
-    allButtons = @[
-//                             @"CIColorCrossPolynomial",
-//                             @"CIColorCube",
-//                             @"CIColorCubeWithColorSpace",
-                             @"CIColorInvert",
-//                             @"CIColorMap",
-                             @"CIColorMonochrome",
-                             @"CIColorPosterize",
-                             @"CIFalseColor",
-//                             @"CIMaskToAlpha",
-                             @"CIMaximumComponent",
-                             @"CIMinimumComponent",
-                             @"CIPhotoEffectChrome",
-                             @"CIPhotoEffectFade",
-                             @"CIPhotoEffectInstant",
-                             @"CIPhotoEffectMono",
-                             @"CIPhotoEffectNoir",
-                             @"CIPhotoEffectProcess",
-                             @"CIPhotoEffectTonal",
-                             @"CIPhotoEffectTransfer",
-                             @"CISepiaTone",
-                             @"CIVignette",
-//                             @"CIVignetteEffect"
-                             ];
-    
-    namesOfButtons = [@[] mutableCopy];
-    
-    bunchaButtons = [[UIScrollView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 100, SCREEN_WIDTH, 100)];
-    bunchaButtons.backgroundColor = [UIColor blackColor];
-    bunchaButtons.scrollEnabled = YES;
-    bunchaButtons.showsHorizontalScrollIndicator = YES;
-    bunchaButtons.contentSize = CGSizeMake([allButtons count] * 100, 100);
-    [self.view addSubview:bunchaButtons];
-    
-    for (NSString * button in allButtons)
-    {
-        NSInteger index = [allButtons indexOfObject:button];
-        UIButton * whiteButton = [[UIButton alloc]initWithFrame:CGRectMake((index * 90)+10, 10, 80, 80)];
-//        whiteButton. = button;
-        [whiteButton addTarget:self action:@selector(changeFilter:) forControlEvents:UIControlEventTouchUpInside];
-        whiteButton.backgroundColor = [UIColor whiteColor];
-        
-        [namesOfButtons addObject:whiteButton];
-        
-        [bunchaButtons addSubview:whiteButton];
-    };
+//    edittingTable = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 140, SCREEN_WIDTH, 140)];
+//    [self.view addSubview:edittingTable];
     
     UIButton * changeBackgroundPicture = [[UIButton alloc]initWithFrame:CGRectMake(10, 10, 30, 30)];
     changeBackgroundPicture.layer.cornerRadius = changeBackgroundPicture.frame.size.height/2;
     changeBackgroundPicture.backgroundColor = [UIColor redColor];
     [changeBackgroundPicture addTarget:self action:@selector(newBackground) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:changeBackgroundPicture];
+    
+    conController = [[ControlsViewController alloc]initWithNibName:nil bundle:nil];
+    conController.delegate = self;
+    conController.view.frame = CGRectMake(0, SCREEN_HEIGHT - 140, SCREEN_WIDTH, 40);
+    [self.view addSubview:conController.view];
+    
+    colorVC = [[HSBColorControlVC alloc]initWithNibName:nil bundle:nil];
+    colorVC.delegate = self;
+    colorVC.view.frame = CGRectMake(0, SCREEN_HEIGHT - 100, SCREEN_WIDTH, 100);
+    
+    filterVC = [[PPAFilterController alloc]initWithNibName:nil bundle:nil];
+    filterVC.delegate = self;
+    filterVC.view.frame = CGRectMake(0, SCREEN_HEIGHT-100, SCREEN_WIDTH, 100);
+//    [self.view addSubview:filterVC.view];
+    
+    blurVC = [[BlurViewController alloc]initWithNibName:nil bundle:nil];
+    blurVC.delegate = self;
+    blurVC.view.frame = CGRectMake(0, SCREEN_HEIGHT-100, SCREEN_WIDTH, 100);
+//    [self.view addSubview:blurVC.view];
+    
 }
 
 -(void)newBackground
@@ -106,7 +88,7 @@
     UIImagePickerController * photos = [[UIImagePickerController alloc]init];
     
     photos.delegate = self;
-    photos.allowsEditing = YES;
+//    photos.allowsEditing = YES;
     
     [self presentViewController: photos animated:YES completion:^{
         nil;
@@ -115,19 +97,49 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSLog(@"%@", info);
-    backgroundPicture.image = info[UIImagePickerControllerEditedImage];
-    NSLog(@"%@", backgroundPicture.image);
+    self.originalImage = info[UIImagePickerControllerOriginalImage];
     
-    [picker dismissViewControllerAnimated:YES completion:^{
-        nil;
-    }];
-    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)changeFilter: (UIButton*)sender
+-(void)selectFilter
 {
+    [self clearEdits];
+    [self.view addSubview:filterVC.view];
+}
 
+-(void)selectBlur
+{
+    [self clearEdits];
+    [self.view addSubview:blurVC.view];
+}
+
+-(void)selectHsb
+{
+    [self clearEdits];
+    [self.view addSubview:colorVC.view];
+}
+
+-(void)clearEdits
+{
+    [blurVC.view removeFromSuperview];
+    [filterVC.view removeFromSuperview];
+    [colorVC.view removeFromSuperview];
+}
+
+-(void)setOriginalImage:(UIImage *)originalImage
+{
+    _originalImage = originalImage;
+    
+    blurVC.imageToFilter = originalImage;
+    filterVC.imageToFilter = originalImage;
+    backgroundPicture.image = originalImage;
+}
+
+-(void)updateCurrentImageWithFilteredImage:(UIImage *)image
+{
+    backgroundPicture.image = image;
+    self.originalImage = image;
 }
 
 - (void)didReceiveMemoryWarning

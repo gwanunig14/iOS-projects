@@ -81,6 +81,7 @@
     [toggleButton addTarget:self action:@selector(toggleStage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:toggleButton];
     
+    
     UIButton * undoButton = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH * 0.8)-45, 60, 40, 40)];
     undoButton.layer.cornerRadius = 20;
     undoButton.backgroundColor = [UIColor yellowColor];

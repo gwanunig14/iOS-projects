@@ -21,6 +21,9 @@
 		9CD8B7BC19116D2200D1F002 /* Pull_PicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8B7BB19116D2200D1F002 /* Pull_PicTests.m */; };
 		9CD8B7C719116D3D00D1F002 /* PPAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8B7C619116D3D00D1F002 /* PPAViewController.m */; };
 		9CD8B7CA1912833400D1F002 /* PPAFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD8B7C91912833400D1F002 /* PPAFilterController.m */; };
+		9CEAF6EA19141CA100E4CEBA /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAF6E919141CA100E4CEBA /* BlurViewController.m */; };
+		9CEAF6ED191427BD00E4CEBA /* HSBColorControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAF6EC191427BD00E4CEBA /* HSBColorControlVC.m */; };
+		9CEAF6F219142E7800E4CEBA /* ControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAF6F119142E7800E4CEBA /* ControlsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		9CD8B7C619116D3D00D1F002 /* PPAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAViewController.m; sourceTree = "<group>"; };
 		9CD8B7C81912833400D1F002 /* PPAFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAFilterController.h; sourceTree = "<group>"; };
 		9CD8B7C91912833400D1F002 /* PPAFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAFilterController.m; sourceTree = "<group>"; };
+		9CEAF6E819141CA100E4CEBA /* BlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlurViewController.h; path = ../../../../Desktop/BlurViewController.h; sourceTree = "<group>"; };
+		9CEAF6E919141CA100E4CEBA /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurViewController.m; path = ../../../../Desktop/BlurViewController.m; sourceTree = "<group>"; };
+		9CEAF6EB191427BD00E4CEBA /* HSBColorControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSBColorControlVC.h; path = ../../../../Downloads/HueSaturationBrightness/HSBColorControlVC.h; sourceTree = "<group>"; };
+		9CEAF6EC191427BD00E4CEBA /* HSBColorControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSBColorControlVC.m; path = ../../../../Downloads/HueSaturationBrightness/HSBColorControlVC.m; sourceTree = "<group>"; };
+		9CEAF6F119142E7800E4CEBA /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControlsViewController.m; path = ../../../../Downloads/ControlsViewController.m; sourceTree = "<group>"; };
+		9CEAF6F319142E7F00E4CEBA /* ControlsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ControlsViewController.h; path = ../../../../Downloads/ControlsViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +92,16 @@
 		9CD8B78A19116D2200D1F002 = {
 			isa = PBXGroup;
 			children = (
+				9CEAF6E819141CA100E4CEBA /* BlurViewController.h */,
+				9CEAF6E919141CA100E4CEBA /* BlurViewController.m */,
 				9CD8B7C519116D3D00D1F002 /* PPAViewController.h */,
 				9CD8B7C619116D3D00D1F002 /* PPAViewController.m */,
 				9CD8B7C81912833400D1F002 /* PPAFilterController.h */,
 				9CD8B7C91912833400D1F002 /* PPAFilterController.m */,
+				9CEAF6EB191427BD00E4CEBA /* HSBColorControlVC.h */,
+				9CEAF6EC191427BD00E4CEBA /* HSBColorControlVC.m */,
+				9CEAF6F319142E7F00E4CEBA /* ControlsViewController.h */,
+				9CEAF6F119142E7800E4CEBA /* ControlsViewController.m */,
 				9CD8B79C19116D2200D1F002 /* Pull Pic */,
 				9CD8B7B519116D2200D1F002 /* Pull PicTests */,
 				9CD8B79519116D2200D1F002 /* Frameworks */,
@@ -250,10 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEAF6ED191427BD00E4CEBA /* HSBColorControlVC.m in Sources */,
 				9CD8B7A719116D2200D1F002 /* PPAAppDelegate.m in Sources */,
 				9CD8B7C719116D3D00D1F002 /* PPAViewController.m in Sources */,
 				9CD8B7A319116D2200D1F002 /* main.m in Sources */,
+				9CEAF6EA19141CA100E4CEBA /* BlurViewController.m in Sources */,
 				9CD8B7CA1912833400D1F002 /* PPAFilterController.m in Sources */,
+				9CEAF6F219142E7800E4CEBA /* ControlsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +468,7 @@
 				9CD8B7C119116D2200D1F002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CD8B7C219116D2200D1F002 /* Build configuration list for PBXNativeTarget "Pull PicTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +477,7 @@
 				9CD8B7C419116D2200D1F002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
