@@ -21,6 +21,8 @@
 		91B882B31917C7330051570C /* PixelNoiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B882B21917C7330051570C /* PixelNoiseTests.m */; };
 		91B882C11917C84D0051570C /* PNAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B882C01917C84D0051570C /* PNAViewController.m */; };
 		91B882C51917C8A80051570C /* PNAPixelSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B882C41917C8A80051570C /* PNAPixelSounds.m */; };
+		9C9A56DB1919154200C40963 /* PNAWorld2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A56DA1919154200C40963 /* PNAWorld2.m */; };
+		9C9A56DF1919210C00C40963 /* drip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C9A56DE1919210C00C40963 /* drip.wav */; };
 		9CF9ABCC1917D22A00050D32 /* Arcade Echo FX 001.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9CF9AB461917D22900050D32 /* Arcade Echo FX 001.wav */; };
 		9CF9ABCD1917D22A00050D32 /* Blip 001.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9CF9AB471917D22900050D32 /* Blip 001.wav */; };
 		9CF9ABCE1917D22A00050D32 /* Blip 002.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9CF9AB481917D22900050D32 /* Blip 002.wav */; };
@@ -181,6 +183,9 @@
 		91B882C01917C84D0051570C /* PNAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNAViewController.m; path = PixelNoise/PNAViewController.m; sourceTree = "<group>"; };
 		91B882C31917C8A80051570C /* PNAPixelSounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNAPixelSounds.h; sourceTree = "<group>"; };
 		91B882C41917C8A80051570C /* PNAPixelSounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNAPixelSounds.m; sourceTree = "<group>"; };
+		9C9A56D91919154200C40963 /* PNAWorld2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNAWorld2.h; sourceTree = "<group>"; };
+		9C9A56DA1919154200C40963 /* PNAWorld2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNAWorld2.m; sourceTree = "<group>"; };
+		9C9A56DE1919210C00C40963 /* drip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drip.wav; path = ../../../../../Downloads/drip.wav; sourceTree = "<group>"; };
 		9CF9AB461917D22900050D32 /* Arcade Echo FX 001.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Arcade Echo FX 001.wav"; sourceTree = "<group>"; };
 		9CF9AB471917D22900050D32 /* Blip 001.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Blip 001.wav"; sourceTree = "<group>"; };
 		9CF9AB481917D22900050D32 /* Blip 002.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Blip 002.wav"; sourceTree = "<group>"; };
@@ -414,6 +419,8 @@
 				91B882C01917C84D0051570C /* PNAViewController.m */,
 				9CF9AD501917EEF900050D32 /* WorldView.h */,
 				9CF9AD511917EEF900050D32 /* WorldView.m */,
+				9C9A56D91919154200C40963 /* PNAWorld2.h */,
+				9C9A56DA1919154200C40963 /* PNAWorld2.m */,
 				91B882C31917C8A80051570C /* PNAPixelSounds.h */,
 				91B882C41917C8A80051570C /* PNAPixelSounds.m */,
 			);
@@ -423,6 +430,7 @@
 		9CF9AB441917D22900050D32 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9C9A56DE1919210C00C40963 /* drip.wav */,
 				9CF9AB451917D22900050D32 /* 8-Bit Kit Volume1 */,
 				9CF9AB7C1917D22900050D32 /* narfstuff_ui_sounds */,
 			);
@@ -786,6 +794,7 @@
 				9CF9AC2D1917D22A00050D32 /* bass_deny1.wav in Resources */,
 				9CF9AC461917D22A00050D32 /* short_whoosh5.wav in Resources */,
 				9CF9AC301917D22A00050D32 /* echo_deny.wav in Resources */,
+				9C9A56DF1919210C00C40963 /* drip.wav in Resources */,
 				9CF9ABF81917D22A00050D32 /* Stutter Blip 001.wav in Resources */,
 				9CF9AC141917D22A00050D32 /* flick_alert.wav in Resources */,
 				9CF9AC311917D22A00050D32 /* electric_deny1.wav in Resources */,
@@ -853,6 +862,7 @@
 				91B882C11917C84D0051570C /* PNAViewController.m in Sources */,
 				91B8829E1917C7330051570C /* PNAAppDelegate.m in Sources */,
 				91B8829A1917C7330051570C /* main.m in Sources */,
+				9C9A56DB1919154200C40963 /* PNAWorld2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

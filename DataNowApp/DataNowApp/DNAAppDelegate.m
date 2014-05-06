@@ -1,25 +1,28 @@
 //
-//  STAAppDelegate.m
-//  Story Aids
+//  DNAAppDelegate.m
+//  DataNowApp
 //
-//  Created by T.J. Mercer on 4/23/14.
+//  Created by T.J. Mercer on 5/6/14.
 //  Copyright (c) 2014 T.J. All rights reserved.
 //
 
-#import "STAAppDelegate.h"
+#import "DNAAppDelegate.h"
+#import "DNATableView.h"
+#import "DNASingleton.h"
 
-#import "STANavController.h"
-
-#import "STATableViewController.h"
-
-@implementation STAAppDelegate
+@implementation DNAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
-    self.window.rootViewController = [[STANavController alloc]initWithRootViewController:[[STATableViewController alloc]initWithStyle:UITableViewStylePlain]];
+    [DNASingleton sharedSingleton].sectionInfo = @{@"section1": @[@"row1"],
+                                                   @"section2": @[@"row1",@"row2"],
+                                                   @"section3": @[@"row1",@"row2",@"row3"],
+                                                   @"section4": @[@"row1"]};
+    
+    self.window.rootViewController = [[DNATableView alloc]initWithStyle:UITableViewStyleGrouped];
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C9A57291919589C00C40963 /* BBASingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A57281919589C00C40963 /* BBASingleton.m */; };
 		9CB2B01D190018F200A2E88C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB2B01C190018F200A2E88C /* Foundation.framework */; };
 		9CB2B01F190018F200A2E88C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB2B01E190018F200A2E88C /* CoreGraphics.framework */; };
 		9CB2B021190018F200A2E88C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB2B020190018F200A2E88C /* UIKit.framework */; };
@@ -160,6 +161,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C9A57271919589C00C40963 /* BBASingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASingleton.h; sourceTree = "<group>"; };
+		9C9A57281919589C00C40963 /* BBASingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASingleton.m; sourceTree = "<group>"; };
 		9CB2B019190018F200A2E88C /* BrickBreaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrickBreaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB2B01C190018F200A2E88C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9CB2B01E190018F200A2E88C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -337,6 +340,8 @@
 			children = (
 				9CB2B04E19001D3400A2E88C /* BBALevelController.h */,
 				9CB2B04F19001D3400A2E88C /* BBALevelController.m */,
+				9C9A57271919589C00C40963 /* BBASingleton.h */,
+				9C9A57281919589C00C40963 /* BBASingleton.m */,
 				9CB2B04B19001BBF00A2E88C /* BBAViewController.h */,
 				9CB2B04C19001BBF00A2E88C /* BBAViewController.m */,
 				9CB2B022190018F200A2E88C /* BrickBreaker */,
@@ -837,6 +842,7 @@
 			files = (
 				9CB2B05019001D3400A2E88C /* BBALevelController.m in Sources */,
 				9CB2B04D19001BBF00A2E88C /* BBAViewController.m in Sources */,
+				9C9A57291919589C00C40963 /* BBASingleton.m in Sources */,
 				9CB2B02D190018F200A2E88C /* BBAAppDelegate.m in Sources */,
 				9CB2B029190018F200A2E88C /* main.m in Sources */,
 			);

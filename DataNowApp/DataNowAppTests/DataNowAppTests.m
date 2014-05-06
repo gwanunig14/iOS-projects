@@ -1,18 +1,18 @@
 //
-//  Story_AidsTests.m
-//  Story AidsTests
+//  DataNowAppTests.m
+//  DataNowAppTests
 //
-//  Created by T.J. Mercer on 4/23/14.
+//  Created by T.J. Mercer on 5/6/14.
 //  Copyright (c) 2014 T.J. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface Story_AidsTests : XCTestCase
+@interface DataNowAppTests : XCTestCase
 
 @end
 
-@implementation Story_AidsTests
+@implementation DataNowAppTests
 
 - (void)setUp
 {

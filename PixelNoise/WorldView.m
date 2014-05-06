@@ -63,15 +63,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    int w = self.view.frame.size.width;
-    int h = self.view.frame.size.height;
-    
-    
-    
     self.collider = [[UICollisionBehavior alloc] initWithItems:@[]];
     self.collider.collisionDelegate = self;
     self.collider.collisionMode = UICollisionBehaviorModeEverything;
-    [self.collider addBoundaryWithIdentifier:@"floor" fromPoint:CGPointMake(0, h) toPoint:CGPointMake(w, h)];
+    self.collider.translatesReferenceBoundsIntoBoundary = YES;
     [self.animator addBehavior:self.collider];
     
     freeFall = [[UIGravityBehavior alloc]initWithItems:@[]];

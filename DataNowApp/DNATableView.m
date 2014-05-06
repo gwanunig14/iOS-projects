@@ -1,30 +1,26 @@
 //
-//  STATableViewController.m
-//  Story Aids
+//  DNATableView.m
+//  DataNowApp
 //
-//  Created by T.J. Mercer on 4/23/14.
+//  Created by T.J. Mercer on 5/6/14.
 //  Copyright (c) 2014 T.J. All rights reserved.
 //
 
-#import "STATableViewController.h"
+#import "DNATableView.h"
 
-#import "STAChapters.h"
+#import "DNASingleton.h"
 
-@interface STATableViewController ()
+@interface DNATableView ()
 
 @end
 
-@implementation STATableViewController
-{
-    NSMutableArray * chapters;
-}
+@implementation DNATableView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self)
-    {
-        chapters = [@[@{@"chapter":@"1"}] mutableCopy];
+    if (self) {
+        
     }
     return self;
 }
@@ -46,24 +42,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return [[[DNASingleton sharedSingleton] allSections]count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [chapters count];
+    NSLog(@"%d",(int)section);
+    
+    NSString * sectionName = [[DNASingleton sharedSingleton]allSections][section];
+    return [[[DNASingleton sharedSingleton]allRowsForSection:sectionName] count];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    STAChapters * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     if (cell == nil)
     {
-        cell = [[STAChapters alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-//    cell.
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -113,10 +120,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
 
 @end

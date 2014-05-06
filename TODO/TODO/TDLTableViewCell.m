@@ -8,6 +8,8 @@
 
 #import "TDLTableViewCell.h"
 
+#import "TDLSingleton.h"
+
 @implementation TDLTableViewCell
 {
     UIImageView * profileImage;
@@ -16,7 +18,6 @@
     
     UILabel * profileURL;
     
-
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -47,27 +48,20 @@
    
 }
 
-
-
-- (void)setProfileInfo:(NSDictionary *)profileInfo
+-(void)setIndex:(NSInteger)index
 {
+    _index = index;
+    
+    NSDictionary * profileInfo = [[TDLSingleton sharedSingleton] allListItems][index];
     
     NSURL * imageUrl = [NSURL URLWithString:profileInfo [@"image"]];
     
     NSData * imageData = [NSData dataWithContentsOfURL:imageUrl];
-
+    
     UIImage * image = [UIImage imageWithData:imageData];
     profileImage.image = image;
     profileName.text = profileInfo [@"name"];
     profileURL.text = profileInfo [@"github"];
-    
-    _profileInfo = profileInfo;
-
-}
-
-- (void)awakeFromNib
-{
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
