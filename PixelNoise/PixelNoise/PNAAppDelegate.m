@@ -2,11 +2,13 @@
 //  PNAAppDelegate.m
 //  PixelNoise
 //
-//  Created by T.J. Mercer on 5/5/14.
-//  Copyright (c) 2014 T.J. All rights reserved.
+//  Created by Heidi Proske on 5/5/14.
+//  Copyright (c) 2014 Heidi Proske. All rights reserved.
 //
 
 #import "PNAAppDelegate.h"
+#import "PNAViewController.h"
+#import "WorldView.h"
 
 @implementation PNAAppDelegate
 
@@ -14,6 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.rootViewController = [[WorldView alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

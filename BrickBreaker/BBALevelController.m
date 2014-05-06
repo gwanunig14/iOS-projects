@@ -8,8 +8,12 @@
 
 #import "BBALevelController.h"
 
+#import <AVFoundation/AVFoundation.h>
+
                                 //used to tell when two objects touch eachother
 @interface BBALevelController () <UICollisionBehaviorDelegate>
+
+@property (nonatomic)AVAudioPlayer * player;
 
 @property (nonatomic) UIView * paddle;
 
@@ -59,6 +63,7 @@
         
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen:)];
         [self.view addGestureRecognizer:tap];
+        
     }
     return self;
 }
@@ -113,8 +118,24 @@
 //    self.collider.translatesReferenceBoundsIntoBoundary = YES;
     
 }
+
+-(void)playSoundWithName:(NSString *)soundName
+{
+    NSString * file = [[NSBundle mainBundle] pathForResource:soundName ofType:@"wav"];
+    
+    NSURL * url = [[NSURL alloc]initFileURLWithPath:file];
+    
+    self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
+    
+    [self.player play];
+}
+
 -(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item1 withItem:(id<UIDynamicItem>)item2 atPoint:(CGPoint)p
 {
+    if ([item1 isEqual:self.paddle]|| [item2 isEqual:self.paddle])
+    {
+        [self playSoundWithName:@"retro_click"];
+    }
     
     UIView * tempBrick;
     for (UIView * brick in self.bricks)
@@ -141,7 +162,11 @@
         }
     }
     [self.bricks removeObject:tempBrick];
-    if(tempBrick != nil) [self.bricks removeObjectIdenticalTo:tempBrick];
+    if(tempBrick != nil)
+    {
+        [self.bricks removeObjectIdenticalTo:tempBrick];
+        [self playSoundWithName:@"electric_alert"];
+    }
 }
 
 -(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p
