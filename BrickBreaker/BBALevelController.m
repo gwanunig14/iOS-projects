@@ -8,12 +8,15 @@
 
 #import "BBALevelController.h"
 
+#import "BBAGameData.h"
+
 #import <AVFoundation/AVFoundation.h>
 
                                 //used to tell when two objects touch eachother
-@interface BBALevelController () <UICollisionBehaviorDelegate>
+@interface BBALevelController () <UICollisionBehaviorDelegate,AVAudioPlayerDelegate>
 
-@property (nonatomic)AVAudioPlayer * player;
+//@property (nonatomic)AVAudioPlayer * player;
+@property (nonatomic)NSMutableArray * players;
 
 @property (nonatomic) UIView * paddle;
 
@@ -55,6 +58,7 @@
         lives = 3;
         self.bricks = [@[] mutableCopy];
         self.balls = [@[] mutableCopy];
+        self.players = [@[] mutableCopy];
 
         paddleWidth = 80;
         points = 0;
@@ -63,7 +67,6 @@
         
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen:)];
         [self.view addGestureRecognizer:tap];
-        
     }
     return self;
 }
@@ -83,9 +86,6 @@
     [self createBricks];
     
     [self.delegate lifeCount:(int)lives];
-    
-    
-    
     
     self.ballsDynamicProperties = [self createPropertiesForItems:self.balls];
     self.ballsDynamicProperties.elasticity = 1.01;
@@ -125,9 +125,18 @@
     
     NSURL * url = [[NSURL alloc]initFileURLWithPath:file];
     
-    self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
+    AVAudioPlayer * player = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
     
-    [self.player play];
+    player.delegate = self;
+    
+    [self.players addObject:player];
+    
+    [player play];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    [self.players removeObjectIdenticalTo:player];
 }
 
 -(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item1 withItem:(id<UIDynamicItem>)item2 atPoint:(CGPoint)p
@@ -153,7 +162,7 @@
                         [self.collider removeItem:brick];
                         points += brick.tag;
                         NSLog(@"Total Points = %f", points);
-                        [self.delegate addPoints:(int)points];
+                        [[BBAGameData sharedSingleton] addPoints:(int)points];
                         [self pointLabelWithBrick:brick];
                     }
                 brick.alpha = 0.5;

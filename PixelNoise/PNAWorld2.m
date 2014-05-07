@@ -133,17 +133,21 @@
     {
 //        for (UIColor * color in colors)
 //        {
-            CGPoint direction = [pointValue CGPointValue];
-            UIView * shard = [[UIView alloc]initWithFrame:CGRectMake(location.x, location.y-10, 5, 5)];
-            shard.backgroundColor = [UIColor blueColor];
-            [self.view addSubview:shard];
-            
-            UIPushBehavior * pusher = [[UIPushBehavior alloc]initWithItems:@[shard] mode:UIPushBehaviorModeInstantaneous];
-            [self.animator addBehavior:pusher];
-            [self.gravity addItem:shard];
-            [self.shardBehavior addItem:shard];
-            [self.shardCollision addItem:shard];
-            pusher.pushDirection = CGVectorMake(direction.x, direction.y);
+        NSInteger index = [splatterDirections indexOfObject:pointValue];
+        
+        UIColor * color = colors[index];
+        
+        CGPoint direction = [pointValue CGPointValue];
+        UIView * shard = [[UIView alloc]initWithFrame:CGRectMake(location.x, location.y-10, 5, 5)];
+        shard.backgroundColor = color;
+        [self.view addSubview:shard];
+        
+        UIPushBehavior * pusher = [[UIPushBehavior alloc]initWithItems:@[shard] mode:UIPushBehaviorModeInstantaneous];
+        [self.animator addBehavior:pusher];
+        [self.gravity addItem:shard];
+        [self.shardBehavior addItem:shard];
+        [self.shardCollision addItem:shard];
+        pusher.pushDirection = CGVectorMake(direction.x, direction.y);
 //        }
     }
 }

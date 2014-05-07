@@ -10,6 +10,8 @@
 
 #import "BBALevelController.h"
 
+#import "BBAGameData.h"
+
 @interface BBAViewController () <BBALevelDelegate>
 
 @end
@@ -64,6 +66,7 @@
 
 -(void)startGame
 {
+//    BBASingleton * tester = [[BBASingleton alloc]init];
     level = [[BBALevelController alloc] initWithNibName:nil bundle:nil];
     level.delegate = self;
     
@@ -77,7 +80,7 @@
     tally = [[UILabel alloc] initWithFrame:CGRectMake(5, 2.5, 60, 15)];
     tally.textColor = [UIColor whiteColor];
     tally.textAlignment = NSTextAlignmentRight;
-    tally.text = @"0";
+//    tally.text = @"%f",(float)[tester sharedSingleton]currentPoints;
     [header addSubview:tally];
     
     tries = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-65, 2.5, 60, 15)];
@@ -103,14 +106,6 @@
     [tries removeFromSuperview];
     [self.view addSubview:startButton];
     
-}
-
--(void)addPoints:(int)points
-{
-//    NSLog(@"%f", currentPoints);
-    currentPoints += points;
-    tally.text = [NSString stringWithFormat: @"%.f", currentPoints];
-    [tally setNeedsDisplay];
 }
 
 -(void)lifeCount:(int)lives

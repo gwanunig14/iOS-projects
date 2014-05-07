@@ -14,9 +14,12 @@
 
 #import "TDLSingleton.h"
 
+#import "TDLSearch.h"
+
 @implementation TDLTableViewController
 
 {
+    TDLSearch * getProfile;
     UITextField * nameField;
 }
 
@@ -122,28 +125,6 @@
  
         self.tableView.rowHeight = 100;
         
-        UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-        header.backgroundColor = [UIColor blackColor];
-        
-        self.tableView.tableHeaderView = header;
-        
-        nameField = [[UITextField alloc]initWithFrame:CGRectMake(20, 20, 280, 30)];
-        nameField.backgroundColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
-        nameField.layer.cornerRadius = 5;
-        nameField.textColor = [UIColor blackColor];
-        nameField.placeholder = @"Type Here";
-        
-        nameField.delegate = self;
-        
-        [header addSubview:nameField];
-        
-        UIButton * submitButton = [[UIButton alloc] initWithFrame:CGRectMake(115, 70, 100, 30)];
-        submitButton.layer.cornerRadius = 10;
-        [submitButton addTarget:self action:@selector(newUser)forControlEvents:UIControlEventTouchUpInside];
-        [submitButton setTitle:@"Submit" forState:UIControlStateNormal];
-        submitButton.backgroundColor = [UIColor darkGrayColor];
-        [header addSubview:submitButton];
-        
     }
     
     return self;
@@ -152,35 +133,9 @@
 
 -(void)newUser
 {
-    NSString * username = nameField.text;
-    
-    nameField.text = @"";
-    
-//    [listItems addObject:@{
-//                           @"name": username,
-//                           @"image" : [UIImage imageNamed:@"default"],
-//                           @"github" : [NSString stringWithFormat:@"https://github.com/%@", username]
-//                           }];
-
-    NSDictionary * userInfo = [TDLGitHubRequest getUserWithUsername:username];
-    
-    if ([[userInfo allKeys] count] == 3)
-    {
-        [[TDLSingleton sharedSingleton] addListItem:userInfo];
-//        [listItems addObject:userInfo];
-    }else {
-        NSLog(@"not enough data");
-        
-        UIAlertView * alertview = [[UIAlertView alloc] initWithTitle:@"Fail" message:@"Unable to Add User" delegate:self cancelButtonTitle:@"Try Something Else" otherButtonTitles: nil];
-        
-        [alertview show];
-        
-    }
-    
-    [nameField resignFirstResponder];
-    
+    NSLog(@"working1");
+    [getProfile newUser:nameField.text textFieldShouldReturn:nameField];
     [self.tableView reloadData];
-    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -190,11 +145,26 @@
     return YES;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    getProfile = [[TDLSearch alloc]init];
+    
+    nameField = [[UITextField alloc]initWithFrame:CGRectMake(60, 12, 200, 20)];
+    nameField.backgroundColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
+    nameField.layer.cornerRadius = 5;
+    nameField.textColor = [UIColor blackColor];
+    nameField.placeholder = @"Type Here";
+    
+    nameField.delegate = self;
+    
+    UIBarButtonItem * submitButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newUser)];
+    self.navigationItem.rightBarButtonItem = submitButton;
+    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    [self.navigationController.navigationBar addSubview:nameField];
 }
 
 - (void)didReceiveMemoryWarning

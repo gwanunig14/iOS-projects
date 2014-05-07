@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BBASingleton.h"
+#import "BBAGameData.h"
 
-@interface BBASingleton : NSObject
+@interface BBAGameData : NSObject
 
-+(BBASingleton *)sharedSingleton;
+@property (nonatomic) float currentpoints;
+
++(BBAGameData *)mainData;
+
+-(void)addPoints:(int)points;
 
 @end

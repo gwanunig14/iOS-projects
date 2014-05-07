@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C6787EF18F2F4520045FAF2 /* TDLGitHubRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6787EE18F2F4520045FAF2 /* TDLGitHubRequest.m */; };
+		9C8358BE1919A5A400DE967C /* TDLSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8358BD1919A5A400DE967C /* TDLSearch.m */; };
 		9C98B52D18EDA78B00B8BE24 /* TDLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98B52C18EDA78B00B8BE24 /* TDLTableViewCell.m */; };
 		9C98B53318EDB61700B8BE24 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C98B53218EDB61700B8BE24 /* default.png */; };
 		9C9A572C191959B600C40963 /* TDLSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A572B191959B600C40963 /* TDLSingleton.m */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		9C6787ED18F2F4520045FAF2 /* TDLGitHubRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLGitHubRequest.h; sourceTree = "<group>"; };
 		9C6787EE18F2F4520045FAF2 /* TDLGitHubRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLGitHubRequest.m; sourceTree = "<group>"; };
+		9C8358BC1919A5A400DE967C /* TDLSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLSearch.h; sourceTree = "<group>"; };
+		9C8358BD1919A5A400DE967C /* TDLSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLSearch.m; sourceTree = "<group>"; };
 		9C98B52B18EDA78B00B8BE24 /* TDLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTableViewCell.h; path = TODO/TDLTableViewCell.h; sourceTree = "<group>"; };
 		9C98B52C18EDA78B00B8BE24 /* TDLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTableViewCell.m; path = TODO/TDLTableViewCell.m; sourceTree = "<group>"; };
 		9C98B53218EDB61700B8BE24 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 			children = (
 				9CBC0D8318EC4C6F0009D287 /* TDLTableViewController.h */,
 				9CBC0D8418EC4C6F0009D287 /* TDLTableViewController.m */,
+				9C8358BC1919A5A400DE967C /* TDLSearch.h */,
+				9C8358BD1919A5A400DE967C /* TDLSearch.m */,
 				9C98B52F18EDA7C900B8BE24 /* Tableview */,
 			);
 			name = Controllers;
@@ -362,6 +367,7 @@
 			files = (
 				9C98B52D18EDA78B00B8BE24 /* TDLTableViewCell.m in Sources */,
 				9CBC0D8518EC4C6F0009D287 /* TDLTableViewController.m in Sources */,
+				9C8358BE1919A5A400DE967C /* TDLSearch.m in Sources */,
 				9C9A572C191959B600C40963 /* TDLSingleton.m in Sources */,
 				9C6787EF18F2F4520045FAF2 /* TDLGitHubRequest.m in Sources */,
 				9CBC0D6118EC4ACE0009D287 /* main.m in Sources */,
