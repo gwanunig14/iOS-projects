@@ -12,10 +12,12 @@
 
 @interface BBAGameData : NSObject
 
-@property (nonatomic) float currentpoints;
-
 +(BBAGameData *)mainData;
 
--(void)addPoints:(int)points;
+@property (nonatomic, readonly) NSInteger topScore;
+
+@property (nonatomic) NSInteger currentScore;
+
+-(NSArray *)gameScores;
 
 @end

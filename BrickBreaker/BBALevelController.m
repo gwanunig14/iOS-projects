@@ -81,6 +81,8 @@
 {
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
+    [BBAGameData mainData].currentScore = 0;
+    
     [self createPaddle];
     
     [self createBricks];
@@ -162,7 +164,8 @@
                         [self.collider removeItem:brick];
                         points += brick.tag;
                         NSLog(@"Total Points = %f", points);
-                        [[BBAGameData sharedSingleton] addPoints:(int)points];
+                        NSInteger currentScore = [BBAGameData mainData].currentScore;
+                        [BBAGameData mainData].currentScore = currentScore + points;
                         [self pointLabelWithBrick:brick];
                     }
                 brick.alpha = 0.5;

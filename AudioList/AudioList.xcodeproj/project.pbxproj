@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C0FF19A191EB0580091880D /* ALATrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FF199191EB0580091880D /* ALATrack.m */; };
+		9C0FF19D191EB0C30091880D /* ALAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FF19C191EB0C30091880D /* ALAArtist.m */; };
+		9C0FF1A0191EB1F10091880D /* ALAAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FF19F191EB1F10091880D /* ALAAlbum.m */; };
+		9C0FF1A3191EB25D0091880D /* ALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FF1A2191EB25D0091880D /* ALASoundCloudRequest.m */; };
+		9C21F129191BB91D0052B187 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C21F128191BB91D0052B187 /* Foundation.framework */; };
+		9C21F12B191BB91D0052B187 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C21F12A191BB91D0052B187 /* CoreGraphics.framework */; };
+		9C21F12D191BB91D0052B187 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C21F12C191BB91D0052B187 /* UIKit.framework */; };
+		9C21F133191BB91D0052B187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C21F131191BB91D0052B187 /* InfoPlist.strings */; };
+		9C21F135191BB91D0052B187 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F134191BB91D0052B187 /* main.m */; };
+		9C21F139191BB91D0052B187 /* ALAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F138191BB91D0052B187 /* ALAAppDelegate.m */; };
+		9C21F13B191BB91D0052B187 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C21F13A191BB91D0052B187 /* Images.xcassets */; };
+		9C21F142191BB91D0052B187 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C21F141191BB91D0052B187 /* XCTest.framework */; };
+		9C21F143191BB91D0052B187 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C21F128191BB91D0052B187 /* Foundation.framework */; };
+		9C21F144191BB91D0052B187 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C21F12C191BB91D0052B187 /* UIKit.framework */; };
+		9C21F14C191BB91D0052B187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C21F14A191BB91D0052B187 /* InfoPlist.strings */; };
+		9C21F14E191BB91D0052B187 /* AudioListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F14D191BB91D0052B187 /* AudioListTests.m */; };
+		9C21F159191BC50E0052B187 /* ALAiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F158191BC50E0052B187 /* ALAiPadViewController.m */; };
+		9C21F15E191BF1540052B187 /* ALAiPadTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F15D191BF1540052B187 /* ALAiPadTableView.m */; };
+		9C21F161191BF1F10052B187 /* ALAiPhoneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F160191BF1F10052B187 /* ALAiPhoneTableView.m */; };
+		9C21F164191BF2100052B187 /* ALAiPhoneDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F163191BF2100052B187 /* ALAiPhoneDataView.m */; };
+		9C21F167191BF8780052B187 /* ALAiPadDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F166191BF8780052B187 /* ALAiPadDataView.m */; };
+		9C21F16A191BFA0C0052B187 /* ALAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C21F169191BFA0C0052B187 /* ALAData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C21F145191BB91D0052B187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C21F11D191BB91D0052B187 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C21F124191BB91D0052B187;
+			remoteInfo = AudioList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C0FF198191EB0580091880D /* ALATrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATrack.h; sourceTree = "<group>"; };
+		9C0FF199191EB0580091880D /* ALATrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALATrack.m; sourceTree = "<group>"; };
+		9C0FF19B191EB0C30091880D /* ALAArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAArtist.h; sourceTree = "<group>"; };
+		9C0FF19C191EB0C30091880D /* ALAArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAArtist.m; sourceTree = "<group>"; };
+		9C0FF19E191EB1F10091880D /* ALAAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAAlbum.h; sourceTree = "<group>"; };
+		9C0FF19F191EB1F10091880D /* ALAAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAAlbum.m; sourceTree = "<group>"; };
+		9C0FF1A1191EB25D0091880D /* ALASoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASoundCloudRequest.h; sourceTree = "<group>"; };
+		9C0FF1A2191EB25D0091880D /* ALASoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASoundCloudRequest.m; sourceTree = "<group>"; };
+		9C21F125191BB91D0052B187 /* AudioList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C21F128191BB91D0052B187 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C21F12A191BB91D0052B187 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C21F12C191BB91D0052B187 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C21F130191BB91D0052B187 /* AudioList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioList-Info.plist"; sourceTree = "<group>"; };
+		9C21F132191BB91D0052B187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C21F134191BB91D0052B187 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C21F136191BB91D0052B187 /* AudioList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioList-Prefix.pch"; sourceTree = "<group>"; };
+		9C21F137191BB91D0052B187 /* ALAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAAppDelegate.h; sourceTree = "<group>"; };
+		9C21F138191BB91D0052B187 /* ALAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALAAppDelegate.m; sourceTree = "<group>"; };
+		9C21F13A191BB91D0052B187 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C21F140191BB91D0052B187 /* AudioListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C21F141191BB91D0052B187 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9C21F149191BB91D0052B187 /* AudioListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioListTests-Info.plist"; sourceTree = "<group>"; };
+		9C21F14B191BB91D0052B187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C21F14D191BB91D0052B187 /* AudioListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioListTests.m; sourceTree = "<group>"; };
+		9C21F157191BC50E0052B187 /* ALAiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPadViewController.h; sourceTree = "<group>"; };
+		9C21F158191BC50E0052B187 /* ALAiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadViewController.m; sourceTree = "<group>"; };
+		9C21F15C191BF1540052B187 /* ALAiPadTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPadTableView.h; sourceTree = "<group>"; };
+		9C21F15D191BF1540052B187 /* ALAiPadTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadTableView.m; sourceTree = "<group>"; };
+		9C21F15F191BF1F10052B187 /* ALAiPhoneTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPhoneTableView.h; sourceTree = "<group>"; };
+		9C21F160191BF1F10052B187 /* ALAiPhoneTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPhoneTableView.m; sourceTree = "<group>"; };
+		9C21F162191BF2100052B187 /* ALAiPhoneDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPhoneDataView.h; sourceTree = "<group>"; };
+		9C21F163191BF2100052B187 /* ALAiPhoneDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPhoneDataView.m; sourceTree = "<group>"; };
+		9C21F165191BF8780052B187 /* ALAiPadDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPadDataView.h; sourceTree = "<group>"; };
+		9C21F166191BF8780052B187 /* ALAiPadDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadDataView.m; sourceTree = "<group>"; };
+		9C21F168191BFA0C0052B187 /* ALAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAData.h; sourceTree = "<group>"; };
+		9C21F169191BFA0C0052B187 /* ALAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAData.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C21F122191BB91D0052B187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C21F12B191BB91D0052B187 /* CoreGraphics.framework in Frameworks */,
+				9C21F12D191BB91D0052B187 /* UIKit.framework in Frameworks */,
+				9C21F129191BB91D0052B187 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C21F13D191BB91D0052B187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C21F142191BB91D0052B187 /* XCTest.framework in Frameworks */,
+				9C21F144191BB91D0052B187 /* UIKit.framework in Frameworks */,
+				9C21F143191BB91D0052B187 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C21CC861921000500903A1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F168191BFA0C0052B187 /* ALAData.h */,
+				9C21F169191BFA0C0052B187 /* ALAData.m */,
+				9C21CC87192100A300903A1A /* Data Models */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C21CC87192100A300903A1A /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C0FF198191EB0580091880D /* ALATrack.h */,
+				9C0FF199191EB0580091880D /* ALATrack.m */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		9C21CC88192104D700903A1A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9C0FF1A1191EB25D0091880D /* ALASoundCloudRequest.h */,
+				9C0FF1A2191EB25D0091880D /* ALASoundCloudRequest.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		9C21F11C191BB91D0052B187 = {
+			isa = PBXGroup;
+			children = (
+				9C21CC88192104D700903A1A /* Requests */,
+				9C21CC861921000500903A1A /* Models */,
+				9C0FF19B191EB0C30091880D /* ALAArtist.h */,
+				9C0FF19C191EB0C30091880D /* ALAArtist.m */,
+				9C0FF19E191EB1F10091880D /* ALAAlbum.h */,
+				9C0FF19F191EB1F10091880D /* ALAAlbum.m */,
+				9C21F15B191BF1380052B187 /* iPhone */,
+				9C21F15A191BF1240052B187 /* iPad */,
+				9C21F12E191BB91D0052B187 /* AudioList */,
+				9C21F147191BB91D0052B187 /* AudioListTests */,
+				9C21F127191BB91D0052B187 /* Frameworks */,
+				9C21F126191BB91D0052B187 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C21F126191BB91D0052B187 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F125191BB91D0052B187 /* AudioList.app */,
+				9C21F140191BB91D0052B187 /* AudioListTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C21F127191BB91D0052B187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F128191BB91D0052B187 /* Foundation.framework */,
+				9C21F12A191BB91D0052B187 /* CoreGraphics.framework */,
+				9C21F12C191BB91D0052B187 /* UIKit.framework */,
+				9C21F141191BB91D0052B187 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C21F12E191BB91D0052B187 /* AudioList */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F137191BB91D0052B187 /* ALAAppDelegate.h */,
+				9C21F138191BB91D0052B187 /* ALAAppDelegate.m */,
+				9C21F13A191BB91D0052B187 /* Images.xcassets */,
+				9C21F12F191BB91D0052B187 /* Supporting Files */,
+			);
+			path = AudioList;
+			sourceTree = "<group>";
+		};
+		9C21F12F191BB91D0052B187 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F130191BB91D0052B187 /* AudioList-Info.plist */,
+				9C21F131191BB91D0052B187 /* InfoPlist.strings */,
+				9C21F134191BB91D0052B187 /* main.m */,
+				9C21F136191BB91D0052B187 /* AudioList-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C21F147191BB91D0052B187 /* AudioListTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F14D191BB91D0052B187 /* AudioListTests.m */,
+				9C21F148191BB91D0052B187 /* Supporting Files */,
+			);
+			path = AudioListTests;
+			sourceTree = "<group>";
+		};
+		9C21F148191BB91D0052B187 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F149191BB91D0052B187 /* AudioListTests-Info.plist */,
+				9C21F14A191BB91D0052B187 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C21F15A191BF1240052B187 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F157191BC50E0052B187 /* ALAiPadViewController.h */,
+				9C21F158191BC50E0052B187 /* ALAiPadViewController.m */,
+				9C21F15C191BF1540052B187 /* ALAiPadTableView.h */,
+				9C21F15D191BF1540052B187 /* ALAiPadTableView.m */,
+				9C21F165191BF8780052B187 /* ALAiPadDataView.h */,
+				9C21F166191BF8780052B187 /* ALAiPadDataView.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		9C21F15B191BF1380052B187 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				9C21F15F191BF1F10052B187 /* ALAiPhoneTableView.h */,
+				9C21F160191BF1F10052B187 /* ALAiPhoneTableView.m */,
+				9C21F162191BF2100052B187 /* ALAiPhoneDataView.h */,
+				9C21F163191BF2100052B187 /* ALAiPhoneDataView.m */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C21F124191BB91D0052B187 /* AudioList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C21F151191BB91D0052B187 /* Build configuration list for PBXNativeTarget "AudioList" */;
+			buildPhases = (
+				9C21F121191BB91D0052B187 /* Sources */,
+				9C21F122191BB91D0052B187 /* Frameworks */,
+				9C21F123191BB91D0052B187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioList;
+			productName = AudioList;
+			productReference = 9C21F125191BB91D0052B187 /* AudioList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C21F13F191BB91D0052B187 /* AudioListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C21F154191BB91D0052B187 /* Build configuration list for PBXNativeTarget "AudioListTests" */;
+			buildPhases = (
+				9C21F13C191BB91D0052B187 /* Sources */,
+				9C21F13D191BB91D0052B187 /* Frameworks */,
+				9C21F13E191BB91D0052B187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C21F146191BB91D0052B187 /* PBXTargetDependency */,
+			);
+			name = AudioListTests;
+			productName = AudioListTests;
+			productReference = 9C21F140191BB91D0052B187 /* AudioListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C21F11D191BB91D0052B187 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ALA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = T.J.;
+				TargetAttributes = {
+					9C21F13F191BB91D0052B187 = {
+						TestTargetID = 9C21F124191BB91D0052B187;
+					};
+				};
+			};
+			buildConfigurationList = 9C21F120191BB91D0052B187 /* Build configuration list for PBXProject "AudioList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C21F11C191BB91D0052B187;
+			productRefGroup = 9C21F126191BB91D0052B187 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C21F124191BB91D0052B187 /* AudioList */,
+				9C21F13F191BB91D0052B187 /* AudioListTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C21F123191BB91D0052B187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C21F133191BB91D0052B187 /* InfoPlist.strings in Resources */,
+				9C21F13B191BB91D0052B187 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C21F13E191BB91D0052B187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C21F14C191BB91D0052B187 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C21F121191BB91D0052B187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C21F15E191BF1540052B187 /* ALAiPadTableView.m in Sources */,
+				9C21F161191BF1F10052B187 /* ALAiPhoneTableView.m in Sources */,
+				9C21F135191BB91D0052B187 /* main.m in Sources */,
+				9C0FF19D191EB0C30091880D /* ALAArtist.m in Sources */,
+				9C0FF1A3191EB25D0091880D /* ALASoundCloudRequest.m in Sources */,
+				9C21F164191BF2100052B187 /* ALAiPhoneDataView.m in Sources */,
+				9C21F16A191BFA0C0052B187 /* ALAData.m in Sources */,
+				9C0FF1A0191EB1F10091880D /* ALAAlbum.m in Sources */,
+				9C21F167191BF8780052B187 /* ALAiPadDataView.m in Sources */,
+				9C21F139191BB91D0052B187 /* ALAAppDelegate.m in Sources */,
+				9C0FF19A191EB0580091880D /* ALATrack.m in Sources */,
+				9C21F159191BC50E0052B187 /* ALAiPadViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C21F13C191BB91D0052B187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C21F14E191BB91D0052B187 /* AudioListTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C21F146191BB91D0052B187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C21F124191BB91D0052B187 /* AudioList */;
+			targetProxy = 9C21F145191BB91D0052B187 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C21F131191BB91D0052B187 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C21F132191BB91D0052B187 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C21F14A191BB91D0052B187 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C21F14B191BB91D0052B187 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C21F14F191BB91D0052B187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C21F150191BB91D0052B187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C21F152191BB91D0052B187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioList/AudioList-Prefix.pch";
+				INFOPLIST_FILE = "AudioList/AudioList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C21F153191BB91D0052B187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioList/AudioList-Prefix.pch";
+				INFOPLIST_FILE = "AudioList/AudioList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9C21F155191BB91D0052B187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AudioList.app/AudioList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioList/AudioList-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AudioListTests/AudioListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9C21F156191BB91D0052B187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AudioList.app/AudioList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioList/AudioList-Prefix.pch";
+				INFOPLIST_FILE = "AudioListTests/AudioListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C21F120191BB91D0052B187 /* Build configuration list for PBXProject "AudioList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C21F14F191BB91D0052B187 /* Debug */,
+				9C21F150191BB91D0052B187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C21F151191BB91D0052B187 /* Build configuration list for PBXNativeTarget "AudioList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C21F152191BB91D0052B187 /* Debug */,
+				9C21F153191BB91D0052B187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C21F154191BB91D0052B187 /* Build configuration list for PBXNativeTarget "AudioListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C21F155191BB91D0052B187 /* Debug */,
+				9C21F156191BB91D0052B187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C21F11D191BB91D0052B187 /* Project object */;
+}

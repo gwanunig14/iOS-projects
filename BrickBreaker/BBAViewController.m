@@ -80,6 +80,8 @@
     tally = [[UILabel alloc] initWithFrame:CGRectMake(5, 2.5, 60, 15)];
     tally.textColor = [UIColor whiteColor];
     tally.textAlignment = NSTextAlignmentRight;
+    tally.text = [NSString stringWithFormat:@"%d", [BBAGameData mainData].topScore];
+//    tally add
 //    tally.text = @"%f",(float)[tester sharedSingleton]currentPoints;
     [header addSubview:tally];
     

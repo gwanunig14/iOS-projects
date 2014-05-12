@@ -26,10 +26,17 @@
     return singleton;
 }
 
--(void)addPoints:(int)points
+-(void)setCurrentScore:(NSInteger)currentScore
 {
-    //    NSLog(@"%f", currentPoints);
-    _currentpoints += points;
+    _currentScore = currentScore;
+    
+    if (currentScore > _topScore) _topScore = currentScore;
 }
+
+-(NSArray *)gameScores
+{
+    return @[];
+}
+
 
 @end
