@@ -19,7 +19,8 @@
 {
     ALAiPadTableView * listVC;
     ALAiPadDataView * detailVC;
-    UINavigationController * nc;
+    UINavigationController * dNc;
+    UINavigationController * lNc;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,11 +31,16 @@
         
         detailVC = [[ALAiPadDataView alloc]initWithNibName:nil bundle:nil];
         
-        nc = [[UINavigationController alloc]initWithRootViewController:detailVC];
+        dNc = [[UINavigationController alloc]initWithRootViewController:detailVC];
         
         listVC = [[ALAiPadTableView alloc]initWithStyle:UITableViewStylePlain];
         
-        self.viewControllers = @[listVC, nc];
+        UITabBarController * tabBar = [[UITabBarController alloc]init];
+        [tabBar setViewControllers:@[listVC,listVC]];
+        
+        lNc = [[UINavigationController alloc]initWithRootViewController:listVC];
+        
+        self.viewControllers = @[tabBar, dNc];
         
         self.delegate = self;
         
@@ -60,12 +66,14 @@
     barButtonItem.title = @"List";
     detailVC.navigationItem.leftBarButtonItem = barButtonItem;
     detailVC.navigationController.navigationBarHidden = NO;
+    lNc.navigationBarHidden = YES;
 }
 
 -(void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
-    nc.navigationItem.leftBarButtonItem = barButtonItem;
-    nc.navigationBarHidden = YES;
+    dNc.navigationItem.leftBarButtonItem = barButtonItem;
+    dNc.navigationBarHidden = YES;
+    lNc.navigationBarHidden = YES;
     
 }
 

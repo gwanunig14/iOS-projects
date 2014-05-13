@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ALATrack : NSMutableDictionary
+#import "ALADictionary.h"
+
+@class ALAUser;
+@class ALAPlaylist;
+
+@interface ALATrack : ALADictionary
 
 +(id)newTrack;
 
-//-(id)objectForKey: (id)aKey;
-//-(void)setObject: (id)anObject forKey:(id<NSCopying>)aKey;
-//-(void)removeObjectForKey: (id)aKey;
+@property (nonatomic) ALAUser * user;
+@property (nonatomic) ALAPlaylist * playlist;
 
 @end

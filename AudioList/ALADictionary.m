@@ -1,21 +1,16 @@
 //
-//  ALASong.m
+//  ALADictionary.m
 //  AudioList
 //
-//  Created by T.J. Mercer on 5/10/14.
+//  Created by T.J. Mercer on 5/12/14.
 //  Copyright (c) 2014 T.J. All rights reserved.
 //
 
-#import "ALATrack.h"
+#import "ALADictionary.h"
 
-@implementation ALATrack
+@implementation ALADictionary
 {
     NSMutableDictionary * dict;
-}
-
-+(id)newTrack
-{
-    return [[ALATrack alloc]init];
 }
 
 -(id)init

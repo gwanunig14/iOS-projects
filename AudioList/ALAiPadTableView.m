@@ -17,24 +17,38 @@
 @implementation ALAiPadTableView
 {
     ALAiPadDataView * dataVC;
+    UITabBarController * tab;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        
+//        tab = [[UITabBarController alloc]init];
+//        NSLog(@"1");
+//        UITableView * playlistTable = [[UITableView alloc]init];
+//        NSLog(@"2");
+//        UITableView * tracklistTable = [[UITableView alloc]init];
+//        NSLog(@"3");
+//        tab.viewControllers = [[NSArray alloc]initWithObjects:playlistTable, tracklistTable, nil];
+//        NSLog(@"4");
+//        [self.view addSubview:tab.view];
+//        NSLog(@"5");
         dataVC = [[ALAiPadDataView alloc]initWithNibName:nil bundle:nil];
         
-//        [ALAData mainData].musicData = [@[@{@"name": @"The Royal We",
-//                                           @"image": [UIImage imageNamed:@"SilversunpickupsSWOON"],
-//                                           @"audio": @"file://localhost/Users/tjmercer/Downloads/Swoon/02%20The%20Royal%20We.mp3",
-//                                           @"playCount": @0,
-//                                           @"liked":@"Thumbs Up"}
-//                                         ] mutableCopy];
-//        
-//        NSLog(@"%@",[ALAData mainData].musicData);
+        NSNotificationCenter * nCenter = [NSNotificationCenter defaultCenter];
         
+        [nCenter addObserverForName:@"dataUpdated" object:nil queue:nil usingBlock:^(NSNotification *note) {
+            
+            NSLog(@"%@",[[ALAData mainData] allTracks]);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+                
+            });
+            
+        }];
         // Custom initialization
     }
     return self;
@@ -57,11 +71,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    // Return the number of rows in the section.
-//    return [[ALAData mainData].musicData count];
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[ALAData mainData].allTracks count];
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,13 +84,13 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    
-    
-    
-//    cell.textLabel.text = [ALAData mainData].musicData[indexPath.row][@"name"];
-    
-    // Configure the cell...
     }
+    
+    ALAUser * track = [[ALAData mainData] allUsers][indexPath.row];
+    
+    NSLog(@"%@",track);
+    
+    cell.textLabel.text = track[@"name"];
     
     return cell;
 }

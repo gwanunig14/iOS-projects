@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 T.J. All rights reserved.
 //
 
-#define CLIENT_ID @"be7a3bde02983f2430f1ba394011db5e"
+#define CLIENT_ID @"client_id=be7a3bde02983f2430f1ba394011db5e"
 
 #define USER_NAME @"gwanunig14"
 
@@ -30,22 +30,45 @@
         
         NSArray *scInfo = [NSJSONSerialization  JSONObjectWithData:data options:0 error:nil];
         
-        for (NSDictionary * playlist in scInfo)
+        NSLog(@"%@",scInfo);
+        
+        for (NSDictionary * playlistInfo in scInfo)
         {
+            NSLog(@"PLAYLIST %@",playlistInfo);
+            
             //create a new plalist and set things like playlist title
             
-            for (NSDictionary * trackInfo in playlist[@"tracks"])
+            ALAPlaylist * playlist = [ALAPlaylist newPlaylist];
+            playlist[@"title"] = playlistInfo[@"title"];
+            [[ALAData mainData] addNewPlaylist:playlist];
+            
+            for (NSDictionary * trackInfo in playlistInfo[@"tracks"])
             {
-                if (!trackInfo[@"streamable"]) continue;
                 ALATrack * track = [ALATrack newTrack];
+                track.playlist = playlist;
+
+                if (!trackInfo[@"streamable"]) continue;
+                
                 track[@"title"] = trackInfo[@"title"];
                 track[@"url"] = trackInfo[@"stream_url"];
                 
+                [playlist.tracks addObject:track];
+                
+                ALAUser * user = [ALAUser newUser];
+                user[@"name"] = trackInfo[@"user"][@"username"];
+                track.user = user;
+                [[ALAData mainData] addNewUser:user];
                 [[ALAData mainData] addNewTrack:track];
+                
+                NSLog(@"here is the playlists%@",track.playlist);
+                NSLog(@"here is the user%@",track.user);
             }
         }
         
-        NSLog(@"%@",[[ALAData mainData] allTracks]);
+        NSNotificationCenter * nCenter = [NSNotificationCenter defaultCenter];
+        
+        [nCenter postNotificationName:@"dataUpdated" object:nil];
+        
     }];
 }
 
