@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:LilPlayA/LilPlayA.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../button-pause.png">
+   </FileRef>
+   <FileRef
+      location = "group:../../button-play.png">
+   </FileRef>
+   <FileRef
+      location = "group:../../button-stop.png">
+   </FileRef>
+</Workspace>
