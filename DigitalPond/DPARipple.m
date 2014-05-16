@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
     }
     return self;
 }
@@ -36,7 +37,7 @@
     rippleLine.layer.borderWidth = 1.0;
     rippleLine.layer.borderColor = [UIColor colorWithWhite:0.0 alpha:0.8].CGColor;
     
-    rippleLine.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
+    rippleLine.backgroundColor = self.tintColor;
     
     [self addSubview:rippleLine];
     
