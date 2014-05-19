@@ -20,6 +20,9 @@
 		9C723C371925275400B151FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C723C351925275400B151FB /* InfoPlist.strings */; };
 		9C723C391925275400B151FB /* Story_BoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C723C381925275400B151FB /* Story_BoardTests.m */; };
 		9C723C441925278000B151FB /* SYBStartup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C723C431925278000B151FB /* SYBStartup.m */; };
+		9C9FC9671927AFEA005ECDB5 /* SYBProjectList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FC9661927AFEA005ECDB5 /* SYBProjectList.m */; };
+		9CFF4D3E192694AC00FED5E3 /* SYBNewProjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF4D3D192694AC00FED5E3 /* SYBNewProjectView.m */; };
+		9CFF4D421926952000FED5E3 /* SYBData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF4D411926952000FED5E3 /* SYBData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		9C723C381925275400B151FB /* Story_BoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Story_BoardTests.m; sourceTree = "<group>"; };
 		9C723C421925278000B151FB /* SYBStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBStartup.h; sourceTree = "<group>"; };
 		9C723C431925278000B151FB /* SYBStartup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBStartup.m; sourceTree = "<group>"; };
+		9C9FC9651927AFEA005ECDB5 /* SYBProjectList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBProjectList.h; sourceTree = "<group>"; };
+		9C9FC9661927AFEA005ECDB5 /* SYBProjectList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBProjectList.m; sourceTree = "<group>"; };
+		9CFF4D3C192694AC00FED5E3 /* SYBNewProjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBNewProjectView.h; sourceTree = "<group>"; };
+		9CFF4D3D192694AC00FED5E3 /* SYBNewProjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBNewProjectView.m; sourceTree = "<group>"; };
+		9CFF4D401926952000FED5E3 /* SYBData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBData.h; sourceTree = "<group>"; };
+		9CFF4D411926952000FED5E3 /* SYBData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,8 @@
 			children = (
 				9C723C421925278000B151FB /* SYBStartup.h */,
 				9C723C431925278000B151FB /* SYBStartup.m */,
+				9CFF4D3F192694D000FED5E3 /* Data */,
+				9CFF4D3B1926948A00FED5E3 /* Popups */,
 				9C723C191925275400B151FB /* Story Board */,
 				9C723C321925275400B151FB /* Story BoardTests */,
 				9C723C121925275400B151FB /* Frameworks */,
@@ -147,6 +158,26 @@
 				9C723C351925275400B151FB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CFF4D3B1926948A00FED5E3 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF4D3C192694AC00FED5E3 /* SYBNewProjectView.h */,
+				9CFF4D3D192694AC00FED5E3 /* SYBNewProjectView.m */,
+				9C9FC9651927AFEA005ECDB5 /* SYBProjectList.h */,
+				9C9FC9661927AFEA005ECDB5 /* SYBProjectList.m */,
+			);
+			name = Popups;
+			sourceTree = "<group>";
+		};
+		9CFF4D3F192694D000FED5E3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF4D401926952000FED5E3 /* SYBData.h */,
+				9CFF4D411926952000FED5E3 /* SYBData.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFF4D3E192694AC00FED5E3 /* SYBNewProjectView.m in Sources */,
 				9C723C201925275400B151FB /* main.m in Sources */,
+				9CFF4D421926952000FED5E3 /* SYBData.m in Sources */,
 				9C723C241925275400B151FB /* SYBAppDelegate.m in Sources */,
+				9C9FC9671927AFEA005ECDB5 /* SYBProjectList.m in Sources */,
 				9C723C441925278000B151FB /* SYBStartup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +478,7 @@
 				9C723C3E1925275400B151FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C723C3F1925275400B151FB /* Build configuration list for PBXNativeTarget "Story BoardTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +487,7 @@
 				9C723C411925275400B151FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

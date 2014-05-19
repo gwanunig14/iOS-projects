@@ -7,12 +7,18 @@
 //
 
 #import "SYBStartup.h"
+#import "SYBNewProjectView.h"
+#import "SYBProjectList.h"
 
-@interface SYBStartup ()
+@interface SYBStartup () <SYBNewProjectViewDelegate,UITextFieldDelegate>
 
 @end
 
 @implementation SYBStartup
+{
+    SYBNewProjectView * newPopUp;
+    SYBProjectList * loadPopUp;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,6 +27,7 @@
     {
         UIButton * newProject = [[UIButton alloc]initWithFrame:CGRectMake((SCREEN_WIDTH/2)-100, 150, 200, 40)];
         newProject.backgroundColor = [UIColor redColor];
+        [newProject addTarget:self action:@selector(openNewProjectWindow) forControlEvents:UIControlEventTouchUpInside];
         newProject.layer.cornerRadius = newProject.frame.size.height/4;
         [self.view addSubview:newProject];
         
@@ -29,6 +36,11 @@
         loadProject.layer.cornerRadius = loadProject.frame.size.height/4;
         [loadProject addTarget:self action:@selector(loadProjects) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:loadProject];
+        
+        newPopUp = [[SYBNewProjectView alloc]init];
+        loadPopUp = [[SYBProjectList alloc]init];
+        
+        newPopUp.delegate = self;
     }
     return self;
 }
@@ -41,15 +53,33 @@
 
 -(void)loadProjects
 {
-    NSLog(@"pressed");
-    UIViewController * loadScreen = [[UIViewController alloc]initWithNibName:nil bundle:nil];
-    loadScreen.view.backgroundColor = [UIColor blackColor];
+    [self popUpWindow:loadPopUp];
+}
+
+-(void)openNewProjectWindow
+{
+    [self popUpWindow:newPopUp];
+    [newPopUp addSubviews];
+}
+
+-(void)newProjectAdded
+{
     
-    UINavigationController * loadNC = [[UINavigationController alloc]initWithRootViewController: loadScreen];
-    
-    [self.navigationController presentViewController:loadNC animated:YES completion:^{
-        
+}
+
+-(void)popUpWindow:(UIViewController *)window
+{
+    window.view.frame = CGRectMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 1, 1);
+    [self.view addSubview:window.view];
+    [UIView animateWithDuration:.5 animations:^{
+        window.view.frame = CGRectMake(40, 120, SCREEN_WIDTH-80, SCREEN_HEIGHT-200);
     }];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning

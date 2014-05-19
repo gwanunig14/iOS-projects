@@ -10,4 +10,6 @@
 
 @interface SABGameScene : SKScene
 
+-(void)buttonClick:(UIButton *)sender withArray:(NSArray *)buttons;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SABGameScene.h"
+#import "SABData.h"
 
 @interface SABGameScene () <SKPhysicsContactDelegate>
 
@@ -14,24 +15,13 @@
 
 @implementation SABGameScene
 {
-    SKLabelNode * timerLabel;
-    SKSpriteNode * player1HPBar;
-    SKSpriteNode * player1Life;
-    SKSpriteNode * player2HPBar;
-    SKSpriteNode * player2Life;
-    
-    SKSpriteNode * buttonA;
-    SKSpriteNode * buttonB;
-    
-    SKSpriteNode * dPadUp;
-    SKSpriteNode * dPadDown;
-    SKSpriteNode * dPadLeft;
-    SKSpriteNode * dPadRight;
-    
     SKSpriteNode * player1;
     SKSpriteNode * player2;
     
     SKEmitterNode * fireball;
+    
+    SKTextureAtlas * atlas;
+    SKTextureAtlas * danceAtlas;
     
     int fireDirection;
     int fireOrigin;
@@ -43,6 +33,7 @@
     self = [super initWithSize:size];
     if (self)
     {
+        
         SKPhysicsBody * scenePhysics = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0, 0, size.width, size.height)];
         self.physicsBody = scenePhysics;
         
@@ -60,69 +51,34 @@
         floor.physicsBody = floorPhysics;
         [self addChild:floor];
         
-        timerLabel = [SKLabelNode node];
-        timerLabel.position = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT - 30);
-        timerLabel.text = @"00:00";
-        timerLabel.fontColor = [SKColor greenColor];
-        timerLabel.fontSize = 16;
-        [self addChild:timerLabel];
+        atlas = [SKTextureAtlas atlasNamed:@"char"];
+        danceAtlas = [SKTextureAtlas atlasNamed:@"dance"];
         
-        float barArea = ((SCREEN_WIDTH - 60)/2.0)-20;
-        
-        player1HPBar = [SKSpriteNode spriteNodeWithColor:[SKColor lightGrayColor] size:CGSizeMake(barArea, 20)];
-        player1HPBar.position = CGPointMake((barArea+20)/2, SCREEN_HEIGHT - 20);
-        [self addChild:player1HPBar];
-        
-        player1Life = [SKSpriteNode spriteNodeWithColor:[SKColor greenColor] size:CGSizeMake(barArea, 30)];
-        player1Life.position = CGPointMake((barArea+20)/2, SCREEN_HEIGHT - 20);
-        [self addChild:player1Life];
-        
-        player2HPBar = [SKSpriteNode spriteNodeWithColor:[SKColor lightGrayColor] size:CGSizeMake(barArea, 20)];
-        player2HPBar.position = CGPointMake(SCREEN_WIDTH - (barArea+20)/2, SCREEN_HEIGHT - 20);
-        [self addChild:player2HPBar];
-        
-        player2Life = [SKSpriteNode spriteNodeWithColor:[SKColor greenColor] size:CGSizeMake(barArea, 30)];
-        player2Life.position = CGPointMake(SCREEN_WIDTH - (barArea+20)/2, SCREEN_HEIGHT - 20);
-        [self addChild:player2Life];
-        
-        player1 = [SKSpriteNode spriteNodeWithColor:[SKColor whiteColor] size:CGSizeMake(40, 100)];
+        player1 = [SKSpriteNode spriteNodeWithImageNamed:atlas.textureNames[0]];
         player1.position = CGPointMake(SCREEN_WIDTH/4, 80);
         [self addChild:player1];
         SKPhysicsBody * player1Physics = [SKPhysicsBody bodyWithRectangleOfSize:player1.size];
         player1.physicsBody = player1Physics;
         
-        player2 = [SKSpriteNode spriteNodeWithColor:[SKColor whiteColor] size:CGSizeMake(40, 100)];
+        NSMutableArray * textures = [@[]mutableCopy];
+        
+        for (int i = 1; i<danceAtlas.textureNames.count + 1; i++)
+        {
+            [textures addObject: [danceAtlas textureNamed:[NSString stringWithFormat:@"dance%d", i]]];
+            NSLog(@"charframe%d", i);
+        }
+        
+        SKAction * dance = [SKAction animateWithTextures:textures timePerFrame:0.2];
+        SKAction * danceAllNight = [SKAction repeatActionForever:dance];
+        [player1 runAction:danceAllNight];
+        
+        player2 = [SKSpriteNode spriteNodeWithImageNamed:atlas.textureNames[0]];
         player2.position = CGPointMake(SCREEN_WIDTH*0.75, 80);
         player2.userData = [@{@"type":@"player2"}mutableCopy];
         [self addChild:player2];
         SKPhysicsBody * player2Physics = [SKPhysicsBody bodyWithRectangleOfSize:player2.size];
         player2.physicsBody = player2Physics;
         player2.physicsBody.contactTestBitMask = 2;
-        
-        buttonA = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(40, 40)];
-        buttonA.position = CGPointMake(SCREEN_WIDTH - 40, 80);
-        [self addChild:buttonA];
-        
-        buttonB = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(40, 40)];
-        buttonB.position = CGPointMake(SCREEN_WIDTH - 80, 40);
-        [self addChild:buttonB];
-        
-        dPadDown = [SKSpriteNode spriteNodeWithColor:[SKColor blueColor] size:CGSizeMake(30, 30)];
-        dPadDown.position = CGPointMake(80, 40);
-        [self addChild:dPadDown];
-        
-        dPadUp = [SKSpriteNode spriteNodeWithColor:[SKColor blueColor] size:CGSizeMake(30, 30)];
-        dPadUp.position = CGPointMake(80, 120);
-        [self addChild:dPadUp];
-        
-        dPadLeft = [SKSpriteNode spriteNodeWithColor:[SKColor blueColor] size:CGSizeMake(30, 30)];
-        dPadLeft.position = CGPointMake(40, 80);
-        [self addChild:dPadLeft];
-        
-        dPadRight = [SKSpriteNode spriteNodeWithColor:[SKColor blueColor] size:CGSizeMake(30, 30)];
-        dPadRight.position = CGPointMake(120, 80);
-        [self addChild:dPadRight];
-        
     }
     return self;
 }
@@ -134,7 +90,7 @@
 
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
-    NSLog(@"%@", contact);
+    NSLog(@"%f", [SABData mainData].player2Life);
     
     NSMutableArray * nodes = [@[]mutableCopy];
     
@@ -156,11 +112,12 @@
         }
         if ([node.userData[@"type"] isEqualToString:@"fireball"])
         {
-            if (player2Life.size.width >= 0)
+            [SABData mainData].player2Life = [SABData mainData].player2Life - 5;
+            
+            NSLog(@"%f", [SABData mainData].player2Life);
+            
+            if ([SABData mainData].player2Life == 0)
             {
-                player2Life.size = CGSizeMake(player2Life.size.width-23.1, 30);
-                player2Life.position = CGPointMake(player2Life.position.x+11.55, SCREEN_HEIGHT - 20);
-            } else {
                 NSString * partPath = [[NSBundle mainBundle]pathForResource:@"explosion" ofType:@"sks"];
                 SKEmitterNode * explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:partPath];
                 explosion.position = player2.position;
@@ -171,22 +128,13 @@
     }
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)buttonClick:(UIButton *)sender withArray:(NSArray *)buttons
 {
-    UITouch * touch = [touches anyObject];
+    NSLog(@"2");
     
-    CGPoint location = [touch locationInNode:self];
-    
-    [self testButtonsWIthLocation:location];
-}
-
--(void)testButtonsWIthLocation:(CGPoint)location
-{
-    NSArray * buttons = @[buttonA,buttonB,dPadUp,dPadDown,dPadLeft,dPadRight];
-    
-    for (SKNode * button in buttons)
+    for (UIButton * button in buttons)
     {
-        if ([button containsPoint:location])
+        if ([button isEqual:sender])
         {
             switch ([buttons indexOfObject:button]) {
                 case 0:
@@ -219,6 +167,22 @@
                         [player1 runAction:stand1];
                         [player1 runAction:stand2];
                     }else{
+//                        for (NSString * textureName in atlas.textureNames) {
+//                            NSLog(@"%@",textureName);
+//                        }
+                        
+                        NSMutableArray * textures = [@[]mutableCopy];
+                        
+                        for (int i = 1; i<atlas.textureNames.count + 1; i++)
+                        {
+                            [textures addObject: [atlas textureNamed:[NSString stringWithFormat:@"charframe%d", i]]];
+                            NSLog(@"charframe%d", i);
+                        }
+                        
+                        SKAction * setFrame2 = [SKAction animateWithTextures:textures timePerFrame:0.25];
+                        
+                        [player1 runAction:setFrame2];
+                        
                         [player1.physicsBody applyImpulse:CGVectorMake(0.0, 100.0)];
                     }
                 }

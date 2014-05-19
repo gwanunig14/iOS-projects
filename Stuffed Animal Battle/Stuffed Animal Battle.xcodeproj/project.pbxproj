@@ -24,6 +24,9 @@
 		9C8F3A4019253F1F00AFDE02 /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F3A3E19253F1F00AFDE02 /* explosion.sks */; };
 		9C8F3A4119253F1F00AFDE02 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F3A3F19253F1F00AFDE02 /* spark.png */; };
 		9C8F3A431925401B00AFDE02 /* fireball.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F3A421925401B00AFDE02 /* fireball.sks */; };
+		9C9FC96A19294346005ECDB5 /* SABData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FC96919294346005ECDB5 /* SABData.m */; };
+		9CFF4D381926567400FED5E3 /* char.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF4D371926567400FED5E3 /* char.atlas */; };
+		9CFF4D3A192665DA00FED5E3 /* dance.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF4D39192665DA00FED5E3 /* dance.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		9C8F3A3E19253F1F00AFDE02 /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
 		9C8F3A3F19253F1F00AFDE02 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9C8F3A421925401B00AFDE02 /* fireball.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fireball.sks; sourceTree = "<group>"; };
+		9C9FC96819294346005ECDB5 /* SABData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SABData.h; sourceTree = "<group>"; };
+		9C9FC96919294346005ECDB5 /* SABData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SABData.m; sourceTree = "<group>"; };
+		9CFF4D371926567400FED5E3 /* char.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = char.atlas; path = ../../../../Downloads/char.atlas; sourceTree = "<group>"; };
+		9CFF4D39192665DA00FED5E3 /* dance.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = dance.atlas; path = ../../../../Downloads/dance.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +96,10 @@
 		9C723BC61924F66E00B151FB = {
 			isa = PBXGroup;
 			children = (
+				9CFF4D39192665DA00FED5E3 /* dance.atlas */,
+				9CFF4D371926567400FED5E3 /* char.atlas */,
+				9C9FC96819294346005ECDB5 /* SABData.h */,
+				9C9FC96919294346005ECDB5 /* SABData.m */,
 				9C723C041924FBCE00B151FB /* SABGameScene.h */,
 				9C723C051924FBCE00B151FB /* SABGameScene.m */,
 				9C723C011924F6C500B151FB /* SABViewController.h */,
@@ -241,7 +252,9 @@
 			files = (
 				9C723BDD1924F66E00B151FB /* InfoPlist.strings in Resources */,
 				9C8F3A4119253F1F00AFDE02 /* spark.png in Resources */,
+				9CFF4D3A192665DA00FED5E3 /* dance.atlas in Resources */,
 				9C8F3A4019253F1F00AFDE02 /* explosion.sks in Resources */,
+				9CFF4D381926567400FED5E3 /* char.atlas in Resources */,
 				9C723BE51924F66E00B151FB /* Images.xcassets in Resources */,
 				9C8F3A431925401B00AFDE02 /* fireball.sks in Resources */,
 			);
@@ -265,6 +278,7 @@
 				9C723C031924F6C500B151FB /* SABViewController.m in Sources */,
 				9C723BDF1924F66E00B151FB /* main.m in Sources */,
 				9C723BE31924F66E00B151FB /* SABAppDelegate.m in Sources */,
+				9C9FC96A19294346005ECDB5 /* SABData.m in Sources */,
 				9C723C061924FBCE00B151FB /* SABGameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +356,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 			};
 			name = Debug;
 		};
@@ -373,6 +388,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
