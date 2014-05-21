@@ -7,7 +7,7 @@
 //
 
 #import "SMSSelectorScreen.h"
-
+#import "STTwitter.h"
 #import "SMSData.h"
 
 @interface SMSSelectorScreen ()
@@ -16,16 +16,22 @@
 
 @implementation SMSSelectorScreen
 {
+    STTwitterAPI * twitter;
+    
     NSMutableArray * inUse;
     NSMutableArray * senders;
+    NSMutableString * sharedString;
     
     UIImageView * grid;
     UIImageView * highlightPosition;
+    UIImageView * smileyToShare;
     
     UIImage * backArrow;
     
     UIButton * nextStep;
     UIButton * finalStep;
+    UIButton * twitterButton;
+    UIButton * facebookButton;
     
     int rows;
     int cols;
@@ -56,6 +62,13 @@
         
         UIImage * arrow = [UIImage imageNamed:@"arrow"];
         backArrow = [UIImage imageWithCGImage:arrow.CGImage scale:arrow.scale orientation: UIImageOrientationUpMirrored];
+        
+        twitter = [STTwitterAPI twitterAPIOSWithFirstAccount];
+        [twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
+            NSLog(@"%@",username);
+        } errorBlock:^(NSError *error) {
+            NSLog(@"%@",error.userInfo);
+        }];
         
         rows = 3;
         cols = 3;
@@ -100,31 +113,26 @@
     
     NSArray * selectedArray = [SMSData mainData].bigSmileys[finalArray];
     
-    UIImageView * smileyToShare = [[UIImageView alloc] initWithFrame:CGRectMake(68, 192, 192, 192)];
-    smileyToShare.image = selectedArray[nextArray];
+    smileyToShare = [[UIImageView alloc] initWithFrame:CGRectMake(68, 192, 192, 192)];
+    smileyToShare.image = [UIImage imageNamed:selectedArray[nextArray]];
     [inUse addObject:smileyToShare];
     [self.view addSubview:smileyToShare];
     
-    UIButton * twitter = [[UIButton alloc] initWithFrame:CGRectMake(84, 48, 48, 48)];
-    [twitter setImage: [UIImage imageNamed:@"sm_twitter_g"] forState:UIControlStateNormal];
-    [twitter setImage:[UIImage imageNamed:@"sm_twitter"] forState:UIControlStateSelected];
-    [twitter addTarget:self action:@selector(setState:) forControlEvents:UIControlEventTouchUpInside];
-    [inUse addObject:twitter];
-    [self.view addSubview:twitter];
+    sharedString = selectedArray[nextArray];
     
-    UIButton * google = [[UIButton alloc] initWithFrame:CGRectMake(139, 48, 48, 48)];
-    [google setImage: [UIImage imageNamed:@"sm_google_g"] forState:UIControlStateNormal];
-    [google setImage:[UIImage imageNamed:@"sM_google"] forState:UIControlStateSelected];
-    [google addTarget:self action:@selector(setState:) forControlEvents:UIControlEventTouchUpInside];
-    [inUse addObject:google];
-    [self.view addSubview:google];
+    twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(84, 48, 48, 48)];
+    [twitterButton setImage: [UIImage imageNamed:@"sm_twitter_g"] forState:UIControlStateNormal];
+    [twitterButton setImage:[UIImage imageNamed:@"sm_twitter"] forState:UIControlStateSelected];
+    [twitterButton addTarget:self action:@selector(setState:) forControlEvents:UIControlEventTouchUpInside];
+    [inUse addObject:twitterButton];
+    [self.view addSubview:twitterButton];
     
-    UIButton * facebook = [[UIButton alloc] initWithFrame:CGRectMake(194, 48, 48, 48)];
-    [facebook setImage: [UIImage imageNamed:@"sm_facebook_g"] forState:UIControlStateNormal];
-    [facebook setImage:[UIImage imageNamed:@"sm_facebook"] forState:UIControlStateSelected];
-    [facebook addTarget:self action:@selector(setState:) forControlEvents:UIControlEventTouchUpInside];
-    [inUse addObject:facebook];
-    [self.view addSubview:facebook];
+    facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(194, 48, 48, 48)];
+    [facebookButton setImage: [UIImage imageNamed:@"sm_facebook_g"] forState:UIControlStateNormal];
+    [facebookButton setImage:[UIImage imageNamed:@"sm_facebook"] forState:UIControlStateSelected];
+    [facebookButton addTarget:self action:@selector(setState:) forControlEvents:UIControlEventTouchUpInside];
+    [inUse addObject:facebookButton];
+    [self.view addSubview:facebookButton];
     
     UIButton * backToSmileys = [[UIButton alloc] initWithFrame:CGRectMake(36, 496, 56, 48)];
     [backToSmileys addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
@@ -167,14 +175,10 @@
             int index = i+(r*3);
             
             grid = [[UIImageView alloc] initWithFrame:CGRectMake(squareX, squareY, 56, 56)];
-            grid.image = array[index];
-            
+            grid.image = [UIImage imageNamed:array[index]];
             grid.tag = [inUse count];
-            
             [inUse addObject:grid];
-            
             [self.view addSubview:grid];
-            
             finalArray = -1;
         }
     }
@@ -233,7 +237,19 @@
 
 -(void)shareStuff
 {
-    NSLog(@"%@",senders);
+    NSLog(@"%@",sharedString);
+    NSURL * url = [[NSURL alloc]initFileURLWithPath:sharedString];
+    NSLog(@"%@", url);
+
+    if ([senders containsObject:twitterButton]) {
+        [twitter postStatusUpdate:@"I'm feeling" inReplyToStatusID:nil mediaURL:url placeID:nil latitude:nil longitude:nil uploadProgressBlock:^(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite) {
+            NSLog(@"%@",url);
+        } successBlock:^(NSDictionary *status) {
+        
+        } errorBlock:^(NSError *error) {
+            NSLog(@"error %@", error.userInfo);
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

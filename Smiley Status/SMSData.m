@@ -33,45 +33,45 @@
     self = [super init];
     if (self)
     {
-        self.colors = @[[UIImage imageNamed:@"colors_1"],
-                        [UIImage imageNamed:@"colors_2"],
-                        [UIImage imageNamed:@"colors_3"],
-                        [UIImage imageNamed:@"colors_4"],
-                        [UIImage imageNamed:@"colors_5"],
-                        [UIImage imageNamed:@"colors_6"],
-                        [UIImage imageNamed:@"colors_7"],
-                        [UIImage imageNamed:@"colors_8"],
-                        [UIImage imageNamed:@"colors_9"]];
+        self.colors = @[@"colors_1",
+                        @"colors_2",
+                        @"colors_3",
+                        @"colors_4",
+                        @"colors_5",
+                        @"colors_6",
+                        @"colors_7",
+                        @"colors_8",
+                        @"colors_9"];
         
-        bigYellowSmileys = @[[UIImage imageNamed:@"yellow_1"],
-                             [UIImage imageNamed:@"yellow_2"],
-                             [UIImage imageNamed:@"yellow_3"],
-                             [UIImage imageNamed:@"yellow_4"],
-                             [UIImage imageNamed:@"yellow_5"],
-                             [UIImage imageNamed:@"yellow_6"],
-                             [UIImage imageNamed:@"yellow_7"],
-                             [UIImage imageNamed:@"yellow_8"],
-                             [UIImage imageNamed:@"yellow_9"]];
+        bigYellowSmileys = @[@"yellow_1",
+                             @"yellow_2",
+                             @"yellow_3",
+                             @"yellow_4",
+                             @"yellow_5",
+                             @"yellow_6",
+                             @"yellow_7",
+                             @"yellow_8",
+                             @"yellow_9"];
         
-        littleYellowSmileys = @[[UIImage imageNamed:@"smilies_1"],
-                          [UIImage imageNamed:@"smilies_2"],
-                          [UIImage imageNamed:@"smilies_3"],
-                          [UIImage imageNamed:@"smilies_4"],
-                          [UIImage imageNamed:@"smilies_5"],
-                          [UIImage imageNamed:@"smilies_6"],
-                          [UIImage imageNamed:@"smilies_7"],
-                          [UIImage imageNamed:@"smilies_8"],
-                          [UIImage imageNamed:@"smilies_9"]];
+        littleYellowSmileys = @[@"smilies_1",
+                          @"smilies_2",
+                          @"smilies_3",
+                          @"smilies_4",
+                          @"smilies_5",
+                          @"smilies_6",
+                          @"smilies_7",
+                          @"smilies_8",
+                          @"smilies_9"];
         
-        littleRedSmileys = @[[UIImage imageNamed:@"angry_1"],
-                       [UIImage imageNamed:@"angry_2"],
-                       [UIImage imageNamed:@"angry_3"],
-                       [UIImage imageNamed:@"angry_4"],
-                       [UIImage imageNamed:@"angry_5"],
-                       [UIImage imageNamed:@"angry_6"],
-                       [UIImage imageNamed:@"angry_7"],
-                       [UIImage imageNamed:@"angry_8"],
-                       [UIImage imageNamed:@"angry_9"]];
+        littleRedSmileys = @[@"angry_1",
+                       @"angry_2",
+                       @"angry_3",
+                       @"angry_4",
+                       @"angry_5",
+                       @"angry_6",
+                       @"angry_7",
+                       @"angry_8",
+                       @"angry_9"];
         
         self.bigSmileys = @[bigYellowSmileys,
                             bigYellowSmileys,

@@ -8,6 +8,7 @@
 
 #import "SMSAppDelegate.h"
 #import "SMSSelectorScreen.h"
+#import "STTwitter.h"
 
 @implementation SMSAppDelegate
 
