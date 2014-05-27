@@ -9,8 +9,9 @@
 #import "SMSSelectorScreen.h"
 #import "STTwitter.h"
 #import "SMSData.h"
+#import <MapKit/MapKit.h>
 
-@interface SMSSelectorScreen ()
+@interface SMSSelectorScreen () <CLLocationManagerDelegate>
 
 @end
 
@@ -20,6 +21,8 @@
     
     NSMutableArray * inUse;
     NSMutableArray * senders;
+    NSString * currentLatitude;
+    NSString * currentLongitude;
     NSMutableString * sharedString;
     
     UIImageView * grid;
@@ -37,6 +40,8 @@
     int cols;
     int nextArray;
     int finalArray;
+    
+    CLLocationManager * lManager;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -74,6 +79,13 @@
         cols = 3;
         
         [self createSquaresWithArray:[SMSData mainData].colors];
+        
+        lManager = [[CLLocationManager alloc] init];
+        lManager.delegate = self;
+        
+        lManager.distanceFilter = 10;
+        
+        [lManager startUpdatingLocation];
     }
     return self;
 }
@@ -242,7 +254,7 @@
     NSLog(@"%@", url);
 
     if ([senders containsObject:twitterButton]) {
-        [twitter postStatusUpdate:@"I'm feeling" inReplyToStatusID:nil mediaURL:url placeID:nil latitude:nil longitude:nil uploadProgressBlock:^(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite) {
+        [twitter postStatusUpdate:@"" inReplyToStatusID:nil mediaURL:url placeID:nil latitude:currentLatitude longitude:currentLongitude uploadProgressBlock:^(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite) {
             NSLog(@"%@",url);
         } successBlock:^(NSDictionary *status) {
         
@@ -250,6 +262,21 @@
             NSLog(@"error %@", error.userInfo);
         }];
     }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"location");
+    for (CLLocation * location in locations) {
+        
+        CLGeocoder * geoCoder = [[CLGeocoder alloc]init];
+        
+        [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+            currentLatitude = [NSString stringWithFormat:@"%f",location.coordinate.latitude];
+            currentLongitude = [NSString stringWithFormat:@"%f",location.coordinate.longitude];
+        }];
+    }
+    //    [lManager stopUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning

@@ -93,6 +93,7 @@
 		9CE4F347192BAA1500A32881 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE4F346192BAA1500A32881 /* Accounts.framework */; };
 		9CE4F349192BAA1B00A32881 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE4F348192BAA1B00A32881 /* Social.framework */; };
 		9CE4F34B192BAA2300A32881 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE4F34A192BAA2300A32881 /* Twitter.framework */; };
+		9CE4F406192D220000A32881 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE4F405192D220000A32881 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		9CE4F346192BAA1500A32881 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9CE4F348192BAA1B00A32881 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9CE4F34A192BAA2300A32881 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		9CE4F405192D220000A32881 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE4F406192D220000A32881 /* MapKit.framework in Frameworks */,
 				9CE4F34B192BAA2300A32881 /* Twitter.framework in Frameworks */,
 				9CE4F349192BAA1B00A32881 /* Social.framework in Frameworks */,
 				9CE4F347192BAA1500A32881 /* Accounts.framework in Frameworks */,
@@ -269,6 +272,7 @@
 		9C91705B192A392D00AA3C04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CE4F405192D220000A32881 /* MapKit.framework */,
 				9CE4F34A192BAA2300A32881 /* Twitter.framework */,
 				9CE4F348192BAA1B00A32881 /* Social.framework */,
 				9CE4F346192BAA1500A32881 /* Accounts.framework */,

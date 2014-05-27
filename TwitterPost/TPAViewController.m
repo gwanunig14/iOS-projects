@@ -7,10 +7,10 @@
 //
 
 #import "TPAViewController.h"
-
+#import <MapKit/MapKit.h>
 #import "STTwitter.h"
 
-@interface TPAViewController ()
+@interface TPAViewController () <CLLocationManagerDelegate>
 
 @end
 
@@ -18,6 +18,11 @@
 {
     STTwitterAPI * twitter;
     UITextField * tweetField;
+    
+    NSString * currentLatitude;
+    NSString * currentLongitude;
+    
+    CLLocationManager * lManager;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,6 +40,13 @@
             NSLog(@"%@",error.userInfo);
             
         }];
+        
+        lManager = [[CLLocationManager alloc] init];
+        lManager.delegate = self;
+        
+        lManager.distanceFilter = 10;
+        
+        [lManager startUpdatingLocation];
     }
     return self;
 }
@@ -59,11 +71,25 @@
 
 -(void)postTweet
 {
-    [twitter postStatusUpdate:tweetField.text inReplyToStatusID:nil latitude:nil longitude:nil placeID:nil displayCoordinates:nil trimUser:nil successBlock:^(NSDictionary *status) {
+    [twitter postStatusUpdate:tweetField.text inReplyToStatusID:nil latitude:currentLatitude longitude:currentLongitude placeID:nil displayCoordinates:nil trimUser:nil successBlock:^(NSDictionary *status) {
         NSLog(@"%@",status);
     } errorBlock:^(NSError *error) {
         NSLog(@"%@",error.userInfo);
     }];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"location");
+    for (CLLocation * location in locations) {
+        
+        CLGeocoder * geoCoder = [[CLGeocoder alloc]init];
+        
+        [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+            currentLatitude = [NSString stringWithFormat:@"%f",location.coordinate.latitude];
+            currentLongitude = [NSString stringWithFormat:@"%f",location.coordinate.longitude];
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning
