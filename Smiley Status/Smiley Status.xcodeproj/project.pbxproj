@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C8F85DC19376E2D0016A71B /* SMSBitDataArchitecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F85DB19376E2D0016A71B /* SMSBitDataArchitecture.m */; };
 		9C91705D192A392D00AA3C04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91705C192A392D00AA3C04 /* Foundation.framework */; };
 		9C91705F192A392D00AA3C04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91705E192A392D00AA3C04 /* CoreGraphics.framework */; };
 		9C917061192A392D00AA3C04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C917060192A392D00AA3C04 /* UIKit.framework */; };
@@ -107,6 +108,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C8F85DA19376E2D0016A71B /* SMSBitDataArchitecture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSBitDataArchitecture.h; sourceTree = "<group>"; };
+		9C8F85DB19376E2D0016A71B /* SMSBitDataArchitecture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSBitDataArchitecture.m; sourceTree = "<group>"; };
 		9C917059192A392D00AA3C04 /* Smiley Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smiley Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C91705C192A392D00AA3C04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C91705E192A392D00AA3C04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -250,6 +253,8 @@
 			children = (
 				9C9170EA192A3AEC00AA3C04 /* SMSSelectorScreen.h */,
 				9C9170EB192A3AEC00AA3C04 /* SMSSelectorScreen.m */,
+				9C8F85DA19376E2D0016A71B /* SMSBitDataArchitecture.h */,
+				9C8F85DB19376E2D0016A71B /* SMSBitDataArchitecture.m */,
 				9CD410BB192A7129004E6187 /* SMSData.h */,
 				9CD410BC192A7129004E6187 /* SMSData.m */,
 				9C917062192A392D00AA3C04 /* Smiley Status */,
@@ -653,6 +658,7 @@
 				9CE4F340192BA9B900A32881 /* STTwitterOAuth.m in Sources */,
 				9CE4F33F192BA9B900A32881 /* STTwitterHTML.m in Sources */,
 				9CD410BD192A7129004E6187 /* SMSData.m in Sources */,
+				9C8F85DC19376E2D0016A71B /* SMSBitDataArchitecture.m in Sources */,
 				9C91706D192A392D00AA3C04 /* SMSAppDelegate.m in Sources */,
 				9CE4F339192BA9B900A32881 /* NSDateFormatter+STTwitter.m in Sources */,
 				9C917069192A392D00AA3C04 /* main.m in Sources */,

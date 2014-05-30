@@ -1,44 +1,30 @@
 //
-//  SLFAppDelegate.m
-//  Selfy
+//  GLAAppDelegate.m
+//  GridLayout
 //
-//  Created by T.J. Mercer on 4/21/14.
+//  Created by T.J. Mercer on 5/30/14.
 //  Copyright (c) 2014 T.J. All rights reserved.
 //
 
-#import "SLFAppDelegate.h"
+#import "GLAAppDelegate.h"
 
-#import "SLFTableViewController.h"
+#import "GLACollectionViewController.h"
 
-#import "SLFStartUp.h"
-
-#import "SLFPhoto.h"
-
-#import <Parse/Parse.h>
-
-@implementation SLFAppDelegate
+@implementation GLAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    [Parse setApplicationId:@"H1JHLiA7kFRmIWvtbkHDcnA1Caj4UofHxRx6UZAB"
-                  clientKey:@"dKLyXccYHUy1MXNgrdR2Sq5b1fNQoTr4clSXVd3p"];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    [PFUser enableAutomaticUser];
-    
-    self.window.rootViewController = [[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    
-//    self.window.rootViewController = [[SLFStartUp alloc] initWithNibName:nil bundle:nil];
-    
-//    self.window.rootViewController = [[SLFPhoto alloc] initWithNibName:nil bundle:nil];
-    
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor greenColor];
     [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = [[GLACollectionViewController alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+    // Override point for customization after application launch.
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -65,7 +51,5 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-
 
 @end
