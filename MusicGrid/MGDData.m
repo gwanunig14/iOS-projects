@@ -27,8 +27,14 @@
     self = [super init];
     if (self)
     {
-        self.albumsForLater = [@[]mutableCopy];
-        self.unRated = [@[]mutableCopy];
+        self.albumsForLater = [@{}mutableCopy];
+        self.unRated = [@{}mutableCopy];
+        self.ratedAlbums = [@{}mutableCopy];
+        self.used = @{};
+        self.startUp = [@{@"u2":@{@"cover": [UIImage imageNamed:@"joshuatree"]},
+                          @"daft punk":@{@"cover": [UIImage imageNamed:@"Daftpunk"]},
+                          @"Guy Clark":@{@"cover": [UIImage imageNamed:@"guyclark"]}}mutableCopy];
+        self.token = @"";
     }
     return self;
 }

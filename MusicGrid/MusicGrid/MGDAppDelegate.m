@@ -8,14 +8,18 @@
 
 #import "MGDAppDelegate.h"
 #import "MGDViewController.h"
+#import "MGDLogInViewController.h"
 
 @implementation MGDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     MGDViewController * root = [[MGDViewController alloc]init];
+//    MGDLogInViewController * root = [[MGDLogInViewController alloc]init];
+    UINavigationController * nc = [[UINavigationController alloc]initWithRootViewController:root];
+    nc.navigationBarHidden = YES;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = root;
+    self.window.rootViewController = nc;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

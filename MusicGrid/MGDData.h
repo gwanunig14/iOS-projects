@@ -12,7 +12,12 @@
 
 +(MGDData *)mainData;
 
-@property (nonatomic) NSMutableArray * albumsForLater;
-@property (nonatomic) NSMutableArray * unRated;
+@property (nonatomic) NSMutableDictionary * albumsForLater;
+@property (nonatomic) NSMutableDictionary * unRated;
+@property (nonatomic) NSMutableDictionary * ratedAlbums;
+@property (nonatomic) NSDictionary * used;
+@property (nonatomic) NSMutableDictionary * startUp;
+@property (nonatomic) NSString * token;
+@property (nonatomic) float requestCount;
 
 @end

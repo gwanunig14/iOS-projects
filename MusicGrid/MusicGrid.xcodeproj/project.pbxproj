@@ -21,8 +21,20 @@
 		9C4E873819429B8200A53A43 /* MusicGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E873719429B8200A53A43 /* MusicGridTests.m */; };
 		9C4E87471942A25200A53A43 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E87461942A25200A53A43 /* FacebookSDK.framework */; };
 		9C4E874A1942A2B700A53A43 /* MGDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E87491942A2B700A53A43 /* MGDViewController.m */; };
-		9C4E874D194358F000A53A43 /* MOVE.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E874C194358F000A53A43 /* MOVE.m */; };
 		9C4E87501943733A00A53A43 /* MGDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E874F1943733A00A53A43 /* MGDData.m */; };
+		9C4E87541943758000A53A43 /* MGDRatingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E87531943758000A53A43 /* MGDRatingScreen.m */; };
+		9C4E875A19439D8700A53A43 /* MGDAlbumList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E875919439D8700A53A43 /* MGDAlbumList.m */; };
+		9C4E875E1943A2DF00A53A43 /* me2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E875D1943A2DF00A53A43 /* me2.png */; };
+		9C4E87641943AAAD00A53A43 /* MGDLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E87631943AAAD00A53A43 /* MGDLogInViewController.m */; };
+		9C4E87661943AF3900A53A43 /* Yes.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E87651943AF3900A53A43 /* Yes.png */; };
+		9C4E87681943B74900A53A43 /* CivilWars.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E87671943B74900A53A43 /* CivilWars.png */; };
+		9C4E876A1943B77400A53A43 /* skrillex.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E87691943B77400A53A43 /* skrillex.png */; };
+		9C4E876C1943B78600A53A43 /* katy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E876B1943B78600A53A43 /* katy.png */; };
+		9C4E876F1943CEE000A53A43 /* MGDFirstRating.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E876E1943CEE000A53A43 /* MGDFirstRating.m */; };
+		9C4E877B1943E3A400A53A43 /* MGDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E877A1943E3A400A53A43 /* MGDRequest.m */; };
+		9C4E87811944B23C00A53A43 /* Daftpunk.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E877E1944B23C00A53A43 /* Daftpunk.png */; };
+		9C4E87821944B23C00A53A43 /* guyclark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E877F1944B23C00A53A43 /* guyclark.png */; };
+		9C4E87831944B23C00A53A43 /* joshuatree.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E87801944B23C00A53A43 /* joshuatree.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +67,26 @@
 		9C4E87461942A25200A53A43 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		9C4E87481942A2B700A53A43 /* MGDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDViewController.h; path = MusicGrid/MGDViewController.h; sourceTree = "<group>"; };
 		9C4E87491942A2B700A53A43 /* MGDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDViewController.m; path = MusicGrid/MGDViewController.m; sourceTree = "<group>"; };
-		9C4E874B194358F000A53A43 /* MOVE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MOVE.h; path = "../../../../Downloads/iOS-Q2-2014-master/ToBeDone/MOVE.h"; sourceTree = "<group>"; };
-		9C4E874C194358F000A53A43 /* MOVE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MOVE.m; path = "../../../../Downloads/iOS-Q2-2014-master/ToBeDone/MOVE.m"; sourceTree = "<group>"; };
 		9C4E874E1943733A00A53A43 /* MGDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDData.h; sourceTree = "<group>"; };
 		9C4E874F1943733A00A53A43 /* MGDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDData.m; sourceTree = "<group>"; };
+		9C4E87521943758000A53A43 /* MGDRatingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDRatingScreen.h; sourceTree = "<group>"; };
+		9C4E87531943758000A53A43 /* MGDRatingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDRatingScreen.m; sourceTree = "<group>"; };
+		9C4E875819439D8700A53A43 /* MGDAlbumList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDAlbumList.h; sourceTree = "<group>"; };
+		9C4E875919439D8700A53A43 /* MGDAlbumList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDAlbumList.m; sourceTree = "<group>"; };
+		9C4E875D1943A2DF00A53A43 /* me2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = me2.png; path = ../../../../Downloads/me2.png; sourceTree = "<group>"; };
+		9C4E87621943AAAD00A53A43 /* MGDLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDLogInViewController.h; sourceTree = "<group>"; };
+		9C4E87631943AAAD00A53A43 /* MGDLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDLogInViewController.m; sourceTree = "<group>"; };
+		9C4E87651943AF3900A53A43 /* Yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Yes.png; path = ../../../../Desktop/Yes.png; sourceTree = "<group>"; };
+		9C4E87671943B74900A53A43 /* CivilWars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CivilWars.png; sourceTree = "<group>"; };
+		9C4E87691943B77400A53A43 /* skrillex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skrillex.png; sourceTree = "<group>"; };
+		9C4E876B1943B78600A53A43 /* katy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = katy.png; sourceTree = "<group>"; };
+		9C4E876D1943CEE000A53A43 /* MGDFirstRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDFirstRating.h; sourceTree = "<group>"; };
+		9C4E876E1943CEE000A53A43 /* MGDFirstRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDFirstRating.m; sourceTree = "<group>"; };
+		9C4E87791943E3A400A53A43 /* MGDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDRequest.h; sourceTree = "<group>"; };
+		9C4E877A1943E3A400A53A43 /* MGDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDRequest.m; sourceTree = "<group>"; };
+		9C4E877E1944B23C00A53A43 /* Daftpunk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Daftpunk.png; sourceTree = "<group>"; };
+		9C4E877F1944B23C00A53A43 /* guyclark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guyclark.png; sourceTree = "<group>"; };
+		9C4E87801944B23C00A53A43 /* joshuatree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joshuatree.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,16 +117,26 @@
 		9C4E870619429B8200A53A43 = {
 			isa = PBXGroup;
 			children = (
-				9C4E874B194358F000A53A43 /* MOVE.h */,
-				9C4E874C194358F000A53A43 /* MOVE.m */,
 				9C4E87481942A2B700A53A43 /* MGDViewController.h */,
 				9C4E87491942A2B700A53A43 /* MGDViewController.m */,
-				9C4E874E1943733A00A53A43 /* MGDData.h */,
-				9C4E874F1943733A00A53A43 /* MGDData.m */,
+				9C4E875819439D8700A53A43 /* MGDAlbumList.h */,
+				9C4E875919439D8700A53A43 /* MGDAlbumList.m */,
+				9C4E87521943758000A53A43 /* MGDRatingScreen.h */,
+				9C4E87531943758000A53A43 /* MGDRatingScreen.m */,
+				9C4E877D1944B08300A53A43 /* Data */,
+				9C4E877C1944A76700A53A43 /* Startup */,
 				9C4E871819429B8200A53A43 /* MusicGrid */,
 				9C4E873119429B8200A53A43 /* MusicGridTests */,
 				9C4E871119429B8200A53A43 /* Frameworks */,
 				9C4E871019429B8200A53A43 /* Products */,
+				9C4E875D1943A2DF00A53A43 /* me2.png */,
+				9C4E87651943AF3900A53A43 /* Yes.png */,
+				9C4E87671943B74900A53A43 /* CivilWars.png */,
+				9C4E87691943B77400A53A43 /* skrillex.png */,
+				9C4E876B1943B78600A53A43 /* katy.png */,
+				9C4E877E1944B23C00A53A43 /* Daftpunk.png */,
+				9C4E877F1944B23C00A53A43 /* guyclark.png */,
+				9C4E87801944B23C00A53A43 /* joshuatree.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +199,28 @@
 				9C4E873419429B8200A53A43 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C4E877C1944A76700A53A43 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E87621943AAAD00A53A43 /* MGDLogInViewController.h */,
+				9C4E87631943AAAD00A53A43 /* MGDLogInViewController.m */,
+				9C4E876D1943CEE000A53A43 /* MGDFirstRating.h */,
+				9C4E876E1943CEE000A53A43 /* MGDFirstRating.m */,
+			);
+			name = Startup;
+			sourceTree = "<group>";
+		};
+		9C4E877D1944B08300A53A43 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E874E1943733A00A53A43 /* MGDData.h */,
+				9C4E874F1943733A00A53A43 /* MGDData.m */,
+				9C4E87791943E3A400A53A43 /* MGDRequest.h */,
+				9C4E877A1943E3A400A53A43 /* MGDRequest.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +299,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4E876C1943B78600A53A43 /* katy.png in Resources */,
+				9C4E875E1943A2DF00A53A43 /* me2.png in Resources */,
 				9C4E871D19429B8200A53A43 /* InfoPlist.strings in Resources */,
+				9C4E87681943B74900A53A43 /* CivilWars.png in Resources */,
+				9C4E87821944B23C00A53A43 /* guyclark.png in Resources */,
+				9C4E87831944B23C00A53A43 /* joshuatree.png in Resources */,
+				9C4E87811944B23C00A53A43 /* Daftpunk.png in Resources */,
 				9C4E872519429B8200A53A43 /* Images.xcassets in Resources */,
+				9C4E87661943AF3900A53A43 /* Yes.png in Resources */,
+				9C4E876A1943B77400A53A43 /* skrillex.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4E874D194358F000A53A43 /* MOVE.m in Sources */,
+				9C4E876F1943CEE000A53A43 /* MGDFirstRating.m in Sources */,
 				9C4E871F19429B8200A53A43 /* main.m in Sources */,
+				9C4E87541943758000A53A43 /* MGDRatingScreen.m in Sources */,
+				9C4E877B1943E3A400A53A43 /* MGDRequest.m in Sources */,
 				9C4E87501943733A00A53A43 /* MGDData.m in Sources */,
 				9C4E872319429B8200A53A43 /* MGDAppDelegate.m in Sources */,
+				9C4E87641943AAAD00A53A43 /* MGDLogInViewController.m in Sources */,
+				9C4E875A19439D8700A53A43 /* MGDAlbumList.m in Sources */,
 				9C4E874A1942A2B700A53A43 /* MGDViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

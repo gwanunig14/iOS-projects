@@ -21,6 +21,7 @@
     [self.window makeKeyAndVisible];
     
     self.window.rootViewController = [[GLACollectionViewController alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+    
     // Override point for customization after application launch.
     return YES;
 }

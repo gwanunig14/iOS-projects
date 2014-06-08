@@ -7,6 +7,8 @@
 //
 
 #import "MGDViewController.h"
+#import "MGDAlbumList.h"
+#import "MGDRatingScreen.h"
 #import "MGDData.h"
 
 @interface MGDViewController ()
@@ -15,8 +17,11 @@
 
 @implementation MGDViewController
 {
+    MGDAlbumList * albums;
+    
     UIImageView * albumCover;
     UIView * menu;
+    UITextView * error;
     
     float albumCount;
     float doneStack;
@@ -26,6 +31,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -33,27 +39,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
     albumCover = [[UIImageView alloc]initWithFrame:CGRectMake(40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
     albumCover.backgroundColor = [UIColor blackColor];
+    albumCover.image = [UIImage imageNamed:@"Yes"];
+    albumCover.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:albumCover];
     
-    menu = [[UIView alloc]initWithFrame:CGRectMake(-100, 0, 100, SCREEN_HEIGHT)];
+    menu = [[UIView alloc]initWithFrame:CGRectMake(-200, 0, 200, SCREEN_HEIGHT)];
     menu.backgroundColor = [UIColor blueColor];
     [self.view addSubview:menu];
     
-    UIButton * rated = [[UIButton alloc]initWithFrame:CGRectMake(20, 20, 60, 20)];
-    [rated setTitle:@"Rate" forState:UIControlStateNormal];
+    error = [[UITextView alloc]initWithFrame:CGRectMake(80, 100, SCREEN_WIDTH - 160, SCREEN_HEIGHT - 200)];
+    error.backgroundColor = [UIColor redColor];
+    
+    UIButton * rated = [[UIButton alloc]initWithFrame:CGRectMake(20, 100, 160, 20)];
+    [rated setTitle:@"Old Listens" forState:UIControlStateNormal];
+    rated.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [rated addTarget:self action:@selector(oldAlbums) forControlEvents:UIControlEventTouchUpInside];
     [menu addSubview:rated];
     
-    UIButton * unrated = [[UIButton alloc]initWithFrame:CGRectMake(100, 20, 60, 20)];
-    [unrated setTitle:@"Rate" forState:UIControlStateNormal];
+    UIButton * unrated = [[UIButton alloc]initWithFrame:CGRectMake(20, 200, 160, 20)];
+    [unrated setTitle:@"Rate Previous" forState:UIControlStateNormal];
+    unrated.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [unrated addTarget:self action:@selector(ratingsScreen) forControlEvents:UIControlEventTouchUpInside];
     [menu addSubview:unrated];
     
-    UIButton * friends = [[UIButton alloc]initWithFrame:CGRectMake(100, 20, 60, 20)];
-    [friends setTitle:@"Rate" forState:UIControlStateNormal];
+    UIButton * later = [[UIButton alloc]initWithFrame:CGRectMake(20, 300, 160, 20)];
+    [later setTitle:@"Saved Suggestions" forState:UIControlStateNormal];
+    later.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [later addTarget:self action:@selector(later) forControlEvents:UIControlEventTouchUpInside];
+    [menu addSubview:later];
+    
+    UIButton * friends = [[UIButton alloc]initWithFrame:CGRectMake(20, 400, 160, 20)];
+    [friends setTitle:@"Friends" forState:UIControlStateNormal];
+    friends.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [friends addTarget:self action:@selector(friends) forControlEvents:UIControlEventTouchUpInside];
     [menu addSubview:friends];
     
@@ -78,16 +101,16 @@
 
 - (void)swipeAlbum:(UISwipeGestureRecognizer *)gesture
 {
-    albumCount = [[] albumsForLater count];
+    albumCount = [[[MGDData mainData].albumsForLater allKeys] count];
     
-    doneStack = [unRated count];
+    doneStack = [[[MGDData mainData].unRated allKeys] count];
     
     switch (gesture.direction)
     {
         case 1: //right
         {
             [UIView animateWithDuration:0.5 animations:^{
-                menu.frame = CGRectMake(0, 0, 100, SCREEN_HEIGHT);
+                menu.frame = CGRectMake(0, 0, 200, SCREEN_HEIGHT);
                 NSLog(@"swiped");
                 
             } completion:^(BOOL finished) {
@@ -98,11 +121,13 @@
             
         case 2: //left
         {
-            if (menu.frame.origin.x == -100)
+            if (menu.frame.origin.x == -200)
             {
                 UIImageView * newAlbum = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH + 40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
                 newAlbum.backgroundColor = [UIColor blackColor];
-                [self.view addSubview:newAlbum];
+                newAlbum.image = [UIImage imageNamed:@"Yes"];
+                newAlbum.contentMode = UIViewContentModeScaleAspectFit;
+                [self.view insertSubview:newAlbum atIndex:0];
                 
                 [UIView animateWithDuration:.5 animations:^{
                     albumCover.frame = CGRectMake(-(SCREEN_WIDTH - 80), (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
@@ -110,7 +135,7 @@
                     newAlbum.frame = CGRectMake(40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
                     albumCover.backgroundColor = [UIColor blackColor];
                     
-                    [albumsForLater addObject:[NSString stringWithFormat:@"Album Number %f",albumCount + 1]];
+                    [[MGDData mainData].albumsForLater setObject:[@{@"cover":albumCover.image}mutableCopy] forKey:[NSString stringWithFormat:@"Album Number %0.f",albumCount + 1]];
                 } completion:^(BOOL finished) {
                     [albumCover removeFromSuperview];
                     albumCover = newAlbum;
@@ -118,7 +143,7 @@
             }else{
                 
                 [UIView animateWithDuration:0.5 animations:^{
-                    menu.frame = CGRectMake(-100, 0, 100, SCREEN_HEIGHT);
+                    menu.frame = CGRectMake(-200, 0, 100, SCREEN_HEIGHT);
                 } completion:^(BOOL finished) {
                     
                 }];
@@ -132,7 +157,7 @@
             [UIView animateWithDuration:.5 animations:^{
                 albumCover.frame = CGRectMake(40, - (SCREEN_WIDTH -80), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
                 
-                [unRated addObject:[NSString stringWithFormat:@"Album Number %f",doneStack + 1]];
+                [[MGDData mainData].unRated setObject:[@{@"cover":albumCover.image}mutableCopy] forKey:[NSString stringWithFormat:@"Album Number %0.f",doneStack + 1]];
             } completion:^(BOOL finished) {
                 [albumCover removeFromSuperview];
             }];
@@ -143,7 +168,8 @@
         {
             UIImageView * newAlbum = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH + 40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
             newAlbum.backgroundColor = [UIColor blackColor];
-            [self.view addSubview:newAlbum];
+            newAlbum.image = [UIImage imageNamed:@"Yes"];
+            [self.view insertSubview:newAlbum atIndex:0];
             
             [UIView animateWithDuration:.5 animations:^{
                 albumCover.frame = CGRectMake(40, (SCREEN_HEIGHT + 40), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
@@ -159,24 +185,66 @@
             break;
     }
     
-    NSLog(@"%@",albumsForLater);
-    NSLog(@"%@",unRated);
+    NSLog(@"%@",[MGDData mainData].albumsForLater);
+    NSLog(@"%@",[MGDData mainData].unRated);
 
 }
 
 -(void)oldAlbums
 {
+    if ([[[MGDData mainData].ratedAlbums allKeys] count] != 0)
+    {
+        albums = [[MGDAlbumList alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+        [MGDData mainData].used = [MGDData mainData].ratedAlbums;
+        UINavigationController * nc = [[UINavigationController alloc]initWithRootViewController:albums];
+        nc.navigationBarHidden = YES;
+        [self.navigationController presentViewController:nc animated:YES completion:^{
+            [menu removeFromSuperview];
+        }];
+    }
     
 }
 
 -(void)ratingsScreen
 {
+    if ([[[MGDData mainData].unRated allKeys] count] != 0)
+    {
+        MGDRatingScreen * stars = [[MGDRatingScreen alloc]init];
+        UINavigationController * nc = [[UINavigationController alloc]initWithRootViewController:stars];
+        nc.navigationBarHidden = YES;
+        [self.navigationController presentViewController:nc animated:YES completion:^{
+            [menu removeFromSuperview];
+        }];
+    }else{
+        error.text = @"You've been thorough \n There are no albums you need to rate";
+        [self.view addSubview:error];
+    }
     
+}
+
+-(void)later
+{
+    if ([[[MGDData mainData].albumsForLater allKeys] count] != 0)
+    {
+        NSLog(@"%@",[MGDData mainData].albumsForLater);
+        albums = [[MGDAlbumList alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+        [MGDData mainData].used = [MGDData mainData].albumsForLater;
+        UINavigationController * nc = [[UINavigationController alloc]initWithRootViewController:albums];
+        nc.navigationBarHidden = YES;
+        [self.navigationController presentViewController:nc animated:YES completion:^{
+            [menu removeFromSuperview];
+        }];
+    }
 }
 
 -(void)friends
 {
     
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [error removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning
