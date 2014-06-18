@@ -47,10 +47,10 @@
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 
-    UIImageView * albumCover = [[UIImageView alloc]initWithFrame:cell.frame];
+    UIImageView * albumCover = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
     albumCover.image = [[MGDData mainData].used allValues][indexPath.row][@"cover"];
     albumCover.contentMode = UIViewContentModeScaleAspectFit;
-    [cell addSubview:albumCover];
+    [cell.contentView addSubview:albumCover];
 
     UILabel * title = [[UILabel alloc]initWithFrame:CGRectMake(0, cell.frame.size.height -30, cell.frame.size.width, 30)];
 
@@ -70,6 +70,11 @@
     // Do any additional setup after loading the view.
 }
 
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 
 @end

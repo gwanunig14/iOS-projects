@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C4E87EC194739FB00A53A43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E87EB194739FB00A53A43 /* Foundation.framework */; };
+		9C4E87EE194739FB00A53A43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E87ED194739FB00A53A43 /* CoreGraphics.framework */; };
+		9C4E87F0194739FB00A53A43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E87EF194739FB00A53A43 /* UIKit.framework */; };
+		9C4E87F6194739FB00A53A43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E87F4194739FB00A53A43 /* InfoPlist.strings */; };
+		9C4E87F8194739FB00A53A43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E87F7194739FB00A53A43 /* main.m */; };
+		9C4E87FC194739FB00A53A43 /* AMAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E87FB194739FB00A53A43 /* AMAAppDelegate.m */; };
+		9C4E87FF194739FB00A53A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E87FD194739FB00A53A43 /* Main.storyboard */; };
+		9C4E8802194739FB00A53A43 /* AMAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8801194739FB00A53A43 /* AMAViewController.m */; };
+		9C4E8804194739FB00A53A43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E8803194739FB00A53A43 /* Images.xcassets */; };
+		9C4E880B194739FB00A53A43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E880A194739FB00A53A43 /* XCTest.framework */; };
+		9C4E880C194739FB00A53A43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E87EB194739FB00A53A43 /* Foundation.framework */; };
+		9C4E880D194739FB00A53A43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E87EF194739FB00A53A43 /* UIKit.framework */; };
+		9C4E8815194739FB00A53A43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E8813194739FB00A53A43 /* InfoPlist.strings */; };
+		9C4E8817194739FB00A53A43 /* AdMonkeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8816194739FB00A53A43 /* AdMonkeyTests.m */; };
+		9C4E882119473A6D00A53A43 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E882019473A6D00A53A43 /* iAd.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C4E880E194739FB00A53A43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C4E87E0194739FB00A53A43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C4E87E7194739FB00A53A43;
+			remoteInfo = AdMonkey;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C4E87E8194739FB00A53A43 /* AdMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4E87EB194739FB00A53A43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C4E87ED194739FB00A53A43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C4E87EF194739FB00A53A43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C4E87F3194739FB00A53A43 /* AdMonkey-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdMonkey-Info.plist"; sourceTree = "<group>"; };
+		9C4E87F5194739FB00A53A43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C4E87F7194739FB00A53A43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C4E87F9194739FB00A53A43 /* AdMonkey-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdMonkey-Prefix.pch"; sourceTree = "<group>"; };
+		9C4E87FA194739FB00A53A43 /* AMAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAAppDelegate.h; sourceTree = "<group>"; };
+		9C4E87FB194739FB00A53A43 /* AMAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAAppDelegate.m; sourceTree = "<group>"; };
+		9C4E87FE194739FB00A53A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C4E8800194739FB00A53A43 /* AMAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAViewController.h; sourceTree = "<group>"; };
+		9C4E8801194739FB00A53A43 /* AMAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAViewController.m; sourceTree = "<group>"; };
+		9C4E8803194739FB00A53A43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C4E8809194739FB00A53A43 /* AdMonkeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdMonkeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4E880A194739FB00A53A43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9C4E8812194739FB00A53A43 /* AdMonkeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdMonkeyTests-Info.plist"; sourceTree = "<group>"; };
+		9C4E8814194739FB00A53A43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C4E8816194739FB00A53A43 /* AdMonkeyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdMonkeyTests.m; sourceTree = "<group>"; };
+		9C4E882019473A6D00A53A43 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C4E87E5194739FB00A53A43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E882119473A6D00A53A43 /* iAd.framework in Frameworks */,
+				9C4E87EE194739FB00A53A43 /* CoreGraphics.framework in Frameworks */,
+				9C4E87F0194739FB00A53A43 /* UIKit.framework in Frameworks */,
+				9C4E87EC194739FB00A53A43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4E8806194739FB00A53A43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E880B194739FB00A53A43 /* XCTest.framework in Frameworks */,
+				9C4E880D194739FB00A53A43 /* UIKit.framework in Frameworks */,
+				9C4E880C194739FB00A53A43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C4E87DF194739FB00A53A43 = {
+			isa = PBXGroup;
+			children = (
+				9C4E87F1194739FB00A53A43 /* AdMonkey */,
+				9C4E8810194739FB00A53A43 /* AdMonkeyTests */,
+				9C4E87EA194739FB00A53A43 /* Frameworks */,
+				9C4E87E9194739FB00A53A43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C4E87E9194739FB00A53A43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E87E8194739FB00A53A43 /* AdMonkey.app */,
+				9C4E8809194739FB00A53A43 /* AdMonkeyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C4E87EA194739FB00A53A43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E882019473A6D00A53A43 /* iAd.framework */,
+				9C4E87EB194739FB00A53A43 /* Foundation.framework */,
+				9C4E87ED194739FB00A53A43 /* CoreGraphics.framework */,
+				9C4E87EF194739FB00A53A43 /* UIKit.framework */,
+				9C4E880A194739FB00A53A43 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C4E87F1194739FB00A53A43 /* AdMonkey */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E87FA194739FB00A53A43 /* AMAAppDelegate.h */,
+				9C4E87FB194739FB00A53A43 /* AMAAppDelegate.m */,
+				9C4E87FD194739FB00A53A43 /* Main.storyboard */,
+				9C4E8800194739FB00A53A43 /* AMAViewController.h */,
+				9C4E8801194739FB00A53A43 /* AMAViewController.m */,
+				9C4E8803194739FB00A53A43 /* Images.xcassets */,
+				9C4E87F2194739FB00A53A43 /* Supporting Files */,
+			);
+			path = AdMonkey;
+			sourceTree = "<group>";
+		};
+		9C4E87F2194739FB00A53A43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E87F3194739FB00A53A43 /* AdMonkey-Info.plist */,
+				9C4E87F4194739FB00A53A43 /* InfoPlist.strings */,
+				9C4E87F7194739FB00A53A43 /* main.m */,
+				9C4E87F9194739FB00A53A43 /* AdMonkey-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C4E8810194739FB00A53A43 /* AdMonkeyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E8816194739FB00A53A43 /* AdMonkeyTests.m */,
+				9C4E8811194739FB00A53A43 /* Supporting Files */,
+			);
+			path = AdMonkeyTests;
+			sourceTree = "<group>";
+		};
+		9C4E8811194739FB00A53A43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E8812194739FB00A53A43 /* AdMonkeyTests-Info.plist */,
+				9C4E8813194739FB00A53A43 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C4E87E7194739FB00A53A43 /* AdMonkey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C4E881A194739FB00A53A43 /* Build configuration list for PBXNativeTarget "AdMonkey" */;
+			buildPhases = (
+				9C4E87E4194739FB00A53A43 /* Sources */,
+				9C4E87E5194739FB00A53A43 /* Frameworks */,
+				9C4E87E6194739FB00A53A43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdMonkey;
+			productName = AdMonkey;
+			productReference = 9C4E87E8194739FB00A53A43 /* AdMonkey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C4E8808194739FB00A53A43 /* AdMonkeyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C4E881D194739FB00A53A43 /* Build configuration list for PBXNativeTarget "AdMonkeyTests" */;
+			buildPhases = (
+				9C4E8805194739FB00A53A43 /* Sources */,
+				9C4E8806194739FB00A53A43 /* Frameworks */,
+				9C4E8807194739FB00A53A43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C4E880F194739FB00A53A43 /* PBXTargetDependency */,
+			);
+			name = AdMonkeyTests;
+			productName = AdMonkeyTests;
+			productReference = 9C4E8809194739FB00A53A43 /* AdMonkeyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C4E87E0194739FB00A53A43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AMA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = T.J.;
+				TargetAttributes = {
+					9C4E8808194739FB00A53A43 = {
+						TestTargetID = 9C4E87E7194739FB00A53A43;
+					};
+				};
+			};
+			buildConfigurationList = 9C4E87E3194739FB00A53A43 /* Build configuration list for PBXProject "AdMonkey" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C4E87DF194739FB00A53A43;
+			productRefGroup = 9C4E87E9194739FB00A53A43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C4E87E7194739FB00A53A43 /* AdMonkey */,
+				9C4E8808194739FB00A53A43 /* AdMonkeyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C4E87E6194739FB00A53A43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E8804194739FB00A53A43 /* Images.xcassets in Resources */,
+				9C4E87F6194739FB00A53A43 /* InfoPlist.strings in Resources */,
+				9C4E87FF194739FB00A53A43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4E8807194739FB00A53A43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E8815194739FB00A53A43 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C4E87E4194739FB00A53A43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E87FC194739FB00A53A43 /* AMAAppDelegate.m in Sources */,
+				9C4E8802194739FB00A53A43 /* AMAViewController.m in Sources */,
+				9C4E87F8194739FB00A53A43 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4E8805194739FB00A53A43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E8817194739FB00A53A43 /* AdMonkeyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C4E880F194739FB00A53A43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C4E87E7194739FB00A53A43 /* AdMonkey */;
+			targetProxy = 9C4E880E194739FB00A53A43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C4E87F4194739FB00A53A43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C4E87F5194739FB00A53A43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C4E87FD194739FB00A53A43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C4E87FE194739FB00A53A43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C4E8813194739FB00A53A43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C4E8814194739FB00A53A43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C4E8818194739FB00A53A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C4E8819194739FB00A53A43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C4E881B194739FB00A53A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdMonkey/AdMonkey-Prefix.pch";
+				INFOPLIST_FILE = "AdMonkey/AdMonkey-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C4E881C194739FB00A53A43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdMonkey/AdMonkey-Prefix.pch";
+				INFOPLIST_FILE = "AdMonkey/AdMonkey-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9C4E881E194739FB00A53A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AdMonkey.app/AdMonkey";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdMonkey/AdMonkey-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AdMonkeyTests/AdMonkeyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9C4E881F194739FB00A53A43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AdMonkey.app/AdMonkey";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdMonkey/AdMonkey-Prefix.pch";
+				INFOPLIST_FILE = "AdMonkeyTests/AdMonkeyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C4E87E3194739FB00A53A43 /* Build configuration list for PBXProject "AdMonkey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4E8818194739FB00A53A43 /* Debug */,
+				9C4E8819194739FB00A53A43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C4E881A194739FB00A53A43 /* Build configuration list for PBXNativeTarget "AdMonkey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4E881B194739FB00A53A43 /* Debug */,
+				9C4E881C194739FB00A53A43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C4E881D194739FB00A53A43 /* Build configuration list for PBXNativeTarget "AdMonkeyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4E881E194739FB00A53A43 /* Debug */,
+				9C4E881F194739FB00A53A43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C4E87E0194739FB00A53A43 /* Project object */;
+}

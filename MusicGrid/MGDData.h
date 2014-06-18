@@ -15,6 +15,7 @@
 @property (nonatomic) NSMutableDictionary * albumsForLater;
 @property (nonatomic) NSMutableDictionary * unRated;
 @property (nonatomic) NSMutableDictionary * ratedAlbums;
+@property (nonatomic) NSMutableArray * suggestions;
 @property (nonatomic) NSDictionary * used;
 @property (nonatomic) NSMutableDictionary * startUp;
 @property (nonatomic) NSString * token;

@@ -15,7 +15,7 @@
 {
     // Create the request.
     NSLog(@"%@",dict);
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://warm-caverns-3979.herokuapp.com/api/v1/users/%@",url]]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://warm-caverns-3979.herokuapp.com/api/v1/%@",url]]];
     
     // Specify that it will be a POST request
     request.HTTPMethod = @"POST";
@@ -41,6 +41,21 @@
         //        NSDictionary * dd = [NSDictionary di]
         NSLog(@"%@",responseString);
         NSLog(@"%@",responseD);
+        
+        if (responseD[@"topalbums"])
+        {
+            for (NSDictionary * albumInfo in responseD[@"topalbums"][@"album"])
+            {
+                NSData * imageData = [NSData dataWithContentsOfURL:albumInfo[@"image"][2][@"#text"]];
+                
+                UIImage * image = [UIImage imageWithData:imageData];
+                
+                [[MGDData mainData].suggestions addObject:@{@"album":albumInfo[@"name"],
+                                                            @"cover":image,
+                                                            @"artist":albumInfo[@"artist"]
+                                                            }];
+            }
+        }
         
         [MGDData mainData].token = responseD[@"user_token"];
     }];

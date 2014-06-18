@@ -37,6 +37,7 @@
     if (self) {
         index = 0;
         artistCount = 1;
+        NSLog(@"%@",[MGDData mainData].token);
         
         NSLog(@"%@", [MGDData mainData].unRated);
         
@@ -222,7 +223,7 @@
                     break;
             }
             
-            [[MGDData mainData].ratedAlbums[@"artists"] setObject:albumTitle.text forKey:[NSString stringWithFormat:@"arist_%0.f", artistCount]];
+            [[MGDData mainData].ratedAlbums[@"artists"] setObject:albumTitle.text forKey:[NSString stringWithFormat:@"artist_%0.f", artistCount]];
             
             NSLog(@"%@",[MGDData mainData].ratedAlbums);
             
@@ -239,12 +240,14 @@
                 NSLog(@"1");
                 MGDViewController * music = [[MGDViewController alloc]init];
                 UINavigationController * nc = [[UINavigationController alloc]initWithRootViewController:music];
-                [self.navigationController presentViewController:nc animated:YES completion:^{
-                    MGDRequest * request = [[MGDRequest alloc]init];
-                    [[MGDData mainData].ratedAlbums[@"artists"] setObject:@([MGDData mainData].requestCount) forKey:@"offset"];
-                    [request sendDictionary:[MGDData mainData].ratedAlbums andString:@"get_three_suggestions"];
-                    [MGDData mainData].requestCount = [MGDData mainData].requestCount + 3;
-                }];
+                MGDRequest * request = [[MGDRequest alloc]init];
+                [[MGDData mainData].ratedAlbums[@"artists"] setObject:@([MGDData mainData].requestCount) forKey:@"offset"];
+//                [[MGDData mainData].ratedAlbums[@"artists"] setObject:[MGDData mainData].token forKey:@"user_token"];
+                [request sendDictionary:[MGDData mainData].ratedAlbums andString:@"taste_profiles/get_three_suggestions"];
+                [MGDData mainData].requestCount = [MGDData mainData].requestCount + 3;
+//                [self.navigationController presentViewController:nc animated:YES completion:^{
+//
+//                }];
             }else if([[[MGDData mainData].unRated allKeys]count] > index)
             {
                 NSLog(@"2");

@@ -20,6 +20,7 @@
     MGDAlbumList * albums;
     
     UIImageView * albumCover;
+    UIImageView * backAlbum;
     UIView * menu;
     UITextView * error;
     
@@ -43,17 +44,33 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    albumCover = [[UIImageView alloc]initWithFrame:CGRectMake(40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
-    albumCover.backgroundColor = [UIColor blackColor];
+    backAlbum = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH/2)-170, 80, 150, 150)];
+//    backAlbum.backgroundColor = [UIColor blackColor];
+    backAlbum.image = [UIImage imageNamed:@"Yes"];
+//    backAlbum.image = [MGDData mainData].suggestions[1][@"cover"];
+    backAlbum.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:backAlbum];
+    
+    albumCover = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH/2)-75, 200, 250, 250)];
+//    albumCover.backgroundColor = [UIColor blackColor];
     albumCover.image = [UIImage imageNamed:@"Yes"];
+//    albumCover.image = [MGDData mainData].suggestions[0][@"cover"];
     albumCover.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:albumCover];
+    
+//    albumCover = [[UIImageView alloc]initWithFrame:CGRectMake(40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
+//    albumCover.backgroundColor = [UIColor blackColor];
+//    albumCover.image = [UIImage imageNamed:@"Yes"];
+//    albumCover.contentMode = UIViewContentModeScaleAspectFit;
+//    [self.view addSubview:albumCover];
     
     menu = [[UIView alloc]initWithFrame:CGRectMake(-200, 0, 200, SCREEN_HEIGHT)];
     menu.backgroundColor = [UIColor blueColor];
     [self.view addSubview:menu];
     
     error = [[UITextView alloc]initWithFrame:CGRectMake(80, 100, SCREEN_WIDTH - 160, SCREEN_HEIGHT - 200)];
+    error.textAlignment =  NSTextAlignmentCenter;
+    error.textContainerInset = UIEdgeInsetsMake(100, 10, SCREEN_HEIGHT-300, 10);
     error.backgroundColor = [UIColor redColor];
     
     UIButton * rated = [[UIButton alloc]initWithFrame:CGRectMake(20, 100, 160, 20)];
@@ -79,6 +96,12 @@
     friends.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [friends addTarget:self action:@selector(friends) forControlEvents:UIControlEventTouchUpInside];
     [menu addSubview:friends];
+    
+    UIButton * options = [[UIButton alloc]initWithFrame:CGRectMake(20, 500, 160, 20)];
+    [options setTitle:@"Options" forState:UIControlStateNormal];
+    options.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [options addTarget:self action:@selector(optionsAct) forControlEvents:UIControlEventTouchUpInside];
+    [menu addSubview:options];
     
     UISwipeGestureRecognizer * swipeUp = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeAlbum:)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
@@ -123,22 +146,26 @@
         {
             if (menu.frame.origin.x == -200)
             {
-                UIImageView * newAlbum = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH + 40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
-                newAlbum.backgroundColor = [UIColor blackColor];
+                UIImageView * newAlbum = [[UIImageView alloc]initWithFrame:CGRectMake(-150, 80, 150, 150)];
+//                newAlbum.backgroundColor = [UIColor blackColor];
                 newAlbum.image = [UIImage imageNamed:@"Yes"];
+//                newAlbum.image = albumCover.image = [MGDData mainData].suggestions[2][@"cover"];;
                 newAlbum.contentMode = UIViewContentModeScaleAspectFit;
                 [self.view insertSubview:newAlbum atIndex:0];
                 
                 [UIView animateWithDuration:.5 animations:^{
-                    albumCover.frame = CGRectMake(-(SCREEN_WIDTH - 80), (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
+                    albumCover.frame = CGRectMake(-(SCREEN_WIDTH/2)-75, 200, SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
                     
-                    newAlbum.frame = CGRectMake(40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
-                    albumCover.backgroundColor = [UIColor blackColor];
+                    backAlbum.frame = CGRectMake((SCREEN_WIDTH/2)-75, 200, 250, 250);
+                    
+                    newAlbum.frame = CGRectMake((SCREEN_WIDTH/2)-170, 80, 150, 150);
+//                    albumCover.backgroundColor = [UIColor blackColor];
                     
                     [[MGDData mainData].albumsForLater setObject:[@{@"cover":albumCover.image}mutableCopy] forKey:[NSString stringWithFormat:@"Album Number %0.f",albumCount + 1]];
                 } completion:^(BOOL finished) {
                     [albumCover removeFromSuperview];
-                    albumCover = newAlbum;
+                    albumCover = backAlbum;
+                    backAlbum = newAlbum;
                 }];
             }else{
                 
@@ -169,24 +196,30 @@
             UIImageView * newAlbum = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH + 40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80)];
             newAlbum.backgroundColor = [UIColor blackColor];
             newAlbum.image = [UIImage imageNamed:@"Yes"];
+//            newAlbum.image = albumCover.image = [MGDData mainData].suggestions[2][@"cover"];;
+            newAlbum.contentMode = UIViewContentModeScaleAspectFit;
             [self.view insertSubview:newAlbum atIndex:0];
             
             [UIView animateWithDuration:.5 animations:^{
-                albumCover.frame = CGRectMake(40, (SCREEN_HEIGHT + 40), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
+                
+                albumCover.frame = CGRectMake(SCREEN_WIDTH + (SCREEN_WIDTH/2)-75, 200, SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
+                
+                backAlbum.frame = CGRectMake((SCREEN_WIDTH/2)-75, 200, 250, 250);
+                
+                newAlbum.frame = CGRectMake((SCREEN_WIDTH/2)-170, 80, 150, 150);
+                //                    albumCover.backgroundColor = [UIColor blackColor];
                 
                 newAlbum.frame = CGRectMake(40, (SCREEN_HEIGHT / 2) - ((SCREEN_WIDTH - 80)/2), SCREEN_WIDTH - 80, SCREEN_WIDTH - 80);
                 } completion:^(BOOL finished) {
                 [albumCover removeFromSuperview];
-                albumCover = newAlbum;
+                albumCover = backAlbum;
+                backAlbum = newAlbum;
             }];
         }
             break;
         default:
             break;
     }
-    
-    NSLog(@"%@",[MGDData mainData].albumsForLater);
-    NSLog(@"%@",[MGDData mainData].unRated);
 
 }
 
@@ -200,7 +233,12 @@
         nc.navigationBarHidden = YES;
         [self.navigationController presentViewController:nc animated:YES completion:^{
             [menu removeFromSuperview];
+            [albumCover removeFromSuperview];
         }];
+
+    }else{
+        error.text = @"You haven't rated anything yet. \n Listen to Some Music";
+        [self.view addSubview:error];
     }
     
 }
@@ -214,6 +252,7 @@
         nc.navigationBarHidden = YES;
         [self.navigationController presentViewController:nc animated:YES completion:^{
             [menu removeFromSuperview];
+            [albumCover removeFromSuperview];
         }];
     }else{
         error.text = @"You've been thorough \n There are no albums you need to rate";
@@ -226,20 +265,30 @@
 {
     if ([[[MGDData mainData].albumsForLater allKeys] count] != 0)
     {
-        NSLog(@"%@",[MGDData mainData].albumsForLater);
         albums = [[MGDAlbumList alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
         [MGDData mainData].used = [MGDData mainData].albumsForLater;
         UINavigationController * nc = [[UINavigationController alloc]initWithRootViewController:albums];
         nc.navigationBarHidden = YES;
         [self.navigationController presentViewController:nc animated:YES completion:^{
             [menu removeFromSuperview];
+            [albumCover removeFromSuperview];
         }];
+    }else{
+        error.text = @"You've listend to everything \n You have no delayed suggestions";
+        [self.view addSubview:error];
     }
 }
 
 -(void)friends
 {
-    
+    error.text = @"This doesn't work yet";
+    [self.view addSubview:error];
+}
+
+-(void)optionsAct
+{
+    error.text = @"This will let you log out and choose your player. \nSpotify will be the default";
+    [self.view addSubview:error];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

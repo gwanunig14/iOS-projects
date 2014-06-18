@@ -133,7 +133,7 @@
                 NSDictionary * login = @{@"user": @{@"name": userName.text,
                                                     @"email": name.text,
                                                     @"password": password.text}};
-                [request sendDictionary:login andString:@"create"];
+                [request sendDictionary:login andString:@"users/create"];
                 MGDFirstRating * stars = [[MGDFirstRating alloc]init];
                 [self.navigationController pushViewController:stars animated:YES];
             }

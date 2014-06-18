@@ -27,6 +27,7 @@
     self = [super init];
     if (self)
     {
+        self.suggestions = [@[]mutableCopy];
         self.albumsForLater = [@{}mutableCopy];
         self.unRated = [@{}mutableCopy];
         self.ratedAlbums = [@{}mutableCopy];
