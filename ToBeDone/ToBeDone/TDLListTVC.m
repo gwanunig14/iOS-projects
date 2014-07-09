@@ -28,7 +28,7 @@
     self = [super initWithStyle:style];
     if (self)
     {
-        
+        self.view.backgroundColor = [UIColor blackColor];
         priorityColors = @[TAN_COLOR,YELLOW_COLOR,ORANGE_COLOR,RED_COLOR];
         
         listItems = [@[] mutableCopy];
@@ -154,6 +154,8 @@
     if(cell == nil) cell = [[TDLCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
     [cell resetLayout];
+    
+    cell.backgroundColor = [UIColor clearColor];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
