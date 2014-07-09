@@ -1,0 +1,24 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define TOP_COLOR [UIColor colorWithRed:87/255.0 green:87/255.0 blue:88/255.0 alpha:1];
+#define TEXTBOX_COLOR [UIColor colorWithRed:161/255.0 green:151/255.0 blue:110/255.0 alpha:1];
+#define BACKGROUND_COLOR [UIColor colorWithRed:240/255.0 green:236/255.0 blue:214/255.0 alpha:1];
+#define ONE_BUTTON [UIColor colorWithRed:237/255.0 green:228/255.0 blue:186/255.0 alpha:1];
+
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
